@@ -1,0 +1,348 @@
+@font-face {
+    font-family: "Outfit";
+    src: url("fonts/Outfit-Regular.ttf");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Outfit";
+    src: url("fonts/Outfit-Medium.ttf");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Google Sans";
+    src: url("fonts/GoogleSans-Regular.ttf");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Google Sans";
+    src: url("fonts/GoogleSans-Bold.ttf");
+    font-weight: bold;
+}
+
+
+/* 공통 설정 */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: white;
+    color: #111111;
+    font-family: "Google Sans", Arial, sans-serif;
+}
+
+a {
+    color: #111111;
+    text-decoration: none;
+}
+
+p {
+    line-height: 1.6;
+}
+
+
+/* 상단: 로고와 계정 메뉴 */
+.site-header {
+    padding: 28px 40px 0;
+}
+
+.top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: "Outfit", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.account-menu {
+    display: flex;
+    align-items: center;
+}
+
+.account-menu a {
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+    font-size: 13px;
+}
+
+.account-menu img {
+    width: 21px;
+    height: 21px;
+    margin-right: 6px;
+}
+
+
+/* 연결 메뉴와 검색창 */
+.navigation-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.main-menu {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.main-menu a {
+    margin-right: 26px;
+    margin-bottom: 14px;
+    font-family: "Outfit", sans-serif;
+    font-size: 48px;
+    font-weight: 500;
+    padding-bottom: 1px;
+    border-bottom: 4px solid transparent;
+}
+
+.main-menu a:hover {
+    border-bottom-color: black;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    width: 230px;
+    margin-bottom: 14px;
+    border-bottom: 4px solid black;
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 0;
+    width: 100%;
+    padding: 10px 5px;
+    border: none;
+    font-family: "Google Sans", sans-serif;
+    font-size: 18px;
+}
+
+.search-box button {
+    padding: 0 0 6px 8px;
+    border: none;
+    background-color: white;
+}
+
+.search-box img {
+    display: block;
+    width: 36px;
+    height: 36px;
+}
+
+
+/* 본문과 각 영역의 제목 */ 
+main {
+    padding: 0 40px;
+}
+
+.content-section {
+    margin-top: 75px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+    border-bottom: 4px solid black;
+}
+
+h1, h2 {
+    margin: 0;
+    font-family: "Outfit", sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.section-heading > a {
+    margin-left: 20px;
+    font-size: 13px;
+}
+
+h3 {
+    margin: 0;
+    font-size: 19px;
+    line-height: 1.5;
+}
+
+
+/* BEST Contest */
+.contest-scroll {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 16px;
+}
+
+.contest-card {
+    flex-shrink: 0;
+    width: 280px;
+    margin-right: 16px;
+}
+
+.poster {
+    position: relative;
+    height: 350px;
+    background-color: #ececec;
+}
+
+.poster img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contest-card h3 {
+    margin-top: 16px;
+}
+
+.organization {
+    margin: 7px 0 12px;
+    color: #777777;
+    font-size: 14px;
+}
+
+.dday {
+    margin: 0;
+    font-family: "Outfit", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+
+/* 포스터에 마우스 올렸을 때 표현 */
+.poster-description {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 26px;
+    align-items: center;
+}
+
+.poster-description p {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+/* 이미지에만 투명도 적용 */
+.poster:hover img {
+    opacity: 0.15;
+}
+
+/* 숨겨둔 설명을 표시 */
+.poster:hover .poster-description {
+    display: flex;
+}
+
+
+/* BEST Recruit */
+.recruit-scroll {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 16px;
+}
+
+.recruit-column {
+    flex-shrink: 0;
+    width: 32%;
+    min-width: 300px;
+    margin-right: 2%;
+}
+
+.recruit-card {
+    position: relative;
+    height: 280px;
+    margin-bottom: 20px;
+    padding: 26px;
+    border: 1px solid #dddddd;
+    border-radius: 16px;
+}
+
+.company-logo {
+    display: block;
+    width: 165px;
+    height: 45px;
+    margin-bottom: 24px;
+    object-fit: contain;
+    object-position: left center;
+}
+
+.company-name {
+    margin: 8px 0;
+    font-size: 15px;
+    color: #555555;
+}
+
+.requirements {
+    margin: 0;
+    font-size: 13px;
+    color: #777777;
+}
+
+
+/* 카드 오른쪽 아래에 마감일 배치 */
+.deadline {
+    position: absolute;
+    right: 24px;
+    bottom: 18px;
+    margin: 0;
+    font-size: 13px;
+    color: #555555;
+}
+
+
+/* Community */
+.community-post {
+    margin-bottom: 14px;
+    padding: 23px 26px;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+}
+
+.community-post p {
+    margin: 0;
+    font-size: 14px;
+    color: #666666;
+}
+
+.community-post .likes {
+    margin: 6px 0;
+    color: #111111;
+}
+
+
+/* 하단 */
+footer {
+    margin: 80px 40px 0;
+    padding: 30px 0;
+    border-top: 1px solid #dddddd;
+}
+
+footer strong {
+    font-family: "Outfit", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+footer p {
+    margin: 8px 0;
+    color: #777777;
+    font-size: 12px;
+}

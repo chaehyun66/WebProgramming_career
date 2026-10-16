@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="황채현, 이다은, 신유진">
+
+    <title>29SM | 메인</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- 상단: 로고, 마이페이지, 알림 -->
+    <header class="site-header">
+        <div class="top-row">
+            <a class="logo" href="#">29SM</a>
+
+            <div class="account-menu">
+                <a href="#">
+                    <img src="images/profile.svg" alt="">
+                    마이페이지
+                </a>
+
+                <a href="#">
+                    <img src="images/bell.svg" alt="">
+                    알림
+                </a>
+            </div>
+        </div>
+
+        <!-- 연결 메뉴와 검색창 -->
+        <div class="navigation-row">
+            <!-- 페이지 완성 후 #을 해당 HTML의 상대경로로 변경 -->
+            <nav class="main-menu">
+                <a href="#">Contest</a>
+                <a href="#">ECA</a>
+                <a href="recruit.html">Recruit</a>
+                <a href="#">Qualification</a>
+            </nav>
+
+            <!-- 안내 문구 없는 검색창 -->
+            <div class="search-box">
+                <input
+                    id="search"
+                    type="text"
+                    title="검색어 입력"
+                >
+
+                <button type="button" title="검색">
+                    <img src="images/search.svg" alt="검색">
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- BEST Contest -->
+        <section class="content-section">
+            <div class="section-heading">
+                <h1>BEST Contest</h1>
+                <a href="#">전체보기 &gt;</a>
+            </div>
+
+            <!-- 카드 나열 -->
+            <div class="contest-scroll">
+                <!-- 공모전 1 -->
+                <article class="contest-card">
+                    <div class="poster">
+                        <img 
+                            src="images/poster.svg"
+                            alt="대학생 아이디어 공모전 포스터"
+                        >
+
+                        <div class="poster-description">
+                            <p>
+                                새로운 시각으로 일상 속 문제를 해결할
+                                아이디어를 제안해 보세요.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h3>대학생 아이디어 공모전</h3>
+                    <p class="organization">주최 가관명</p>
+                    <p class="dday">D-12</p>
+                </article>
+
+                <!-- 공모전 2 -->
+                <article class="contest-card">
+                    <div class="poster">
+                        <img 
+                            src="images/poster.svg"
+                            alt="브랜드 콘텐츠 공모전 포스터"
+                        >
+
+                        <div class="poster-description">
+                            <p>
+                                나만의 시선으로 브랜드 이야기를 
+                                콘텐츠로 표현해 보세요.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h3>브랜드 콘텐츠 공모전</h3>
+                    <p class="organization">주최 기관명</p>
+                    <p class="dday">D-7</p>
+                </article>
+
+                <!-- 공모전 3 -->
+                <article class="contest-card">
+                    <div class="poster">
+                        <img
+                            src="images/poster.svg"
+                            alt="환경 디자인 공모전 포스터"
+                        >
+
+                        <div class="poster-description">
+                            <p>
+                                더 나은 내일을 위한 친환경
+                                디자인 아이디어를 모집합니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h3>환경 디자인 공모전</h3>
+                    <p class="organization">주최 기관명</p>
+                    <p class="dday">D-21</p>
+                </article>
+
+                <!-- 공모전 4 -->
+                <article class="contest-card">
+                    <div class="poster">
+                        <img 
+                            src="images/poster.svg"
+                            alt="지역 홍보 영상 공모전 포스터"
+                        >
+
+                        <div class="poster-description">
+                            <p>
+                                우리 지역의 매력을 담은
+                                영상 콘텐츠를 만들어 보세요.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h3>지역 홍보 영상 공모전</h3>
+                    <p class="organization">주최 기관명</p>
+                    <p class="dday">D-15</p>
+                </article>
+
+                <!-- 공모전 5 -->
+                <article class="contest-card">
+                    <div class="poster">
+                        <img 
+                            src="images/poster.svg"
+                            alt="캠퍼스 사진 공모전 임시 포스터"
+                        >
+
+                        <div class="poster-description">
+                            <p>
+                                대학생활의 특별한 순간을 
+                                사진으로 공유해 보세요. 
+                            </p>
+                        </div>
+                    </div>
+
+                    <h3>캠퍼스 사진 공모전</h3>
+                    <p class="organization">주최 기관명</p>
+                    <p class="dday">D-9</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- BEST Recruit -->
+        <section class="content-section">
+            <div class="section-heading">
+                <h2>BEST Recruit</h2>
+                <a href="#">전체보기 &gt;</a>
+            </div>
+
+            <!-- recruit column안에 카드 구성 -->
+
+            <div class="recruit-scroll">
+                <!-- 첫번째 열 -->
+                <div class="recruit-column">
+                    <article class="recruit-card">
+                        <img
+                            class="company-logo"
+                            src="images/cj_logo.png"
+                            alt="cj logo"
+                        >
+
+                        <h3>커머스부문[정산 담당자] 신입수시 채용</h3>
+                        <p class="company-name">CJ ENM</p>
+                        <p class="requirements">
+                            서울 · 계약직 가능
+                        </p>
+                        <p class="deadline">~ 10.25 마감</p>
+                    </article>
+
+                    <article class="recruit-card">
+                        <img 
+                            class="company-logo"
+                            src="images/hyundai_logo.jpeg"
+                            alt="hyundai logo"
+                        >
+
+                        <h3>2026년 10월 월간 경력 채용</h3>
+                        <p class="company-name">현대 자동차</p>
+                        <p class="requirements">
+                            서울 외 2 · 경력직 
+                        </p>
+                        <p class="deadline">~ 10.29 마감</p>
+                    </article>
+                </div>
+
+                <!-- 두번째 열 -->
+                <div class="recruit-column">
+                    <article class="recruit-card">
+                        <img
+                            class="company-logo"
+                            src="images/lg_logo.jpeg"
+                            alt="lg logo"
+                        >
+
+                        <h3>[Consumer부문] 전남소매영업팀 회계 계약직 채용</h3>
+                        <p class="company-name">LG 유플러스</p>
+                        <p class="requirements">
+                            전남광주 · 계약직 
+                        </p>
+                        <p class="deadline">~ 10.21 마감</p>
+                    </article>
+
+                    <article class="recruit-card">
+                        <img 
+                            class="company-logo"
+                            src="images/sk_logo.png"
+                            alt="sk logo"
+                        >
+
+                        <h3>기계/전기 설비 관리 기술직 채용</h3>
+                        <p class="company-name">SK ON</p>
+                        <p class="requirements">
+                            대전 · 계약직
+                        </p>
+                        <p class="deadline">~ 10.24 마감</p>
+                    </article>
+                </div>
+
+                <!-- 세번째 열 -->
+                <div class="recruit-column">
+                    <article class="recruit-card">
+                        <img 
+                            class="company-logo"
+                            src="images/tesla_logo.jpeg"
+                            alt="tesla logo"
+                        >
+
+                        <h3>2026 대규모 공개채용</h3>
+                        <p class="company-name">테슬라 코리아</p>
+                        <p class="requirements">
+                            서울 · 경력직
+                        </p>
+                        <p class="deadline">~ 10.31 마감</p>
+                    </article>
+
+                    <article class="recruit-card">
+                        <img 
+                            class="company-logo"
+                            src="images/sm_logo.png"
+                            alt="sm logo"
+                        >
+
+                        <h3>A&R 담당자 채용</h3>
+                        <p class="company-name">SM 엔터테인먼트</p>
+                        <p class="requirements">
+                            서울 · 신입 · 경력직 가능
+                        </p>
+                        <p class="deadline">~ 10.23 마감</p>
+                    </article>
+                </div>
+
+                <!-- 네번째 열: 가로로 넘기면 표시 -->
+                <div class="recruit-column">
+                    <article class="recruit-card">
+                        <img
+                            class="company-logo"
+                            src="images/sony_logo.png"
+                            alt="sony logo"
+                        >
+
+                        <h3>소니코리아 General Affairs Specialist 채용</h3>
+                        <p class="company-name">소니 코리아</p>
+                        <p class="requirements">
+                            서울 · 신입 
+                        </p>
+                        <p class="deadline">~ 10.19 마감</p>
+                    </article>
+
+                    <article class="recruit-card">
+                        <img
+                            class="company-logo"
+                            src="images/cj_logo.png"
+                            alt="cj logo"
+                        >
+
+                        <h3>SCM 센터운영 신입/경력사원 모집</h3>
+                        <p class="company-name">CJ 프레시웨이</p>
+                        <p class="requirements">
+                            경기 · 신입 · 경력직 가능
+                        </p>
+                        <p class="deadline">~ 11.01 마감</p>
+                    </article>
+                </div>
+
+                <!-- 다섯번째 열 -->
+                <div class="recruit-column">
+                    <article class="recruit-card">
+                        <img
+                            class="company-logo"
+                            src="images/lg_logo.jpeg"
+                            alt="lg logo"
+                        >
+
+                        <h3>채용비연계형 대학생 인턴_인사기획/조직문화</h3>
+                        <p class="company-name">LG 전자</p>
+                        <p class="requirements">
+                            서울 · 신입 · 인턴
+                        </p>
+                        <p class="deadline">~ 10.28 마감</p>
+                    </article>
+
+                    <article class="recruit-card">
+                        <img 
+                            class="company-logo"
+                            src="images/hyundai_logo.jpeg"
+                            alt="예시 회사 로고"
+                        >
+
+                        <h3>시험정비(경쟁차 운영) 계약직 채용</h3>
+                        <p class="company-name">현대 자동차</p>
+                        <p class="requirements">
+                            경기 · 계약직
+                        </p>
+                        <p class="deadline">~ 11.25 마감</p>
+                    </article>
+                </div>
+
+                <!-- 여섯번째 열 -->
+                <div class="recruit-column">
+                    <article class="recruit-card">
+                        <img
+                            class="company-logo"
+                            src="images/sm_logo.png"
+                            alt="sm logo"
+                        >
+
+                        <h3>법인영업 담당 신입/계약직 채용</h3>
+                        <p class="company-name">SM C&C</p>
+                        <p class="requirements">
+                            서울 · 신입 · 경력직
+                        </p>
+                        <p class="deadline">~ 11.20 마감</p>
+                    </article>
+
+                    <article class="recruit-card">
+                        <img
+                            class="company-logo"
+                            src="images/sk_logo.png"
+                            alt="sk logo"
+                        >
+
+                        <h3>2D/3D 장면 재구성 엔지니어 신입 인재 채용</h3>
+                        <p class="company-name">SK인텔릭스</p>
+                        <p class="requirements">
+                            경기 · 신입
+                        </p>
+                        <p class="deadline">~ 11.01 마감</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community -->
+        <section class="content-section">
+            <div class="section-heading">
+                <h2>Community</h2>
+                <a href="#">전체보기 &gt;</a>
+            </div>
+
+            <div class="community-list">
+                <article class="community-post">
+                    <h3>
+                        <a href="#">
+                            공모전 함께 준비할 팀원 구해요!
+                        </a>
+                    </h3>
+
+                    <p class="likes">♡ 24</p>
+                    <p>
+                        아이디어를 나누고 함께 도전할 팀원을
+                        찾고 있어요. 
+                    </p>
+                </article>
+
+                <article class="community-post">
+                    <h3>
+                        <a href="#">
+                            첫 인턴 지원, 다들 어떻게 준비하시나요?
+                        </a>
+                    </h3>
+
+                    <p class="likes">♡ 18</p>
+                    <p>
+                        자기소개서와 포트폴리오 준비 경험을
+                        함께 나눠요. 
+                    </p>
+                </article>
+
+                <article class="community-post">
+                    <h3>
+                        <a href="#">
+                            이번 학기 자격증 공부 같이 해요
+                        </a>
+                    </h3>
+
+                    <p class="likes">♡ 12</p>
+                    <p>
+                        서로 공부 계획을 공유하면서
+                        꾸준히 준비해 봐요. 
+                    </p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <strong>29SM</strong>
+
+        <p>
+            웹프로그래밍 팀 프로젝트
+        </p>
+
+        <p>
+            공모전과 채용 정보는 화면 구성을 위한 예시입니다. 
+        </p>
+    </footer>
+</body>
+</html>

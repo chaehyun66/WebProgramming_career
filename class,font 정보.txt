@@ -1,0 +1,20 @@
+[ 상단 부분 class ]
+
+.site-header : 상단 전체 
+.top-row : 로고와 계정 메뉴를 감싸는 줄
+.logo : 29SM 로고
+.account-menu : 마이페이지, 알림
+.main-menu : 페이지 이동 메뉴
+.current-menu : 현재 페이지 메뉴의 밑줄  
+
+* 공모전 -> contest / 대외활동 -> ECA / 취업공고 - Recruit / 자격증 - Qualification으로 정해두었습니다
+
+[ fonts ]
+
+로고 : Outfit-Medium.ttf / 20px / 글자간격 2px 
+마이페이지, 알림 : 13px 
+메뉴창 : Outfit-Meduim.ttf / 48px
+검색창 : Google Sans / 18px
+페이지 제목 : Outfit-Medium.ttf / 48px 
+
+
