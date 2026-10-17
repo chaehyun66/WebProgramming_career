@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="황채현, 이다은, 신유진">
+
+  <title>29SM | My Page</title>
+
+  <link rel="stylesheet" href="MyPage.css">
+</head>
+
+<body>
+
+  <!-- 상단: 로고, 마이페이지, 알림 -->
+  <header class="site-header">
+    <div class="top-row">
+      <a class="logo" href="#">29SM</a>
+
+      <div class="account-menu">
+        <a href="#">
+          <img src="images/profile.svg" alt="">
+          마이페이지
+        </a>
+
+        <a href="#">
+          <img src="images/bell.svg" alt="">
+          알림
+        </a>
+      </div>
+    </div>
+
+    <!-- 연결 메뉴와 검색창 -->
+    <div class="navigation-row">
+      <!-- 페이지 완성 후 #을 해당 HTML의 상대경로로 변경 -->
+      <nav class="main-menu">
+        <a href="#">Contest</a>
+        <a href="#">ECA</a>
+        <a href="recruit.html">Recruit</a>
+        <a href="#">Qualification</a>
+      </nav>
+
+      <!-- 안내 문구 없는 검색창 -->
+      <div class="search-box">
+        <input
+          id="search"
+          type="text"
+          title="검색어 입력"
+        >
+
+        <button type="button" title="검색">
+            <img src="images/search.svg" alt="검색">
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="inner">
+
+    <!-- 페이지 제목 + 진행 단계 -->
+    <div class="page-title">
+      <h2>My Page</h2>
+    </div>
+
+    <div class="cart-wrap">
+
+      <!-- 왼쪽: 상품 목록 + 지원 완료한 공고 -->
+      <div class="cart-left">
+
+      <!-- 상품 목록 -->
+      <section class="cart-list">
+
+        <!-- 전체 선택 / 선택 삭제 -->
+        <div class="list-top">
+          <label class="check">
+            <input type="checkbox" checked>
+            <span>전체선택 (3/3)</span>
+          </label>
+          <button type="button" class="btn-line">선택삭제</button>
+        </div>
+
+        <!-- 상품 1 -->
+        <article class="cart-item">
+          <input type="checkbox" class="item-check" checked>
+          <div class="thumb thumb1"></div>
+          <div class="info">
+            <p class="brand">대외활동 [TV CHOSUN]</p>
+            <h3 class="name">[TV CHOSUN] 2026 글로벌 리더스 포럼 대학생 서포터즈 모집</h3>
+            <p class="option">대학생 / 서울 / 오프라인</p>
+          </div>
+          <p class="D-day">D-3</p>
+          <button type="button" class="btn-smorder">지원하기</button>
+          <button type="button" class="btn-delete" title="삭제">✕</button>
+        </article>
+
+        <!-- 상품 2 -->
+        <article class="cart-item">
+          <input type="checkbox" class="item-check" checked>
+          <div class="thumb thumb2"></div>
+          <div class="info">
+            <p class="brand">공모전 [에이치에너지]</p>
+            <h3 class="name">2026 POSTECH OIBC 빅데이터 경진대회</h3>
+            <p class="option">대학생 / [과학/공학]</p>
+          </div>
+          <p class="D-day">D-7</p>
+          <button type="button" class="btn-smorder">지원하기</button>
+          <button type="button" class="btn-delete" title="삭제">✕</button>
+        </article>
+
+        <!-- 상품 3 -->
+        <article class="cart-item">
+          <input type="checkbox" class="item-check" checked>
+          <div class="thumb thumb3"></div>
+          <div class="info">
+            <p class="brand">취업공고 [이노션]</p>
+            <h3 class="name">[이노션] 앱 서비스 기획</h3>
+            <p class="option">인턴 / [IT/개발]</p>
+          </div>
+          <p class="D-day">D-13</p>
+          <button type="button" class="btn-smorder">지원하기</button>
+          <button type="button" class="btn-delete" title="삭제">✕</button>
+        </article>
+
+      </section>
+
+      <!-- 지원 완료한 공고 -->
+      <section class="applied">
+
+        <!-- 제목 + 탭 -->
+        <div class="applied-top">
+          <div>
+            <h3 class="applied-title">지원 완료한 공고</h3>
+            <p class="applied-desc">지원한 공고의 진행 단계를 한눈에 확인하세요.</p>
+          </div>
+          <nav class="applied-tabs">
+            <a href="#" class="active">전체 4</a>
+            <a href="#">진행 중 2</a>
+            <a href="#">합격 1</a>
+            <a href="#">불합격 1</a>
+          </nav>
+        </div>
+
+        <!-- 공고 1 : 서류 심사 중 -->
+        <article class="applied-item">
+          <div class="applied-thumb purple"></div>
+          <div class="applied-info">
+            <p class="applied-cate">공모전 · [주최기관]</p>
+            <h4 class="applied-name">캐릭터 디자인 공모전</h4>
+            <p class="applied-date">지원일 [YYYY.MM.DD] · 결과 발표 [YYYY.MM.DD]</p>
+          </div>
+          <ol class="progress">
+            <li class="done">지원</li>
+            <li class="current">서류</li>
+            <li>면접</li>
+            <li>결과</li>
+          </ol>
+          <button type="button" class="status status-line">서류 심사 중</button>
+        </article>
+
+        <!-- 공고 2 : 면접 예정 -->
+        <article class="applied-item">
+          <div class="applied-thumb blue"></div>
+          <div class="applied-info">
+            <p class="applied-cate">취업공고 · [기관명]</p>
+            <h4 class="applied-name">청년인턴 [N]기 채용</h4>
+            <p class="applied-date">지원일 [YYYY.MM.DD] · 면접 [YYYY.MM.DD]</p>
+          </div>
+          <ol class="progress">
+            <li class="done">지원</li>
+            <li class="done">서류</li>
+            <li class="current">면접</li>
+            <li>결과</li>
+          </ol>
+          <button type="button" class="status status-blue">면접 예정</button>
+        </article>
+
+        <!-- 공고 3 : 최종 합격 -->
+        <article class="applied-item">
+          <div class="applied-thumb beige"></div>
+          <div class="applied-info">
+            <p class="applied-cate">대외활동 · [단체명]</p>
+            <h4 class="applied-name">대학생 마케팅 연합동아리</h4>
+            <p class="applied-date">지원일 [YYYY.MM.DD] · 활동 시작 [YYYY.MM.DD]</p>
+          </div>
+          <ol class="progress">
+            <li class="done">지원</li>
+            <li class="done">서류</li>
+            <li class="done">면접</li>
+            <li class="done">결과</li>
+          </ol>
+          <button type="button" class="status status-black">최종 합격</button>
+        </article>
+
+        <!-- 공고 4 : 불합격 (전체가 흐리게) -->
+        <article class="applied-item fail">
+          <div class="applied-thumb gray"></div>
+          <div class="applied-info">
+            <p class="applied-cate">대외활동 · [기관명]</p>
+            <h4 class="applied-name">대학생 기자단 [N]기 모집</h4>
+            <p class="applied-date">지원일 [YYYY.MM.DD] · 서류 발표 [YYYY.MM.DD]</p>
+          </div>
+          <ol class="progress">
+            <li class="done">지원</li>
+            <li class="done">서류</li>
+            <li>면접</li>
+            <li>결과</li>
+          </ol>
+          <button type="button" class="status status-gray">불합격</button>
+        </article>
+
+      </section>
+
+      </div>
+
+      <!-- 오른쪽: 결제 금액 요약 -->
+      <aside class="summary">
+        <h3>지원 일정 요약</h3>
+        <dl>
+          <div class="row">
+            <dt>선택한 공고</dt>
+            <dd>[N]건</dd>
+          </div>
+          <div class="row">
+            <dt>이번주 마감</dt>
+            <dd class="discount">[N]건</dd>
+          </div>
+          <div class="row">
+            <dt>가장 빠른 마감</dt>
+            <dd>D-3</dd>
+          </div>
+        </dl>
+        <p class="notice">마감 하루 전에 알림을 받으려면 로그인 후 알림을 켜주세요</p>
+        <button type="button" class="btn-order">지원하기</button>
+        <a href="#" class="btn-continue">더 둘러보기</a>
+      </aside>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-heading">
+      <a class="footer-logo" href="index.html">29SM</a>
+      <p>29살까지 취업하고자 하는 대학생들의 다음 기회를 모으다.</p>
+    </div>
+
+    <div class="footer-info">
+      <p>
+        29SM은 대학생들을 위한 공모전, 대외활동,
+        채용 및 자격증 정보를 소개하는 웹사이트입니다.
+      </p>
+
+      <p>
+        본 웹사이트는 정보를 제공함과 동시에
+        학생들의 공모전, 대외활동, 채용공고, 자격증 관련
+        일정을 관리하고 다양한 활동을 비교할 수 있는 서비스를 제공합니다. 
+      </p>
+
+      <p>
+          제작: 황채현 · 이다은 · 신유진
+      </p>
+    </div>
+
+    <nav class="footer-links">
+      <a href="#">서비스 소개</a>
+      <a href="#">이용약관</a>
+      <a href="#">개인정보처리방침</a>
+      <a href="#">문의하기</a>
+    </nav>
+
+    <p class="footer-credit">
+      29SM · Web Programming Team Project
+    </p>
+  </footer>
+
+</body>
+</html>

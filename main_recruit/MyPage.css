@@ -1,0 +1,757 @@
+@font-face {
+  font-family: "Outfit";
+  src: url("fonts/Outfit-Light.ttf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("fonts/Outfit-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("fonts/Outfit-Medium.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("fonts/Outfit-SemiBold.ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("fonts/Outfit-Bold.ttf");
+  font-weight: 700 900;   /* 800처럼 더 두꺼운 굵기도 Bold 파일로 표시 */
+}
+
+@font-face {
+  font-family: "Google Sans";
+  src: url("fonts/GoogleSans-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Google Sans";
+  src: url("fonts/GoogleSans-Medium.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Google Sans";
+  src: url("fonts/GoogleSans-SemiBold.ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Google Sans";
+  src: url("fonts/GoogleSans-Bold.ttf");
+  font-weight: 700 900;
+}
+
+/* ===== 기본 초기화 ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* 영어·숫자는 Outfit, Outfit에 없는 한글은 뒤의 폰트로 표시 */
+  font-family: "Outfit", "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  color: #222;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+/* 버튼, 입력칸은 body 폰트를 자동으로 안 따라가서 따로 지정 */
+button,
+input {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* 가운데 정렬용 공통 영역 */
+
+.inner {
+  width: 1400px;
+  padding: 0 0 0 40px;
+}
+
+/* 본문: 1400px 고정을 풀고, 오른쪽 간격도 왼쪽(40px)과 같게 */
+main.inner {
+  width: auto;
+  padding-right: 40px;
+}
+
+/* ===== 헤더 (index.html의 style.css와 같은 값) ===== */
+
+/* 상단: 로고와 계정 메뉴 */
+.site-header {
+  position: sticky;   /* 스크롤해도 화면 맨 위에 고정 */
+  top: 0;
+  z-index: 100;       /* 다른 요소보다 위에 보이게 */
+  padding: 28px 40px 0;
+  background-color: #fff;
+  color: #111111;
+  font-family: "Google Sans", Arial, sans-serif;   /* index의 기본 글꼴 */
+}
+
+.top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: "Outfit", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.account-menu {
+  display: flex;
+  align-items: center;
+}
+
+.account-menu a {
+  display: flex;
+  align-items: center;
+  margin-left: 25px;
+  font-size: 13px;
+}
+
+.account-menu img {
+  width: 21px;
+  height: 21px;
+  margin-right: 6px;
+}
+
+/* 연결 메뉴와 검색창 */
+.navigation-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.main-menu {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.main-menu a {
+  margin-right: 26px;
+  margin-bottom: 14px;
+  font-family: "Outfit", sans-serif;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: normal;   /* index와 같은 줄 높이 */
+  padding-bottom: 1px;
+  border-bottom: 4px solid transparent;
+}
+
+.main-menu a:hover {
+  border-bottom-color: black;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  width: 230px;
+  margin-bottom: 14px;
+  border-bottom: 4px solid black;
+}
+
+.search-box input {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  padding: 10px 5px;
+  border: none;
+  outline: none;
+  font-family: "Google Sans", sans-serif;
+  font-size: 18px;
+}
+
+.search-box button {
+  padding: 0 0 6px 8px;
+  border: none;
+  background-color: white;
+}
+
+.search-box img {
+  display: block;
+  width: 36px;
+  height: 36px;
+}
+
+/* ===== 페이지 제목 + 단계 ===== */
+.page-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 50px 0 24px;
+}
+
+.page-title h2 {
+  font-size: 48px;
+  font-weight: 500
+}
+
+.steps {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.steps li.current {
+  color: #222;
+  font-weight: 700;
+}
+
+/* ===== 장바구니 전체 레이아웃 (왼쪽 목록 / 오른쪽 요약) ===== */
+.cart-wrap {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.cart-list {
+  flex: 1;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 10px 0;
+}
+
+/* ===== 체크박스 공통 ===== */
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #222;   /* 체크됐을 때 색상 */
+  cursor: pointer;
+}
+
+/* ===== 전체선택 줄 ===== */
+.list-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 2px solid #222;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* 테두리만 있는 작은 버튼 */
+.btn-line {
+  padding: 8px 14px;
+  font-size: 13px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: all 0.15s;
+}
+
+.btn-line:hover {
+  border-color: #222;
+}
+
+.btn-line:active {
+  background-color: #eee;
+  transform: scale(0.96);
+}
+
+/* ===== 상품 한 줄 ===== */
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 24px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+/* 상품 이미지 자리 */
+.thumb {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+}
+
+.thumb1 { background-color: #E9E3D8; }   /* 베이지 */
+.thumb2 { background-color: #C9D3C0; }   /* 세이지 그린 */
+.thumb3 { background-color: #1C1C1C; }   /* 블랙 */
+
+.info {
+  flex: 1;
+}
+
+.brand {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 4px;
+}
+
+.name {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.option {
+  font-size: 13px;
+  color: #888;
+}
+
+.D-day {
+  width: 110px;
+  text-align: right;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* 작은 지원하기 버튼 */
+.btn-smorder {
+  width: 70px;
+  height: 35px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #222;
+  border: none;
+  border-radius: 2px;
+  transition: all 0.15s;
+}
+
+.btn-smorder:hover {
+  background-color: #444;
+}
+
+.btn-smorder:active {
+  transform: scale(0.97);
+  background-color: #000;
+}
+
+/* 삭제(X) 버튼 */
+.btn-delete {
+  width: 32px;
+  height: 32px;
+  font-size: 14px;
+  color: #999;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  transition: all 0.15s;
+}
+
+.btn-delete:hover {
+  color: #e74c3c;
+  background-color: #fdecea;
+}
+
+.btn-delete:active {
+  transform: scale(0.85);
+}
+
+/* ===== 왼쪽 영역 (상품 목록 + 지원 완료한 공고) ===== */
+.cart-left {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ===== 지원 완료한 공고 ===== */
+.applied {
+  margin-top: 60px;
+}
+
+/* 제목 + 탭 */
+.applied-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 14px;
+  border-bottom: 2px solid #222;
+}
+
+.applied-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #3b4fe0;
+  margin-bottom: 10px;
+}
+
+.applied-title {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.applied-desc {
+  font-size: 13px;
+  color: #555;
+}
+
+/* 전체 / 진행 중 / 합격 / 불합격 탭 */
+.applied-tabs a {
+  margin-left: 18px;
+  padding-bottom: 6px;
+  font-size: 13px;
+  color: #555;
+}
+
+.applied-tabs a:hover {
+  color: #222;
+}
+
+.applied-tabs a.active {
+  font-weight: 700;
+  color: #222;
+  border-bottom: 2px solid #222;
+}
+
+/* 공고 한 줄 */
+.applied-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 18px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* 썸네일 자리 */
+.applied-thumb {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+}
+
+.applied-thumb.purple { background-color: #DCD8EC; }   /* 라벤더 */
+.applied-thumb.blue   { background-color: #D7DEE8; }   /* 블루그레이 */
+.applied-thumb.beige  { background-color: #F1D9C7; }   /* 피치 */
+.applied-thumb.gray   { background-color: #E9E3D8; }   /* 베이지 */
+
+.applied-info {
+  flex: 1;
+}
+
+.applied-cate {
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.applied-name {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.applied-date {
+  font-size: 12px;
+  color: #777;
+}
+
+/* ----- 진행 단계 (지원 - 서류 - 면접 - 결과) ----- */
+.progress {
+  display: flex;
+  align-items: center;
+}
+
+.progress li {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* 동그라미 점 (기본: 아직 안 한 단계 → 속이 빈 회색 원) */
+.progress li::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  margin-right: 6px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+/* 단계 사이 연결선 (마지막 단계 뒤에는 없음) */
+.progress li:not(:last-child)::after {
+  content: "";
+  width: 28px;
+  height: 1px;
+  margin: 0 8px;
+  background-color: #e5e5e5;
+}
+
+/* 완료한 단계 → 검은 점 + 굵은 글씨 + 진한 선 */
+.progress li.done {
+  color: #222;
+  font-weight: 700;
+}
+
+.progress li.done::before {
+  background-color: #222;
+  border-color: #222;
+}
+
+.progress li.done::after {
+  background-color: #999;
+}
+
+/* 지금 진행 중인 단계 → 파란 점 + 바깥 테두리 */
+.progress li.current {
+  color: #3b4fe0;
+  font-weight: 700;
+}
+
+.progress li.current::before {
+  background-color: #3b4fe0;
+  border-color: #3b4fe0;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3px #3b4fe0;   /* 점 바깥 링 */
+}
+
+/* ----- 오른쪽 상태 버튼 ----- */
+.status {
+  width: 80px;
+  height: 30px;
+  margin-left: 20px;
+  white-space: nowrap;   /* 글자가 두 줄로 넘어가지 않게 */
+  font-size: 12px;
+  font-weight: 700;
+  border: 1px solid;
+  transition: all 0.15s;
+}
+
+/* 서류 심사 중 : 파란 테두리 */
+.status-line {
+  color: #3b4fe0;
+  background-color: #fff;
+  border-color: #3b4fe0;
+}
+
+.status-line:hover {
+  background-color: #eef0fd;
+}
+
+/* 면접 예정 : 파란 배경 */
+.status-blue {
+  color: #fff;
+  background-color: #2f45f0;
+  border-color: #2f45f0;
+}
+
+.status-blue:hover {
+  background-color: #2234c8;
+}
+
+/* 최종 합격 : 검은 배경 */
+.status-black {
+  color: #fff;
+  background-color: #111;
+  border-color: #111;
+}
+
+.status-black:hover {
+  background-color: #333;
+}
+
+/* 불합격 : 회색 테두리 */
+.status-gray {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
+
+.status-gray:hover {
+  background-color: #f5f5f5;
+}
+
+/* 불합격한 공고는 전체를 회색 톤으로 */
+.applied-item.fail .applied-name,
+.applied-item.fail .progress li.done {
+  color: #777;
+}
+
+.applied-item.fail .progress li.done::before {
+  background-color: #999;
+  border-color: #999;
+}
+
+/* ===== 오른쪽 결제 요약 ===== */
+.summary {
+  width: 340px;
+  background-color: #fff;
+  padding: 30px;
+  margin-top: 88px;
+  position: sticky;   /* 스크롤해도 따라오게 */
+  top: 172px;         /* 고정된 헤더(152px) 아래 + 20px */
+  border: 2px solid #222;
+}
+
+.summary h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.summary .row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  font-size: 15px;
+  color: #555;
+}
+
+.summary .discount {
+  color: #e74c3c;
+}
+
+.summary .total {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  font-size: 18px;
+  font-weight: 700;
+  color: #222;
+}
+
+.summary .total dd {
+  font-size: 22px;
+}
+
+.notice {
+  font-size: 15px;
+  color: #8f8f8f;
+  margin: 10px 0 24px;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+}
+
+/* 주문하기 버튼 */
+.btn-order {
+  width: 100%;
+  height: 56px;
+  font-size: 17px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #222;
+  border: none;
+  border-radius: 3px;
+  transition: all 0.15s;
+}
+
+.btn-order:hover {
+  background-color: #444;
+}
+
+.btn-order:active {
+  transform: scale(0.97);
+  background-color: #000;
+}
+
+/* 쇼핑 계속하기 */
+.btn-continue {
+  display: block;
+  margin-top: 12px;
+  padding: 14px 0;
+  text-align: center;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  transition: all 0.15s;
+}
+
+.btn-continue:hover {
+  border-color: #222;
+}
+
+
+/* 하단 */
+.site-footer {
+  margin-top: 80px;
+  padding: 45px 40px 30px;
+  background-color: black;
+  color: white;
+}
+
+.footer-heading {
+  margin-bottom: 25px;
+}
+
+.site-footer .footer-logo {
+  font-family: "Outfit", sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: white;
+}
+
+.footer-heading p {
+  margin: 10px 0 0;
+  font-size: 16px;
+  color: #dddddd;
+}
+
+.footer-info p {
+  margin: 0 0 14px;
+  font-size: 13px;
+  line-height: 1.8;
+  color: #999999;
+}
+
+/* 안내문과 링크 목록 사이 구분선 */
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid #333333;
+}
+
+.footer-links a {
+  margin: 0 22px 12px 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-credit {
+  margin: 18px 0 0;
+  font-family: "Outfit", sans-serif;
+  font-size: 12px;
+  color: #777777;
+}

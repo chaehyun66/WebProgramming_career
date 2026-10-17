@@ -1,0 +1,589 @@
+@font-face {
+  font-family: "Outfit";
+  src: url("fonts/Outfit-Light.ttf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("fonts/Outfit-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("fonts/Outfit-Medium.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("fonts/Outfit-SemiBold.ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("fonts/Outfit-Bold.ttf");
+  font-weight: 700 900;   /* 800처럼 더 두꺼운 굵기도 Bold 파일로 표시 */
+}
+
+@font-face {
+  font-family: "Google Sans";
+  src: url("fonts/GoogleSans-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Google Sans";
+  src: url("fonts/GoogleSans-Medium.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Google Sans";
+  src: url("fonts/GoogleSans-SemiBold.ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Google Sans";
+  src: url("fonts/GoogleSans-Bold.ttf");
+  font-weight: 700 900;
+}
+
+/* ===== 기본 초기화 ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* 영어·숫자는 Outfit, Outfit에 없는 한글은 뒤의 폰트로 표시 */
+  font-family: "Outfit", "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  color: #222;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+/* 버튼, 입력칸은 body 폰트를 자동으로 안 따라가서 따로 지정 */
+button,
+input {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* 가운데 정렬용 공통 영역 */
+
+.inner {
+  width: 1400px;
+  padding: 0 0 0 40px;
+}
+
+/* ===== 헤더 (index.html의 style.css와 같은 값) ===== */
+
+/* 상단: 로고와 계정 메뉴 */
+.site-header {
+  position: sticky;   /* 스크롤해도 화면 맨 위에 고정 */
+  top: 0;
+  z-index: 100;       /* 다른 요소보다 위에 보이게 */
+  padding: 28px 40px 0;
+  background-color: #fff;
+  color: #111111;
+  font-family: "Google Sans", Arial, sans-serif;   /* index의 기본 글꼴 */
+}
+
+.top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: "Outfit", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.account-menu {
+  display: flex;
+  align-items: center;
+}
+
+.account-menu a {
+  display: flex;
+  align-items: center;
+  margin-left: 25px;
+  font-size: 13px;
+}
+
+.account-menu img {
+  width: 21px;
+  height: 21px;
+  margin-right: 6px;
+}
+
+/* 연결 메뉴와 검색창 */
+.navigation-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.main-menu {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.main-menu a {
+  margin-right: 26px;
+  margin-bottom: 14px;
+  font-family: "Outfit", sans-serif;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: normal;   /* index와 같은 줄 높이 */
+  padding-bottom: 1px;
+  border-bottom: 4px solid transparent;
+}
+
+.main-menu a:hover {
+  border-bottom-color: black;
+}
+
+/* 현재 페이지의 메뉴는 밑줄 유지 */
+.main-menu .current-menu {
+    border-bottom-color: black;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  width: 230px;
+  margin-bottom: 14px;
+  border-bottom: 4px solid black;
+}
+
+.search-box input {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  padding: 10px 5px;
+  border: none;
+  outline: none;
+  font-family: "Google Sans", sans-serif;
+  font-size: 18px;
+}
+
+.search-box button {
+  padding: 0 0 6px 8px;
+  border: none;
+  background-color: white;
+}
+
+.search-box img {
+  display: block;
+  width: 36px;
+  height: 36px;
+}
+
+/* 본문 영역: 로고와 왼쪽 줄 맞추기 (40px + 30px) */
+.content {
+  width: auto;          /* 1400px 고정을 풀고 화면 너비에 맞추기 */
+  padding-right: 40px;  /* 오른쪽 간격 = 왼쪽 간격(40px) */
+  padding-bottom: 120px;
+}
+
+/* ===== 페이지 제목 (MyPage와 같은 크기) ===== */
+.page-head {
+  margin: 50px 0 30px;
+  padding-bottom: 30px;
+  border-bottom: 2px solid #222;
+}
+
+.page-head h2 {
+  font-size: 48px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.page-head p {
+  font-size: 14px;
+  color: #777;
+}
+
+/* 섹션 공통 제목 */
+.section-title {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* ===== 시험 일정 안내 ===== */
+.section-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.more {
+  font-size: 14px;
+  color: #555;
+}
+
+.more:hover {
+  color: #222;
+  text-decoration: underline;
+}
+
+/* 카드 4개를 한 줄에 같은 너비로 */
+.schedule-list {
+  position: relative;   /* 다음 버튼 위치 기준 */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.schedule-card {
+  padding: 28px 24px;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  transition: all 0.15s;
+}
+
+.schedule-card:hover {
+  border-color: #bbb;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+/* 정기접수 / 접수중 태그 */
+.tags {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.tag {
+  padding: 4px 8px;
+  font-size: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tag-blue {
+  color: #fff;
+  background-color: #2C3E6B;
+  border-color: #2C3E6B;
+}
+
+.exam-name {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+/* 시험 날짜 */
+.exam-date {
+  font-size: 28px;
+  font-weight: 700;
+  padding-bottom: 18px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* 일정 카드의 요일 → 같은 색 계열의 가을 톤 */
+.exam-date .sat {
+  color: #2C3E6B;   /* 토요일 남색 */
+}
+
+.exam-date .sun {
+  color: #A0412D;   /* 일요일 벽돌빛 빨강 */
+}
+
+/* 달력의 요일 → 원래 빨강/파랑 유지 */
+.calendar-table .sat {
+  color: #2f45f0;   /* 토요일 파란색 */
+}
+
+.calendar-table .sun {
+  color: #d93025;   /* 일요일 빨간색 */
+}
+
+/* 접수마감 / 성적발표 */
+.exam-info li {
+  font-size: 13px;
+  color: #777;
+  line-height: 1.9;
+}
+
+/* ===== 한 달 일정 달력 ===== */
+.calendar {
+  margin-top: 100px;
+  padding-top: 30px;
+  border-top: 2px solid #222;
+}
+
+.calendar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 30px;
+}
+
+
+/* 분류 버튼 (라디오 버튼 + label) */
+.filter {
+  display: flex;
+  gap: 8px;
+}
+
+.filter input {
+  display: none;   /* 동그란 라디오 버튼은 숨기고 label만 버튼처럼 보이게 */
+}
+
+.filter label {
+  padding: 10px 16px;
+  font-size: 13px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.filter label:hover {
+  border-color: #222;
+}
+
+/* 선택된 버튼 → 검은 배경 */
+.filter input:checked + label {
+  color: #fff;
+  background-color: #111;
+  border-color: #111;
+}
+
+/* 월 이동 + 범례 */
+.month-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.month-nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.month {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.btn-month {
+  width: 36px;
+  height: 36px;
+  font-size: 14px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  transition: all 0.15s;
+}
+
+.btn-month:hover {
+  border-color: #222;
+}
+
+.btn-month:active {
+  background-color: #eee;
+  transform: scale(0.94);
+}
+
+.legend {
+  display: flex;
+  gap: 16px;
+  font-size: 12px;
+  color: #555;
+}
+
+.legend li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.box {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #222;
+}
+
+.box-apply  { background-color: #2C3E6B; border-color: #2C3E6B; }
+.box-exam   { background-color: #111; }
+.box-result { background-color: #fff; }
+
+/* 달력 표 */
+.calendar-table {
+  width: 100%;
+  table-layout: fixed;        /* 7칸 너비를 똑같이 */
+  border-collapse: collapse;  /* 칸 사이 테두리를 한 줄로 */
+}
+
+.calendar-table th,
+.calendar-table td {
+  border: 1px solid #e5e5e5;
+  text-align: left;
+}
+
+.calendar-table th {
+  padding: 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.calendar-table td {
+  height: 150px;   /* 칸 세로 길이 (90px → 150px) */
+  padding: 10px 8px;
+  vertical-align: top;   /* 날짜를 칸 위쪽에 */
+}
+
+/* 지난달 빈칸 */
+.calendar-table td.empty {
+  background-color: #f7f7f7;
+}
+
+.day {
+  font-size: 12px;
+}
+
+/* 오늘 */
+.calendar-table td.today {
+  background-color: #f3f3f3;
+}
+
+.today .day {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 22px;
+  height: 22px;
+  color: #fff;
+  font-weight: 700;
+  background-color: #111;
+  border-radius: 50%;
+}
+
+.today-text {
+  margin-left: 4px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* 일정 막대 */
+.event {
+  display: block;
+  margin-top: 8px;
+  padding: 3px 6px;
+  font-size: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;   /* 글자가 길면 … 처리 */
+  border: 1px solid;
+  cursor: pointer;
+}
+
+.ev-apply {
+  color: #fff;
+  background-color: #2C3E6B;
+  border-color: #2C3E6B;
+}
+
+.ev-exam {
+  color: #fff;
+  background-color: #111;
+  border-color: #111;
+}
+
+.ev-result {
+  color: #222;
+  background-color: #fff;
+  border-color: #222;
+}
+
+.event:hover {
+  opacity: 0.8;
+}
+
+
+/* 하단 */
+.site-footer {
+  margin-top: 80px;
+  padding: 45px 40px 30px;
+  background-color: black;
+  color: white;
+}
+
+.footer-heading {
+  margin-bottom: 25px;
+}
+
+.site-footer .footer-logo {
+  font-family: "Outfit", sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: white;
+}
+
+.footer-heading p {
+  margin: 10px 0 0;
+  font-size: 16px;
+  color: #dddddd;
+}
+
+.footer-info p {
+  margin: 0 0 14px;
+  font-size: 13px;
+  line-height: 1.8;
+  color: #999999;
+}
+
+/* 안내문과 링크 목록 사이 구분선 */
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid #333333;
+}
+
+.footer-links a {
+  margin: 0 22px 12px 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-credit {
+  margin: 18px 0 0;
+  font-family: "Outfit", sans-serif;
+  font-size: 12px;
+  color: #777777;
+}
