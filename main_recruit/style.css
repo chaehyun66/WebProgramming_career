@@ -25,6 +25,8 @@
 
 /* 공통 설정 */
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -47,13 +49,22 @@ p {
 
 /* 상단: 로고와 계정 메뉴 */
 .site-header {
+    position: sticky;   /* 스크롤해도 화면 맨 위에 고정 */
+    top: 0;
+    z-index: 100;       /* 다른 요소보다 위에 보이게 */
     padding: 28px 40px 0;
+    background-color: #fff;
+    color: #111111;
+    font-family: "Google Sans", Arial, sans-serif;   /* index의 기본 글꼴 */
+    font-weight: normal;
+    line-height: normal;
 }
 
 .top-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 26px;
 }
 
 .logo {
@@ -105,6 +116,7 @@ p {
     font-weight: 500;
     padding-bottom: 1px;
     border-bottom: 4px solid transparent;
+    line-height: normal;
 }
 
 .main-menu a:hover {
@@ -127,12 +139,17 @@ p {
     border: none;
     font-family: "Google Sans", sans-serif;
     font-size: 18px;
+    font-weight: normal;
+    line-height: normal;
 }
 
 .search-box button {
     padding: 0 0 6px 8px;
     border: none;
     background-color: white;
+    font-size: 13.3333px;
+    font-weight: normal;
+    line-height: normal;
 }
 
 .search-box img {
@@ -328,21 +345,109 @@ h3 {
 
 
 /* 하단 */
-footer {
-    margin: 80px 40px 0;
-    padding: 30px 0;
-    border-top: 1px solid #dddddd;
+.site-footer {
+    margin-top: 80px;
+    padding: 45px 40px 30px;
+    background-color: black;
+    color: white;
 }
 
-footer strong {
+.footer-heading {
+    margin-bottom: 25px;
+}
+
+.site-footer .footer-logo {
     font-family: "Outfit", sans-serif;
+    font-size: 30px;
     font-weight: 500;
-    font-size: 20px;
     letter-spacing: 2px;
+    color: white;
 }
 
-footer p {
-    margin: 8px 0;
-    color: #777777;
+.footer-heading p {
+    margin: 10px 0 0;
+    font-size: 16px;
+    color: #dddddd;
+}
+
+.footer-info p {
+    margin: 0 0 14px;
+    font-size: 13px;
+    line-height: 1.8;
+    color: #999999;
+}
+
+/* 안내문과 링크 목록 사이 구분선 */
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid #333333;
+}
+
+.footer-links a {
+    margin: 0 22px 12px 0;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-credit {
+    margin: 18px 0 0;
+    font-family: "Outfit", sans-serif;
     font-size: 12px;
+    color: #777777;
+}
+
+
+/* 커뮤니티 하트와 좋아요 수 */
+.community-post .likes {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.community-heart {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.community-heart input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.community-heart svg {
+    display: block;
+    width: 28px;
+    height: 28px;
+    fill: none;
+    stroke: #111;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* 선택하면 빨간색으로 채우기 */
+.community-heart input:checked + svg {
+    fill: red;
+    stroke: red;
+}
+
+.community-heart input:focus-visible + svg {
+    outline: 2px solid #111;
+    outline-offset: 3px;
 }

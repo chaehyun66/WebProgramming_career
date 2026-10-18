@@ -24,6 +24,8 @@
 
 /* 공통 설정 */
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -45,13 +47,22 @@ p {
 
 /* 상단 */
 .site-header {
+    position: sticky;   /* 스크롤해도 화면 맨 위에 고정 */
+    top: 0;
+    z-index: 100;       /* 다른 요소보다 위에 보이게 */
     padding: 28px 40px 0;
+    background-color: #fff;
+    color: #111111;
+    font-family: "Google Sans", Arial, sans-serif;   /* index의 기본 글꼴 */
+    font-weight: normal;
+    line-height: normal;
 }
 
 .top-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 26px;
 }
 
 .logo {
@@ -80,11 +91,18 @@ p {
 }
 
 /* 상단 메뉴 */
+.navigation-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
 .main-menu {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    margin-top: 20px;
 }
 
 .main-menu a {
@@ -95,6 +113,7 @@ p {
     font-family: "Outfit", sans-serif;
     font-size: 48px;
     font-weight: 500;
+    line-height: normal;
 }
 
 .main-menu a:hover {
@@ -104,6 +123,42 @@ p {
 /* 현재 페이지의 메뉴는 밑줄 유지 */
 .main-menu .current-menu {
     border-bottom-color: black;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  width: 230px;
+  margin-bottom: 14px;
+  border-bottom: 4px solid black;
+}
+
+.search-box input {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  padding: 10px 5px;
+  border: none;
+  outline: none;
+  font-family: "Google Sans", sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: normal;
+}
+
+.search-box button {
+  padding: 0 0 6px 8px;
+  border: none;
+  background-color: white;
+  font-size: 13.3333px;
+  font-weight: normal;
+  line-height: normal;
+}
+
+.search-box img {
+  display: block;
+  width: 36px;
+  height: 36px;
 }
 
 /* 페이지 제목 */
@@ -118,15 +173,27 @@ p {
 }
 
 h1 {
-    margin: 0;
+    margin-bottom: 10px;
     font-family: "Outfit", sans-serif;
-    font-size: 36px;
+    font-size: 48px;
+    font-weight: 500;
+}
+
+.page-heading h1 {
+    margin: 0 0 10px;
+    font-family: "Outfit", sans-serif;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 1.2;
 }
 
 .page-heading p {
     margin: 10px 0 0;
+    font-family: "Google Sans", Arial, sans-serif;
     color: #777777;
     font-size: 14px;
+    font-weight: normal;
+    line-height: 1.6;
 }
 
 /* 왼쪽 필터와 오른쪽 목록을 나란히 배치 */
@@ -330,21 +397,139 @@ h1 {
     font-size: 25px;
 }
 
-/* 하단 */
-footer {
-    margin: 70px 40px 0;
-    padding: 30px 0;
-    border-top: 1px solid #dddddd;
+/* 페이지 번호 */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+    padding: 15px 0;
 }
 
-footer strong {
+.pagination a,
+.pagination span {
+    display: block;
+    margin: 0 12px;
     font-family: "Outfit", sans-serif;
     font-size: 24px;
-    letter-spacing: 2px;
+    color: #c5c5c5;
 }
 
-footer p {
-    margin: 8px 0;
-    color: #777777;
+.pagination .current-page {
+    color: black;
+    font-weight: bold;
+}
+
+.pagination .page-prev {
+    margin-right: 22px;
+}
+
+.pagination .page-next {
+    margin-left: 22px;
+}
+
+.pagination a:hover {
+    color: black;
+}
+
+
+/* 하단 */
+.site-footer {
+    margin-top: 80px;
+    padding: 45px 40px 30px;
+    background-color: black;
+    color: white;
+}
+
+.footer-heading {
+    margin-bottom: 25px;
+}
+
+.site-footer .footer-logo {
+    font-family: "Outfit", sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: white;
+}
+
+.footer-heading p {
+    margin: 10px 0 0;
+    font-size: 16px;
+    color: #dddddd;
+}
+
+.footer-info p {
+    margin: 0 0 14px;
+    font-size: 13px;
+    line-height: 1.8;
+    color: #999999;
+}
+
+/* 안내문과 링크 목록 사이 구분선 */
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid #333333;
+}
+
+.footer-links a {
+    margin: 0 22px 12px 0;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-credit {
+    margin: 18px 0 0;
+    font-family: "Outfit", sans-serif;
     font-size: 12px;
+    color: #777777;
+}
+
+/* 채용 공고 관심 하트 */
+.recruit-heart {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.recruit-heart input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.recruit-heart svg {
+    display: block;
+    width: 28px;
+    height: 28px;
+    fill: none;
+    stroke: #111;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* 클릭하면 같은 도형을 빨간색으로 채움 */
+.recruit-heart input:checked + svg {
+    fill: red;
+    stroke: red;
+}
+
+.recruit-heart input:focus-visible + svg {
+    outline: 2px solid #111;
+    outline-offset: 3px;
 }
