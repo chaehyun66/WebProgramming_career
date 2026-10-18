@@ -24,6 +24,8 @@
 
 /* 공통 설정 */
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -45,13 +47,22 @@ p {
 
 /* 상단 */
 .site-header {
+    position: sticky;   /* 스크롤해도 화면 맨 위에 고정 */
+    top: 0;
+    z-index: 100;       /* 다른 요소보다 위에 보이게 */
     padding: 28px 40px 0;
+    background-color: #fff;
+    color: #111111;
+    font-family: "Google Sans", Arial, sans-serif;   /* index의 기본 글꼴 */
+    font-weight: normal;
+    line-height: normal;
 }
 
 .top-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 26px;
 }
 
 .logo {
@@ -80,11 +91,18 @@ p {
 }
 
 /* 상단 메뉴 */
+.navigation-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
 .main-menu {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    margin-top: 20px;
 }
 
 .main-menu a {
@@ -95,6 +113,7 @@ p {
     font-family: "Outfit", sans-serif;
     font-size: 48px;
     font-weight: 500;
+    line-height: normal;
 }
 
 .main-menu a:hover {
@@ -104,6 +123,42 @@ p {
 /* 현재 페이지의 메뉴는 밑줄 유지 */
 .main-menu .current-menu {
     border-bottom-color: black;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  width: 230px;
+  margin-bottom: 14px;
+  border-bottom: 4px solid black;
+}
+
+.search-box input {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  padding: 10px 5px;
+  border: none;
+  outline: none;
+  font-family: "Google Sans", sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: normal;
+}
+
+.search-box button {
+  padding: 0 0 6px 8px;
+  border: none;
+  background-color: white;
+  font-size: 13.3333px;
+  font-weight: normal;
+  line-height: normal;
+}
+
+.search-box img {
+  display: block;
+  width: 36px;
+  height: 36px;
 }
 
 /* 페이지 제목 */
@@ -118,9 +173,10 @@ p {
 }
 
 h1 {
-    margin: 0;
+    margin-bottom: 10px;
     font-family: "Outfit", sans-serif;
-    font-size: 36px;
+    font-size: 48px;
+    font-weight: 500;
 }
 
 .page-heading p {
@@ -331,46 +387,94 @@ h1 {
 }
 
 /* 하단 */
-footer {
-    margin: 70px 40px 0;
-    padding: 30px 0;
-    border-top: 1px solid #dddddd;
+.site-footer {
+    margin-top: 80px;
+    padding: 45px 40px 30px;
+    background-color: black;
+    color: white;
 }
 
-footer strong {
+.footer-heading {
+    margin-bottom: 25px;
+}
+
+.site-footer .footer-logo {
     font-family: "Outfit", sans-serif;
-    font-size: 24px;
+    font-size: 30px;
+    font-weight: 500;
     letter-spacing: 2px;
+    color: white;
 }
 
-footer p {
-    margin: 8px 0;
-    color: #777777;
-    font-size: 12px;
+.footer-heading p {
+    margin: 10px 0 0;
+    font-size: 16px;
+    color: #dddddd;
 }
+
+.footer-info p {
+    margin: 0 0 14px;
+    font-size: 13px;
+    line-height: 1.8;
+    color: #999999;
+}
+
+/* 안내문과 링크 목록 사이 구분선 */
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid #333333;
+}
+
+.footer-links a {
+    margin: 0 22px 12px 0;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-credit {
+    margin: 18px 0 0;
+    font-family: "Outfit", sans-serif;
+    font-size: 12px;
+    color: #777777;
+}
+
 
 
 /* ===== 공모전 페이지 ===== */
 
 .contest-page {
-    padding: 60px 40px 100px;
+    padding: 0 40px;
 }
 
 .contest-page .page-heading {
-    margin: 0 0 44px;
-    padding-bottom: 32px;
+    margin: 55px 0 40px;
+    padding-bottom: 22px;
     border-bottom: 4px solid #111;
 }
 
 .contest-page .page-heading h1 {
-    margin: 0 0 12px;
+    margin: 0 0 10px;
+    font-family: "Outfit", sans-serif;
     font-size: 48px;
+    font-weight: 500;
+    line-height: 1.2;
 }
 
 .contest-page .page-heading p {
-    margin: 0;
+    margin: 10px 0 0;
+    font-family: "Google Sans", Arial, sans-serif;
     color: #777;
-    font-size: 16px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.6;
 }
 
 /* 왼쪽 메뉴와 오른쪽 목록 */
@@ -592,4 +696,47 @@ footer p {
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+
+
+/* 체크박스 숨기기 */
+.heart-check {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+/* 하트 영역 크기 고정 */
+.heart-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+/* 동일한 도형의 테두리와 채우기 */
+.heart-toggle svg {
+    display: block;
+    width: 28px;
+    height: 28px;
+    fill: none;
+    stroke: #111;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* 선택하면 색만 변경 */
+.heart-check:checked + .heart-toggle svg {
+    fill: red;
+    stroke: red;
+}
+
+.heart-check:focus-visible + .heart-toggle {
+    outline: 2px solid #111;
+    outline-offset: 3px;
 }

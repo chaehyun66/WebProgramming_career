@@ -16,7 +16,7 @@
             <a class="logo" href="index.html">29SM</a>
 
             <div class="account-menu">
-                <a href="#">
+                <a href="MyPage.html">
                     <img src="images/profile.svg" alt="">
                     마이페이지
                 </a>
@@ -28,12 +28,29 @@
             </div>
         </div>
 
-        <nav class="main-menu">
-            <a href="#">Contest</a>
-            <a href="#">ECA</a>
-            <a class="current-menu" href="recruit.html">Recruit</a>
-            <a href="#">Qualification</a>
-        </nav>
+        <!-- 연결 메뉴와 검색창 -->
+        <div class="navigation-row">
+            <!-- 페이지 완성 후 #을 해당 HTML의 상대경로로 변경 -->
+            <nav class="main-menu">
+                <a href="contest.html">Contest</a>
+                <a href="activity.html">ECA</a>
+                <a class="current-menu" href="recruit.html">Recruit</a>
+                <a href="Qualifications.html">Qualification</a>
+            </nav>
+
+            <!-- 안내 문구 없는 검색창 -->
+            <div class="search-box">
+                <input
+                    id="search"
+                    type="text"
+                    title="검색어 입력"
+                >
+
+                <button type="button" title="검색">
+                    <img src="images/search.svg" alt="검색">
+                </button>
+            </div>
+        </div>
     </header>
 
     <main class="recruit-page">
@@ -297,14 +314,21 @@
                                 </td>
 
                                 <td class="notice-cell">
-                                    <a href="#">[테슬라코리아]2026 대규모 공개채용</a>
+                                    <a href="RecruitPage.html">[테슬라코리아]2026 대규모 공개채용</a>
                                     <p>IT/개발</p>
                                 </td>
 
                                 <td>경력직</td>
                                 <td>서울</td>
                                 <td>~ 10.18</td>
-                                <td class="heart">♡</td>
+                                <td class="heart">
+    <label class="recruit-heart">
+        <input type="checkbox" aria-label="이 채용 공고 관심 등록">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z"/>
+        </svg>
+    </label>
+</td>
                             </tr>
 
                             <!-- 공고 2 -->
@@ -325,7 +349,14 @@
                                 <td>신입</td>
                                 <td>경기</td>
                                 <td>~ 10.21</td>
-                                <td class="heart">♡</td>
+                                <td class="heart">
+    <label class="recruit-heart">
+        <input type="checkbox" aria-label="이 채용 공고 관심 등록">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z"/>
+        </svg>
+    </label>
+</td>
                             </tr>
 
                             <!-- 공고 3 -->
@@ -346,7 +377,14 @@
                                 <td>경력직</td>
                                 <td>서울,경기</td>
                                 <td>~ 10.23</td>
-                                <td class="heart">♡</td>
+                                <td class="heart">
+    <label class="recruit-heart">
+        <input type="checkbox" aria-label="이 채용 공고 관심 등록">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z"/>
+        </svg>
+    </label>
+</td>
                             </tr>
 
                             <!-- 공고 4 -->
@@ -367,7 +405,14 @@
                                 <td>신입,계약직</td>
                                 <td>서울</td>
                                 <td>~ 10.28</td>
-                                <td class="heart">♡</td>
+                                <td class="heart">
+    <label class="recruit-heart">
+        <input type="checkbox" aria-label="이 채용 공고 관심 등록">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z"/>
+        </svg>
+    </label>
+</td>
                             </tr>
 
                             <!-- 공고 5 -->
@@ -388,7 +433,14 @@
                                 <td>경력직</td>
                                 <td>경기</td>
                                 <td>~ 11.01</td>
-                                <td class=heart>♡</td>
+                                <td class="heart">
+    <label class="recruit-heart">
+        <input type="checkbox" aria-label="이 채용 공고 관심 등록">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z"/>
+        </svg>
+    </label>
+</td>
                             </tr>
 
                             <!-- 공고 6 -->
@@ -409,7 +461,14 @@
                                 <td>신입</td>
                                 <td>서울</td>
                                 <td>~ 11.07</td>
-                                <td class="heart">♡</td>
+                                <td class="heart">
+    <label class="recruit-heart">
+        <input type="checkbox" aria-label="이 채용 공고 관심 등록">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z"/>
+        </svg>
+    </label>
+</td>
                             </tr>
 
                             <!-- 공고 7 -->
@@ -430,7 +489,14 @@
                                 <td>인턴</td>
                                 <td>서울</td>
                                 <td>~ 11.10</td>
-                                <td class="heart">♡</td>
+                                <td class="heart">
+    <label class="recruit-heart">
+        <input type="checkbox" aria-label="이 채용 공고 관심 등록">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z"/>
+        </svg>
+    </label>
+</td>
                             </tr>
 
                             <!-- 공고 8 -->
@@ -451,7 +517,14 @@
                                 <td>계약직</td>
                                 <td>서울</td>
                                 <td>~11.13</td>
-                                <td class="heart">♡</td>
+                                <td class="heart">
+    <label class="recruit-heart">
+        <input type="checkbox" aria-label="이 채용 공고 관심 등록">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z"/>
+        </svg>
+    </label>
+</td>
                             </tr>
 
                             <!-- 공고 9 -->
@@ -472,7 +545,14 @@
                                 <td>계약직</td>
                                 <td>경기</td>
                                 <td>~ 11.18</td>
-                                <td class="heart">♡</td>
+                                <td class="heart">
+    <label class="recruit-heart">
+        <input type="checkbox" aria-label="이 채용 공고 관심 등록">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z"/>
+        </svg>
+    </label>
+</td>
                             </tr>
 
                             <!-- 공고 10 -->
@@ -493,7 +573,14 @@
                                 <td>인턴</td>
                                 <td>서울</td>
                                 <td>~ 11.22</td>
-                                <td class="heart">♡</td>
+                                <td class="heart">
+    <label class="recruit-heart">
+        <input type="checkbox" aria-label="이 채용 공고 관심 등록">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z"/>
+        </svg>
+    </label>
+</td>
                             </tr>
 
                             <!-- 공고 11 -->
@@ -514,19 +601,72 @@
                                 <td>신입, 경력직</td>
                                 <td>서울</td>
                                 <td>~ 11.28</td>
-                                <td class="heart">♡</td>
+                                <td class="heart">
+    <label class="recruit-heart">
+        <input type="checkbox" aria-label="이 채용 공고 관심 등록">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z"/>
+        </svg>
+    </label>
+</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
+
+                <!-- 페이지 번호 -->
+                <nav class="pagination">
+                    <a class="page-prev" href="#" title="이전 페이지">
+                        &lt;
+                    </a>
+
+                    <a class="current-page" href="#">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+
+                    <a class="page-next" href="#" title="다음 페이지">
+                        &gt;
+                    </a>
+                </nav>
             </section>
         </div>
     </main>
 
-    <footer>
-        <strong>29SM</strong>
-        <p>웹프로그래밍 팀 프로젝트</p>
-        <p>채용 정보는 화면 구성을 위한 예시입니다.</p>
+    <footer class="site-footer">
+        <div class="footer-heading">
+            <a class="footer-logo" href="index.html">29SM</a>
+            <p>29살까지 취업하고자 하는 대학생들의 다음 기회를 모으다.</p>
+        </div>
+
+        <div class="footer-info">
+            <p>
+                29SM은 대학생들을 위한 공모전, 대외활동,
+                채용 및 자격증 정보를 소개하는 웹사이트입니다.
+            </p>
+
+            <p>
+                본 웹사이트는 정보를 제공함과 동시에
+                학생들의 공모전, 대외활동, 채용공고, 자격증 관련
+                일정을 관리하고 다양한 활동을 비교할 수 있는 서비스를 제공합니다. 
+            </p>
+
+            <p>
+                제작: 황채현 · 이다은 · 신유진
+            </p>
+        </div>
+
+        <nav class="footer-links">
+            <a href="#">서비스 소개</a>
+            <a href="#">이용약관</a>
+            <a href="#">개인정보처리방침</a>
+            <a href="#">문의하기</a>
+        </nav>
+
+        <p class="footer-credit">
+            29SM · Web Programming Team Project
+        </p>
     </footer>
 </body>
 </html>
