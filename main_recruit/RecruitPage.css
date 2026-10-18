@@ -1,0 +1,602 @@
+@font-face {
+  font-family: "Outfit";
+  src: url("fonts/Outfit-Light.ttf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("fonts/Outfit-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("fonts/Outfit-Medium.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("fonts/Outfit-SemiBold.ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("fonts/Outfit-Bold.ttf");
+  font-weight: 700 900;   /* 800처럼 더 두꺼운 굵기도 Bold 파일로 표시 */
+}
+
+@font-face {
+  font-family: "Google Sans";
+  src: url("fonts/GoogleSans-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Google Sans";
+  src: url("fonts/GoogleSans-Medium.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Google Sans";
+  src: url("fonts/GoogleSans-SemiBold.ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Google Sans";
+  src: url("fonts/GoogleSans-Bold.ttf");
+  font-weight: 700 900;
+}
+
+/* ===== 기본 초기화 ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* 영어·숫자는 Outfit, Outfit에 없는 한글은 뒤의 폰트로 표시 */
+  font-family: "Outfit", "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  color: #222;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+/* 버튼, 입력칸은 body 폰트를 자동으로 안 따라가서 따로 지정 */
+button,
+input {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* 가운데 정렬용 공통 영역 */
+
+.inner {
+  width: 1400px;
+  padding: 0 0 0 40px;
+}
+
+/* ===== 헤더 (index.html의 style.css와 같은 값) ===== */
+
+/* 상단: 로고와 계정 메뉴 */
+.site-header {
+  position: sticky;   /* 스크롤해도 화면 맨 위에 고정 */
+  top: 0;
+  z-index: 100;       /* 다른 요소보다 위에 보이게 */
+  padding: 28px 40px 0;
+  background-color: #fff;
+  color: #111111;
+  font-family: "Google Sans", Arial, sans-serif;   /* index의 기본 글꼴 */
+}
+
+.top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: "Outfit", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.account-menu {
+  display: flex;
+  align-items: center;
+}
+
+.account-menu a {
+  display: flex;
+  align-items: center;
+  margin-left: 25px;
+  font-size: 13px;
+}
+
+.account-menu img {
+  width: 21px;
+  height: 21px;
+  margin-right: 6px;
+}
+
+/* 연결 메뉴와 검색창 */
+.navigation-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.main-menu {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.main-menu a {
+  margin-right: 26px;
+  margin-bottom: 14px;
+  font-family: "Outfit", sans-serif;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: normal;   /* index와 같은 줄 높이 */
+  padding-bottom: 1px;
+  border-bottom: 4px solid transparent;
+}
+
+.main-menu a:hover {
+  border-bottom-color: black;
+}
+
+/* 현재 페이지의 메뉴는 밑줄 유지 */
+.main-menu .current-menu {
+    border-bottom-color: black;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  width: 230px;
+  margin-bottom: 14px;
+  border-bottom: 4px solid black;
+}
+
+.search-box input {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  padding: 10px 5px;
+  border: none;
+  outline: none;
+  font-family: "Google Sans", sans-serif;
+  font-size: 18px;
+}
+
+.search-box button {
+  padding: 0 0 6px 8px;
+  border: none;
+  background-color: white;
+}
+
+.search-box img {
+  display: block;
+  width: 36px;
+  height: 36px;
+}
+
+
+/* ===== 본문: 공고 상세 ===== */
+.detail {
+  padding: 0 40px;   /* 양쪽 40px (MyPage, Qualifications와 같게) */
+}
+
+/* ===== 페이지 제목 (Qualifications와 같은 값) ===== */
+.page-head {
+  margin: 50px 0 30px;
+  padding-bottom: 30px;
+  border-bottom: 2px solid #222;
+}
+
+.page-head h2 {
+  font-size: 48px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.page-head p {
+  font-size: 14px;
+  color: #777;
+}
+
+/* 위치 안내 (대외활동 › 서포터즈) */
+.breadcrumb {
+  margin-bottom: 22px;
+  font-size: 12px;
+  color: #888;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb .arrow {
+  margin: 0 6px;
+}
+
+.breadcrumb .current {
+  color: #222;
+}
+
+/* ----- 포스터 + 요약 정보 ----- */
+.detail-top {
+  display: flex;
+  gap: 44px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.poster-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 255px;
+  height: 318px;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;   /* 흰 로고 이미지가 배경에 묻히지 않게 */
+}
+
+/* 기업 로고: 비율을 유지한 채 칸 안에 맞추기 */
+.poster-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.detail-summary {
+  flex: 1;
+}
+
+.company {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.dday {
+  padding: 4px 7px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #2f45f0;
+}
+
+.detail-title {
+  padding-bottom: 24px;
+  margin-bottom: 18px;
+  font-size: 26px;
+  font-weight: 700;
+  border-bottom: 1px solid #222;
+}
+
+/* 접수기간 / 활동기간 ... 2칸씩 */
+.info-grid {
+  display: grid;
+  grid-template-columns: 80px 1fr 80px 1fr;   /* 제목 | 내용 | 제목 | 내용 */
+  row-gap: 14px;
+  font-size: 13px;
+}
+
+.info-grid dt {
+  color: #888;
+}
+
+.info-grid dd {
+  color: #222;
+}
+
+/* 추천 목적 태그 */
+.purpose {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 22px;
+  font-size: 12px;
+}
+
+.purpose-label {
+  margin-right: 6px;
+  color: #888;
+}
+
+.purpose-tag {
+  padding: 5px 9px;
+  border: 1px solid #222;
+}
+
+/* 하트 + 지원하기 버튼 */
+.detail-buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: 22px;
+}
+
+.btn-like {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 51px;
+  height: 51px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+
+.btn-like:hover {
+  border-color: #222;
+}
+
+.btn-like input {
+  display: none;   /* 체크박스는 숨기고 하트만 보이게 */
+}
+
+/* 기본: 빈 하트 */
+.btn-like span::before {
+  content: "♡";
+  font-size: 18px;
+  color: #222;
+}
+
+/* 누르면(체크되면): 빨간 꽉 찬 하트 */
+.btn-like input:checked + span::before {
+  content: "♥";
+  color: #d93025;
+}
+
+.btn-apply {
+  width: 327px;
+  height: 51px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #111;
+  border: none;
+  transition: all 0.15s;
+}
+
+.btn-apply:hover {
+  background-color: #333;
+}
+
+.btn-apply:active {
+  transform: scale(0.98);
+}
+
+/* ----- 상세 내용 (모집 개요, 활동 내용 ...) ----- */
+.detail-row {
+  display: flex;
+  padding: 40px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 13px;
+}
+
+.detail-row dt {
+  flex-shrink: 0;
+  width: 190px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.detail-row dd {
+  color: #444;
+  line-height: 1.6;
+}
+
+/* 점 목록 */
+.dot-list li {
+  position: relative;
+  padding-left: 16px;
+  margin-bottom: 8px;
+}
+
+.dot-list li:last-child {
+  margin-bottom: 0;
+}
+
+.dot-list li::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 2px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #222;
+}
+
+.step-arrow {
+  margin: 0 4px;
+  color: #aaa;
+}
+
+/* ----- 아래쪽 추천 영역 공통 ----- */
+.related {
+  margin-top: 80px;
+}
+
+.related-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.related-top h3 {
+  font-size: 28px;   /* 섹션 제목 (다른 페이지와 같게) */
+  font-weight: 700;
+}
+
+.related-more {
+  font-size: 12px;
+  color: #555;
+}
+
+.related-more:hover {
+  text-decoration: underline;
+}
+
+/* 함께 준비하면 좋은 자격증 */
+/* 넓어진 본문에 맞춰 카드 3개가 같은 너비로 꽉 차게 */
+.license-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.license-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 20px;
+  border: 1px solid #e5e5e5;
+  transition: border-color 0.15s;
+}
+
+.license-card:hover {
+  border-color: #222;
+}
+
+.license-name {
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.license-desc {
+  font-size: 11px;
+  color: #888;
+}
+
+.license-date {
+  font-size: 11px;
+  color: #888;
+}
+
+/* 비슷한 활동 */
+/* 카드 4개가 같은 너비로 꽉 차게 (Qualifications 일정 카드와 같은 방식) */
+.similar-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* 기업 로고 칸 (위쪽 테슬라 로고 칸과 같은 스타일) */
+.similar-thumb {
+  height: 240px;
+  margin-bottom: 10px;
+  padding: 30px;                /* 로고가 테두리에 붙지 않게 여백 */
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  transition: border-color 0.15s;
+}
+
+.similar-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;          /* 로고 비율 유지 */
+}
+
+.similar-card:hover .similar-thumb {
+  border-color: #222;
+}
+
+.similar-meta {
+  margin-bottom: 6px;
+  font-size: 11px;
+  color: #888;
+}
+
+.similar-name {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* 하단 */
+.site-footer {
+  margin-top: 80px;
+  padding: 45px 40px 30px;
+  background-color: black;
+  color: white;
+}
+
+.footer-heading {
+  margin-bottom: 25px;
+}
+
+.site-footer .footer-logo {
+  font-family: "Outfit", sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: white;
+}
+
+.footer-heading p {
+  margin: 10px 0 0;
+  font-size: 16px;
+  color: #dddddd;
+}
+
+.footer-info p {
+  margin: 0 0 14px;
+  font-size: 13px;
+  line-height: 1.8;
+  color: #999999;
+}
+
+/* 안내문과 링크 목록 사이 구분선 */
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid #333333;
+}
+
+.footer-links a {
+  margin: 0 22px 12px 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-credit {
+  margin: 18px 0 0;
+  font-family: "Outfit", sans-serif;
+  font-size: 12px;
+  color: #777777;
+}
