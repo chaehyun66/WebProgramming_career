@@ -311,11 +311,27 @@ input[type="checkbox"] {
   width: 100px;
   height: 100px;
   flex-shrink: 0;
+  object-fit: cover;          /* 포스터가 찌그러지지 않게 칸을 꽉 채우기 */
+  object-position: top;       /* 포스터 윗부분(제목 쪽)이 보이게 */
 }
 
-.thumb1 { background-color: #E9E3D8; }   /* 베이지 */
-.thumb2 { background-color: #C9D3C0; }   /* 세이지 그린 */
-.thumb3 { background-color: #1C1C1C; }   /* 블랙 */
+/* 가로로 긴 로고(현대자동차): 왼쪽 H 마크만 보이게 잘라서 크게 */
+.thumb.logo-mark {
+  padding: 0 15px;               /* 좌우를 좁혀서 마크 부분만 남기기 */
+  object-fit: cover;             /* 세로를 칸에 꽉 맞춤 */
+  object-position: -9px center;  /* 로고 왼쪽 여백을 살짝 밀어내기 */
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+}
+
+/* 기업 로고: 잘리지 않게 칸 안에 맞추고 흰 배경 + 테두리 */
+.thumb.logo,
+.applied-thumb.logo {
+  object-fit: contain;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+}
 
 .info {
   flex: 1;
@@ -459,12 +475,14 @@ input[type="checkbox"] {
   width: 80px;
   height: 80px;
   flex-shrink: 0;
+  object-fit: cover;
+  object-position: top;
 }
 
-.applied-thumb.purple { background-color: #DCD8EC; }   /* 라벤더 */
-.applied-thumb.blue   { background-color: #D7DEE8; }   /* 블루그레이 */
-.applied-thumb.beige  { background-color: #F1D9C7; }   /* 피치 */
-.applied-thumb.gray   { background-color: #E9E3D8; }   /* 베이지 */
+/* 불합격 공고는 포스터도 흐리게 */
+.applied-item.fail .applied-thumb {
+  opacity: 0.5;
+}
 
 .applied-info {
   flex: 1;
