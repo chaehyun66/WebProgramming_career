@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="황채현, 이다은, 신유진">
+
+    <title>29SM | RecruitPage</title>
+
+    <link rel="stylesheet" href="RecruitPage.css">
+</head>
+<body>
+
+    <!-- 상단: 로고, 마이페이지, 알림 -->
+  <header class="site-header">
+    <div class="top-row">
+      <a class="logo" href="index.html">29SM</a>
+
+      <div class="account-menu">
+        <a href="MyPage.html">
+          <img src="images/profile.svg" alt="">
+          마이페이지
+        </a>
+
+        <a href="#">
+          <img src="images/bell.svg" alt="">
+          알림
+        </a>
+      </div>
+    </div>
+
+    <!-- 연결 메뉴와 검색창 -->
+    <div class="navigation-row">
+      <!-- 페이지 완성 후 #을 해당 HTML의 상대경로로 변경 -->
+      <nav class="main-menu">
+        <a href="contest.html">Contest</a>
+        <a href="activity.html">ECA</a>
+        <a class="current-menu" href="recruit.html">Recruit</a>
+        <a href="Qualifications.html">Qualification</a>
+      </nav>
+
+      <!-- 안내 문구 없는 검색창 -->
+      <div class="search-box">
+        <input
+          id="search"
+          type="text"
+          title="검색어 입력"
+        >
+
+        <button type="button" title="검색">
+            <img src="images/search.svg" alt="검색">
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="detail">
+
+    <!-- 페이지 제목 (MyPage, Qualifications와 같은 모양) -->
+    <div class="page-head">
+      <h2>Recruit</h2>
+      <p>관심 있는 채용공고의 상세 정보를 확인하세요.</p>
+    </div>
+
+    <!-- 위치 안내 -->
+    <p class="breadcrumb">
+      <a href="recruit.html">채용공고</a>
+      <span class="arrow">›</span>
+      <span class="current">IT/개발</span>
+    </p>
+
+    <!-- ===== 기업 로고 + 요약 정보 ===== -->
+    <section class="detail-top">
+      <div class="poster-box">
+        <img src="images/tesla_logo.jpeg" alt="테슬라코리아 로고">
+      </div>
+
+      <div class="detail-summary">
+        <p class="company">
+          <span class="dday">D-13</span>
+          테슬라코리아
+        </p>
+        <h2 class="detail-title">[테슬라코리아] 2026 대규모 공개채용</h2>
+
+        <!-- 2칸씩 나란히 보이는 정보 -->
+        <dl class="info-grid">
+          <dt>접수기간</dt>
+          <dd>10.15 ~ 10.31</dd>
+          <dt>채용형태</dt>
+          <dd>경력직</dd>
+
+          <dt>모집직무</dt>
+          <dd>IT/개발</dd>
+          <dt>모집부문</dt>
+          <dd>경력 1~3년</dd>
+
+          <dt>근무지역</dt>
+          <dd>서울 강남구</dd>
+          <dt>기업형태</dt>
+          <dd>외국계기업</dd>
+        </dl>
+
+        <div class="purpose">
+          <span class="purpose-label">키워드</span>
+          <span class="purpose-tag">외국계</span>
+          <span class="purpose-tag">경력직</span>
+          <span class="purpose-tag">IT/개발</span>
+        </div>
+
+        <div class="detail-buttons">
+          <!-- 체크박스라서 JS 없이 누르면 하트가 채워짐 -->
+          <label class="btn-like" title="관심 공고">
+            <input type="checkbox">
+            <span></span>
+          </label>
+          <button type="button" class="btn-apply">지원하기</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 상세 내용 ===== -->
+    <dl class="detail-rows">
+      <div class="detail-row">
+        <dt>모집 기간</dt>
+        <dd>2026.10.15 ~ 2026.10.31</dd>
+      </div>
+
+      <div class="detail-row">
+        <dt>모집 부문</dt>
+        <dd>IT/개발 · 경력 1~3년</dd>
+      </div>
+
+      <div class="detail-row">
+        <dt>전형 절차</dt>
+        <dd>
+          서류전형 <span class="step-arrow">→</span>
+          면접전형 <span class="step-arrow">→</span>
+          평판조회 <span class="step-arrow">→</span>
+          최종합격
+        </dd>
+      </div>
+
+      <div class="detail-row">
+        <dt>기업 정보</dt>
+        <dd>
+          <ul class="dot-list">
+            <li>기업명 : 테슬라코리아</li>
+            <li>기업형태 : 외국계기업</li>
+            <li>설립일자 : 2015.11.30</li>
+            <li>상세업종 : 도매 및 소매업</li>
+          </ul>
+        </dd>
+      </div>
+
+      <div class="detail-row">
+        <dt>지원 방법</dt>
+        <dd>홈페이지 지원 · 지원서 양식 없음</dd>
+      </div>
+    </dl>
+
+    <!-- ===== 함께 준비하면 좋은 자격증 ===== -->
+    <section class="related">
+      <div class="related-top">
+        <h3>함께 준비하면 좋은 자격증</h3>
+        <a href="Qualifications.html" class="related-more">시험 일정 보기 ›</a>
+      </div>
+
+      <div class="license-list">
+        <a href="Qualifications.html" class="license-card">
+          <div>
+            <p class="license-name">정보처리기사</p>
+            <p class="license-desc">개발 직무 기본 자격</p>
+          </div>
+          <span class="license-date">[MM.DD]</span>
+        </a>
+
+        <a href="Qualifications.html" class="license-card">
+          <div>
+            <p class="license-name">SQLD</p>
+            <p class="license-desc">데이터베이스 활용</p>
+          </div>
+          <span class="license-date">[MM.DD]</span>
+        </a>
+
+        <a href="Qualifications.html" class="license-card">
+          <div>
+            <p class="license-name">OPIc</p>
+            <p class="license-desc">외국계 영어 역량</p>
+          </div>
+          <span class="license-date">[MM.DD]</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== 비슷한 채용공고 ===== -->
+    <section class="related">
+      <div class="related-top">
+        <h3>비슷한 채용공고</h3>
+      </div>
+
+      <!-- recruit.html에 있는 공고 중 IT/개발·경력직 공고 4개 -->
+      <div class="similar-list">
+        <a href="recruit.html" class="similar-card">
+          <div class="similar-thumb">
+            <img src="images/sk_logo.png" alt="SK텔레콤 로고">
+          </div>
+          <p class="similar-meta">SK텔레콤 · 계약직 · ~ 11.13</p>
+          <p class="similar-name">[SK텔레콤] 에이닷 음악 추천 서비스 운영 담당자</p>
+        </a>
+
+        <a href="recruit.html" class="similar-card">
+          <div class="similar-thumb">
+            <img src="images/lg_logo.jpeg" alt="LG경영개발원 로고">
+          </div>
+          <p class="similar-meta">LG경영개발원 · 인턴 · ~ 11.22</p>
+          <p class="similar-name">[LG경영개발원] Backend Engineer Internship</p>
+        </a>
+
+        <a href="recruit.html" class="similar-card">
+          <div class="similar-thumb">
+            <img src="images/hyundai_logo.jpeg" alt="현대자동차 로고">
+          </div>
+          <p class="similar-meta">현대자동차 · 경력직 · ~ 10.23</p>
+          <p class="similar-name">[현대자동차] 2026년 10월 월간 경력 채용</p>
+        </a>
+
+        <a href="recruit.html" class="similar-card">
+          <div class="similar-thumb">
+            <img src="images/sk_logo.png" alt="SK오션플랜트 로고">
+          </div>
+          <p class="similar-meta">SK오션플랜트 · 경력직 · ~ 11.01</p>
+          <p class="similar-name">[SK오션플랜트] 경영기획 구성원 모집</p>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-heading">
+      <a class="footer-logo" href="index.html">29SM</a>
+      <p>29살까지 취업하고자 하는 대학생들의 다음 기회를 모으다.</p>
+    </div>
+
+    <div class="footer-info">
+      <p>
+        29SM은 대학생들을 위한 공모전, 대외활동,
+        채용 및 자격증 정보를 소개하는 웹사이트입니다.
+      </p>
+
+      <p>
+        본 웹사이트는 정보를 제공함과 동시에
+        학생들의 공모전, 대외활동, 채용공고, 자격증 관련
+        일정을 관리하고 다양한 활동을 비교할 수 있는 서비스를 제공합니다. 
+      </p>
+
+      <p>
+          제작: 황채현 · 이다은 · 신유진
+      </p>
+    </div>
+
+    <nav class="footer-links">
+      <a href="#">서비스 소개</a>
+      <a href="#">이용약관</a>
+      <a href="#">개인정보처리방침</a>
+      <a href="#">문의하기</a>
+    </nav>
+
+    <p class="footer-credit">
+      29SM · Web Programming Team Project
+    </p>
+  </footer>
+</body>
+</html>

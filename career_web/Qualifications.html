@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="황채현, 이다은, 신유진">
+
+    <title>29SM | Qualification</title>
+
+    <link rel="stylesheet" href="Qualifications.css">
+</head>
+
+<body>
+
+  <!-- 상단: 로고, 마이페이지, 알림 -->
+  <header class="site-header">
+    <div class="top-row">
+      <a class="logo" href="index.html">29SM</a>
+
+      <div class="account-menu">
+        <a href="MyPage.html">
+          <img src="images/profile.svg" alt="">
+          마이페이지
+        </a>
+
+        <a href="#">
+          <img src="images/bell.svg" alt="">
+          알림
+        </a>
+      </div>
+    </div>
+
+    <!-- 연결 메뉴와 검색창 -->
+    <div class="navigation-row">
+      <!-- 페이지 완성 후 #을 해당 HTML의 상대경로로 변경 -->
+      <nav class="main-menu">
+        <a href="contest.html">Contest</a>
+        <a href="activity.html">ECA</a>
+        <a href="recruit.html">Recruit</a>
+        <a class="current-menu" href="Qualifications.html">Qualification</a>
+      </nav>
+
+      <!-- 안내 문구 없는 검색창 -->
+      <div class="search-box">
+        <input
+          id="search"
+          type="text"
+          title="검색어 입력"
+        >
+
+        <button type="button" title="검색">
+            <img src="images/search.svg" alt="검색">
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="inner content">
+
+    <!-- 페이지 제목 -->
+    <div class="page-head">
+      <h2>Qualification</h2>
+      <p>놓치기 쉬운 접수 일정을 한눈에 확인하세요.</p>
+    </div>
+
+    <!-- ===== 시험 일정 안내 ===== -->
+    <section class="schedule">
+      <div class="section-top">
+        <h3 class="section-title">시험 일정 안내</h3>
+        <a href="#" class="more">전체 일정 보기 +</a>
+      </div>
+
+      <div class="schedule-list">
+
+        <!-- 일정 1 -->
+        <article class="schedule-card">
+          <div class="tags">
+            <span class="tag">정기접수</span>
+            <span class="tag tag-blue">접수중</span>
+          </div>
+          <p class="exam-name">[시험명]</p>
+          <p class="exam-date">2026.10.31<span class="sat">(토)</span></p>
+          <ul class="exam-info">
+            <li>접수마감 : 2026.10.19 (월) 10:00</li>
+            <li>성적발표 : 2026.11.10 (화) 12:00</li>
+          </ul>
+        </article>
+
+        <!-- 일정 2 -->
+        <article class="schedule-card">
+          <div class="tags">
+            <span class="tag">정기접수</span>
+            <span class="tag tag-blue">접수중</span>
+          </div>
+          <p class="exam-name">[시험명]</p>
+          <p class="exam-date">2026.11.08<span class="sun">(일)</span></p>
+          <ul class="exam-info">
+            <li>접수마감 : 2026.10.26 (월) 10:00</li>
+            <li>성적발표 : 2026.11.17 (화) 12:00</li>
+          </ul>
+        </article>
+
+        <!-- 일정 3 -->
+        <article class="schedule-card">
+          <div class="tags">
+            <span class="tag">정기접수</span>
+            <span class="tag tag-blue">접수중</span>
+          </div>
+          <p class="exam-name">[시험명]</p>
+          <p class="exam-date">2026.11.15<span class="sun">(일)</span></p>
+          <ul class="exam-info">
+            <li>접수마감 : 2026.11.02 (월) 10:00</li>
+            <li>성적발표 : 2026.11.24 (화) 12:00</li>
+          </ul>
+        </article>
+
+        <!-- 일정 4 -->
+        <article class="schedule-card">
+          <div class="tags">
+            <span class="tag">정기접수</span>
+            <span class="tag tag-blue">접수중</span>
+          </div>
+          <p class="exam-name">[시험명]</p>
+          <p class="exam-date">2026.11.29<span class="sun">(일)</span></p>
+          <ul class="exam-info">
+            <li>접수마감 : 2026.11.16 (월) 10:00</li>
+            <li>성적발표 : 2026.12.08 (화) 12:00</li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===== 한 달 일정 달력 ===== -->
+    <section class="calendar">
+
+      <div class="calendar-top">
+        <div>
+          <h3 class="section-title">한 달 일정 한눈에 보기</h3>
+        </div>
+      </div>
+
+      <!-- 월 이동 + 범례 -->
+      <div class="month-bar">
+        <div class="month-nav">
+          <button type="button" class="btn-month" title="이전 달">←</button>
+          <strong class="month">2026. 10</strong>
+          <button type="button" class="btn-month" title="다음 달">→</button>
+        </div>
+        <ul class="legend">
+          <li><span class="box box-apply"></span>접수</li>
+          <li><span class="box box-exam"></span>시험</li>
+          <li><span class="box box-result"></span>발표</li>
+        </ul>
+      </div>
+
+      <!-- 달력 표 -->
+      <table class="calendar-table">
+        <thead>
+          <tr>
+            <th class="sun">일</th>
+            <th>월</th>
+            <th>화</th>
+            <th>수</th>
+            <th>목</th>
+            <th>금</th>
+            <th class="sat">토</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- 1주차 -->
+          <tr>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td><span class="day">1</span></td>
+            <td><span class="day">2</span></td>
+            <td class="sat"><span class="day">3</span></td>
+          </tr>
+          <!-- 2주차 -->
+          <tr>
+            <td class="sun"><span class="day">4</span></td>
+            <td>
+              <span class="day">5</span>
+              <span class="event ev-apply">[시험명] 접수 시작</span>
+            </td>
+            <td><span class="day">6</span></td>
+            <td><span class="day">7</span></td>
+            <td>
+              <span class="day">8</span>
+              <span class="event ev-result">[시험명] 발표</span>
+            </td>
+            <td><span class="day">9</span></td>
+            <td class="sat"><span class="day">10</span></td>
+          </tr>
+          <!-- 3주차 -->
+          <tr>
+            <td class="sun"><span class="day">11</span></td>
+            <td>
+              <span class="day">12</span>
+              <span class="event ev-apply">[시험명] 접수 시작</span>
+            </td>
+            <td><span class="day">13</span></td>
+            <td><span class="day">14</span></td>
+            <td><span class="day">15</span></td>
+            <td>
+              <span class="day">16</span>
+              <span class="event ev-apply">[시험명] 접수 마감</span>
+            </td>
+            <td class="sat">
+              <span class="day">17</span>
+              <span class="event ev-exam">[시험명] 시험</span>
+            </td>
+          </tr>
+          <!-- 4주차 -->
+          <tr>
+            <td class="sun">
+              <span class="day">18</span>
+              <span class="event ev-exam">[시험명] 시험</span>
+            </td>
+            <td><span class="day">19</span></td>
+            <td class="today">
+              <span class="day">20</span><span class="today-text">오늘</span>
+              <span class="event ev-apply">[시험명] 접수 마감</span>
+            </td>
+            <td><span class="day">21</span></td>
+            <td><span class="day">22</span></td>
+            <td>
+              <span class="day">23</span>
+              <span class="event ev-result">[시험명] 발표</span>
+            </td>
+            <td class="sat"><span class="day">24</span></td>
+          </tr>
+          <!-- 5주차 -->
+          <tr>
+            <td class="sun">
+              <span class="day">25</span>
+              <span class="event ev-exam">[시험명] 시험</span>
+            </td>
+            <td><span class="day">26</span></td>
+            <td><span class="day">27</span></td>
+            <td><span class="day">28</span></td>
+            <td><span class="day">29</span></td>
+            <td>
+              <span class="day">30</span>
+              <span class="event ev-result">[시험명] 발표</span>
+            </td>
+            <td class="sat"><span class="day">31</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-heading">
+      <a class="footer-logo" href="index.html">29SM</a>
+      <p>29살까지 취업하고자 하는 대학생들의 다음 기회를 모으다.</p>
+    </div>
+
+    <div class="footer-info">
+      <p>
+        29SM은 대학생들을 위한 공모전, 대외활동,
+        채용 및 자격증 정보를 소개하는 웹사이트입니다.
+      </p>
+
+      <p>
+        본 웹사이트는 정보를 제공함과 동시에
+        학생들의 공모전, 대외활동, 채용공고, 자격증 관련
+        일정을 관리하고 다양한 활동을 비교할 수 있는 서비스를 제공합니다. 
+      </p>
+
+      <p>
+          제작: 황채현 · 이다은 · 신유진
+      </p>
+    </div>
+
+    <nav class="footer-links">
+      <a href="#">서비스 소개</a>
+      <a href="#">이용약관</a>
+      <a href="#">개인정보처리방침</a>
+      <a href="#">문의하기</a>
+    </nav>
+
+    <p class="footer-credit">
+      29SM · Web Programming Team Project
+    </p>
+  </footer>
+</body>
+</html>
