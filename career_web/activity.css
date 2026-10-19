@@ -696,3 +696,46 @@ h1 {
     height: 100%;
     object-fit: contain;
 }
+
+
+/* 체크박스 숨기기 */
+.heart-check {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+/* 하트 영역 크기 고정 */
+.heart-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+/* 동일한 도형의 테두리와 채우기 */
+.heart-toggle svg {
+    display: block;
+    width: 28px;
+    height: 28px;
+    fill: none;
+    stroke: #111;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* 선택하면 색만 변경 */
+.heart-check:checked + .heart-toggle svg {
+    fill: red;
+    stroke: red;
+}
+
+.heart-check:focus-visible + .heart-toggle {
+    outline: 2px solid #111;
+    outline-offset: 3px;
+}

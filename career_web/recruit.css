@@ -493,3 +493,43 @@ h1 {
     color: #777777;
 }
 
+/* 채용 공고 관심 하트 */
+.recruit-heart {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.recruit-heart input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.recruit-heart svg {
+    display: block;
+    width: 28px;
+    height: 28px;
+    fill: none;
+    stroke: #111;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* 클릭하면 같은 도형을 빨간색으로 채움 */
+.recruit-heart input:checked + svg {
+    fill: red;
+    stroke: red;
+}
+
+.recruit-heart input:focus-visible + svg {
+    outline: 2px solid #111;
+    outline-offset: 3px;
+}
