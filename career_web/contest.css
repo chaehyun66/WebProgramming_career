@@ -546,7 +546,8 @@ h1 {
 .contest-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 40px 24px;
+    column-gap: 36px;
+    row-gap: 64px;
 }
 
 .contest-card {
