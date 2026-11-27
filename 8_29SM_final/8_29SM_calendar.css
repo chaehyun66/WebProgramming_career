@@ -1,0 +1,89 @@
+/* 달력 CSS */
+
+/* 오늘로 이동 */
+#calendar-today {
+    padding: 8px 12px;
+    border: 1px solid #dddddd;
+    background-color: #ffffff;
+    color: #555555;
+    font-family: "Google Sans", Arial, sans-serif;
+    font-size: 13px;
+}
+
+#calendar-today:hover {
+    border-color: #111111;
+    background-color: #eeeeee;
+}
+
+
+/* 날짜 선택 버튼 */
+.calendar-table .calendar-day-button {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    color: inherit;
+    text-align: left;
+    font-family: inherit;
+}
+
+.calendar-table td.calendar-date:hover {
+    background-color: #f7f7f7;
+}
+
+.calendar-table button.event {
+    width: 100%;
+    text-align: left;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.calendar-table button.calendar-event-selected {
+    border-color: #111111;
+    font-weight: bold;
+}
+
+/* 선택 일정의 상세 정보 */
+#calendar-details {
+    margin-top: 24px;
+    padding: 24px;
+    border: 1px solid #dddddd;
+    background-color: #ffffff;
+}
+
+#calendar-selected-title {
+    margin: 0 0 16px;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+#calendar-selected-list .calendar-empty-message {
+    margin: 0;
+    padding: 20px 0;
+    color: #999999;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+#calendar-selected-list .calendar-detail-row {
+    display: flex;
+    margin: 0;
+    padding: 14px 0;
+    border-bottom: 1px solid #eeeeee;
+    color: #555555;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.calendar-detail-row strong{
+    width: 70px;
+    flex-shrink: 0;
+    color: #222222;
+}
+
+.calendar-detail-row span {
+    flex: 1;
+    min-width: 0;
+}
+

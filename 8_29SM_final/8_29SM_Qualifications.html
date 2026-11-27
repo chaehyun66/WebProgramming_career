@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="황채현, 이다은, 신유진">
+
+    <title>29SM | Qualification</title>
+
+    <link rel="stylesheet" href="8_29SM_common.css">
+    <link rel="stylesheet" href="8_29SM_Qualifications.css">
+    <link rel="stylesheet" href="8_29SM_search.css">
+    <link rel="stylesheet" href="8_29SM_calendar.css">
+
+</head>
+
+<body>
+
+  <!-- 상단: 로고, 마이페이지, 알림 -->
+  <header class="site-header">
+    <div class="top-row">
+      <a class="logo" href="8_29SM_index.html">29SM</a>
+
+      <div class="account-menu">
+        <a href="8_29SM_MyPage.html">
+          <img src="8_images/8_profile.svg" alt="">
+          마이페이지
+        </a>
+
+        <a href="#">
+          <img src="8_images/8_bell.svg" alt="">
+          알림
+        </a>
+      </div>
+    </div>
+
+    <!-- 연결 메뉴와 검색창 -->
+    <div class="navigation-row">
+      <!-- 페이지 완성 후 #을 해당 HTML의 상대경로로 변경 -->
+      <nav class="main-menu">
+        <a href="8_29SM_contest.html">Contest</a>
+        <a href="8_29SM_activity.html">ECA</a>
+        <a href="8_29SM_recruit.html">Recruit</a>
+        <a class="current-menu" href="8_29SM_Qualifications.html">Qualification</a>
+      </nav>
+
+      <!-- 안내 문구 없는 검색창 -->
+      <div class="search-box">
+        <input
+          id="search"
+          type="text"
+          title="검색어 입력"
+        >
+
+        <button type="button" title="검색">
+            <img src="8_images/8_search.svg" alt="검색">
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 공통 검색 결과 -->
+  <section id="common-search-results">
+    <div class="common-search-heading">
+      <h2>검색 결과</h2>
+
+      <button type="button" id="common-search-close">
+        닫기
+      </button>
+    </div>
+
+    <p id="common-search-message"></p>
+    
+    <div id="common-search-list"></div>
+  </section>
+
+  <main class="inner content">
+
+    <!-- 페이지 제목 -->
+    <div class="page-head">
+      <h2>Qualification</h2>
+      <p>놓치기 쉬운 접수 일정을 한눈에 확인하세요.</p>
+    </div>
+
+    <!-- ===== 시험 일정 안내 ===== -->
+    <section class="schedule">
+      <div class="section-top">
+        <h3 class="section-title">시험 일정 안내</h3>
+        <a href="#" class="more">전체 일정 보기 +</a>
+      </div>
+
+      <div class="schedule-list">
+
+        <!-- 일정 1 : 한경 TESAT -->
+        <article class="schedule-card">
+          <div class="tags">
+            <span class="tag">정기접수</span>
+            <span class="tag tag-blue">접수중</span>
+          </div>
+          <p class="exam-name">TESAT 제109회 (경제이해력)</p>
+          <p class="exam-date">2026.11.07<span class="sat">(토)</span></p>
+          <ul class="exam-info">
+            <li>접수마감 : 2026.10.26 (월) 24:00</li>
+            <li>성적발표 : 2026.11.13 (금) 15:00</li>
+          </ul>
+        </article>
+
+        <!-- 일정 2 : TOEIC -->
+        <article class="schedule-card">
+          <div class="tags">
+            <span class="tag">정기접수</span>
+            <span class="tag tag-blue">접수중</span>
+          </div>
+          <p class="exam-name">TOEIC 정기시험</p>
+          <p class="exam-date">2026.11.08<span class="sun">(일)</span></p>
+          <ul class="exam-info">
+            <li>접수마감 : 2026.10.26 (월) 10:00</li>
+            <li>성적발표 : 2026.11.17 (화) 12:00</li>
+          </ul>
+        </article>
+
+        <!-- 일정 3 : TOEIC -->
+        <article class="schedule-card">
+          <div class="tags">
+            <span class="tag">정기접수</span>
+            <span class="tag tag-blue">접수중</span>
+          </div>
+          <p class="exam-name">TOEIC 정기시험</p>
+          <p class="exam-date">2026.11.15<span class="sun">(일)</span></p>
+          <ul class="exam-info">
+            <li>접수마감 : 2026.11.02 (월) 10:00</li>
+            <li>성적발표 : 2026.11.24 (화) 12:00</li>
+          </ul>
+        </article>
+
+        <!-- 일정 4 : TOEIC -->
+        <article class="schedule-card">
+          <div class="tags">
+            <span class="tag">정기접수</span>
+            <span class="tag tag-blue">접수중</span>
+          </div>
+          <p class="exam-name">TOEIC 정기시험</p>
+          <p class="exam-date">2026.11.29<span class="sun">(일)</span></p>
+          <ul class="exam-info">
+            <li>접수마감 : 2026.11.16 (월) 10:00</li>
+            <li>성적발표 : 2026.12.08 (화) 12:00</li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===== 한 달 일정 달력 ===== -->
+    <section class="calendar">
+
+      <div class="calendar-top">
+        <div>
+          <h3 class="section-title">한 달 일정 한눈에 보기</h3>
+        </div>
+      </div>
+
+      <!-- 월 이동 + 범례 -->
+      <div class="month-bar">
+        <div class="month-nav">
+          <button type="button" class="btn-month" title="이전 달">←</button>
+          <strong class="month">2026. 10</strong>
+          <button type="button" class="btn-month" title="다음 달">→</button>
+
+          <button type="button" id="calendar-today">오늘</button>
+        </div>
+        <ul class="legend">
+          <li><span class="box box-apply"></span>접수</li>
+          <li><span class="box box-exam"></span>시험</li>
+          <li><span class="box box-result"></span>발표</li>
+        </ul>
+      </div>
+
+      <!-- 달력 표 -->
+      <table class="calendar-table">
+        <thead>
+          <tr>
+            <th class="sun">일</th>
+            <th>월</th>
+            <th>화</th>
+            <th>수</th>
+            <th>목</th>
+            <th>금</th>
+            <th class="sat">토</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <!-- 선택한 날짜의 일정 -->
+      <div id="calendar-details">
+        <h3 id="calendar-selected-title">선택한 날짜의 일정</h3>
+        <div id="calendar-selected-list">
+          <p class="calendar-empty-message">
+            달력에서 일정 이름을 선택해주세요.
+          </p>
+        </div>
+      </div>      
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-heading">
+      <a class="footer-logo" href="8_29SM_index.html">29SM</a>
+      <p>29살까지 취업하고자 하는 대학생들의 다음 기회를 모으다.</p>
+    </div>
+
+    <div class="footer-info">
+      <p>
+        29SM은 대학생들을 위한 공모전, 대외활동,
+        채용 및 자격증 정보를 소개하는 웹사이트입니다.
+      </p>
+
+      <p>
+        본 웹사이트는 정보를 제공함과 동시에
+        학생들의 공모전, 대외활동, 채용공고, 자격증 관련
+        일정을 관리하고 다양한 활동을 비교할 수 있는 서비스를 제공합니다. 
+      </p>
+
+      <p>
+          제작: 황채현 · 이다은 · 신유진
+      </p>
+    </div>
+
+    <nav class="footer-links">
+      <a href="#">서비스 소개</a>
+      <a href="#">이용약관</a>
+      <a href="#">개인정보처리방침</a>
+      <a href="#">문의하기</a>
+    </nav>
+
+    <p class="footer-credit">
+      29SM · Web Programming Team Project
+    </p>
+  </footer>
+  <script src="8_29SM_search.js"></script>
+  <script src="8_29SM_calendar.js"></script>
+</body>
+</html>
