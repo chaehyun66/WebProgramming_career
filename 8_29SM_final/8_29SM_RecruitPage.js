@@ -2,14 +2,7 @@ const LIKE_KEY = 'likedIds';
 const THIS_ID = 'recruit-001';
 const heart = document.getElementById('like-check');
 
-let likedIds = JSON.parse(localStorage.getItem(LIKE_KEY)) || ['recruit-003', 'activity-global', 'contest-hana'];
-heart.checked = likedIds.includes(THIS_ID);
-
-heart.addEventListener('change', () => {
-  if (heart.checked) likedIds.push(THIS_ID);
-  else likedIds = likedIds.filter(id => id !== THIS_ID);
-  localStorage.setItem(LIKE_KEY, JSON.stringify(likedIds));
-});
+Favorites.bind(heart, THIS_ID);
 
 const ddayBox = document.getElementById('dday');
 const now = new Date();
@@ -19,5 +12,5 @@ const deadline = new Date(y, m - 1, d);
 const left = Math.round((deadline - today) / 86400000);
 
 if (left > 0) ddayBox.innerText = 'D-' + left;
-else if (left === 0) ddayBox.innerText = 'D-Day';
+else if (left === 0) ddayBox.innerText = '오늘 마감';
 else ddayBox.innerText = '마감';

@@ -409,6 +409,13 @@ h1 {
     font-size: 14px;
     color: #999999;
 }
+.notice-table .recruit-open-label {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #e65332;
+}
 
 /* 마감 공고 표시 */
 .notice-table .recruit-closed-row {

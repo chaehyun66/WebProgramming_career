@@ -1,0 +1,15 @@
+.filter-reset { display:block; width:100%; margin:15px 0 10px; }
+.filter-reset, .page-button { background:#fff; border:1px solid #ddd; border-radius:6px; color:#222; font:inherit; padding:8px 12px; cursor:pointer; }
+.filter-reset:hover, .page-button:hover:not(:disabled), .page-button.current-page { background:#222; color:#fff; border-color:#222; }
+.page-button:disabled { opacity:.35; cursor:default; }
+.pagination { gap:10px; }
+.page-button { min-width:40px; }
+.closed-filter { display:flex; align-items:center; gap:6px; font-size:14px; cursor:pointer; }
+.contest-card .contest-card-bottom .live-dday { display:inline-block; color:#e65332; font-weight:bold; font-size:14px; white-space:nowrap; }
+.contest-card .contest-card-bottom .live-dday.expired { color:#888; }
+.contest-card .contest-card-bottom .live-dday.urgent { color:#bc2424; }
+.contest-card { transition:box-shadow .15s,transform .15s; }
+.contest-card:hover { box-shadow:0 5px 18px #0002; transform:translateY(-2px); }
+.heart-toggle:hover { opacity:.75; cursor:pointer; }
+.empty-message { grid-column:1/-1; padding:35px 10px; text-align:center; color:#777; }
+button:focus-visible { outline:2px solid #527bb4; outline-offset:2px; }

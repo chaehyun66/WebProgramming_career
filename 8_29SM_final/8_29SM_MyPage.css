@@ -133,6 +133,11 @@ main.inner {
   padding: 10px 0;
 }
 
+.favorite-heading { margin: 12px 0; font-size: 20px; }
+.favorite-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.favorite-tabs button { border: 1px solid #ddd; border-radius: 6px; background: white; padding: 8px 12px; color: #222; cursor: pointer; }
+.favorite-tabs button.active, .favorite-tabs button:hover { background: #222; color: white; }
+
 input[type="checkbox"] {
   width: 20px;
   height: 20px;

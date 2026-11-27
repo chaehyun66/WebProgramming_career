@@ -35,6 +35,9 @@ function initializeRecruit() {
             }
 
             allRecruitNotices = data.recruit;
+            allRecruitNotices.forEach(notice => {
+                notice.status = Favorites.daysLeft(notice.deadline) < 0 ? "마감" : "진행 중";
+            });
 
             const groups = document.querySelectorAll(".filter-group");
             
@@ -132,15 +135,15 @@ function createRecruitRow(notice, heartHTML) {
     const dateCell = document.createElement("td");
     dateCell.innerText = notice.deadline;
 
-    if (notice.status === "마감") {
+    {
         const statusText = document.createElement("span");
 
         statusText.setAttribute(
             "class",
-            "recruit-closed-label"
+            notice.status === "마감" ? "recruit-closed-label" : "recruit-open-label"
         );
 
-        statusText.innerText = "마감";
+        statusText.innerText = Favorites.dday(notice.deadline);
 
         dateCell.appendChild(statusText);
     }
@@ -155,6 +158,7 @@ function createRecruitRow(notice, heartHTML) {
         "id",
         "favorite-" + notice.id
     );
+    Favorites.bind(heartInput, notice.id);
 
     row.appendChild(companyCell);
     row.appendChild(noticeCell);

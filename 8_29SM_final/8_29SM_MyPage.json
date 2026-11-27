@@ -18,7 +18,9 @@
       "option": "서포터즈·홍보대사 · 11.20 ~ 12.18",
       "deadline": "2026-12-18",
       "thumb": "8_images/8_activity02.png",
-      "thumbClass": ""
+      "thumbClass": "",
+      "field": "서포터즈·홍보대사",
+      "start": "2026-11-20"
     },
     {
       "id": "contest-hana",
@@ -28,7 +30,9 @@
       "option": "디자인·광고 · 11.14 ~ 12.21",
       "deadline": "2026-12-21",
       "thumb": "8_images/8_contest02.jpg",
-      "thumbClass": ""
+      "thumbClass": "",
+      "field": "디자인·광고",
+      "start": "2026-11-14"
     },
     {
       "id": "recruit-001",
@@ -48,7 +52,9 @@
       "option": "영상·콘텐츠 · 11.10 ~ 12.12",
       "deadline": "2026-12-12",
       "thumb": "8_images/8_contest04.jpg",
-      "thumbClass": ""
+      "thumbClass": "",
+      "field": "영상·콘텐츠",
+      "start": "2026-11-10"
     },
     {
       "id": "recruit-002",
@@ -68,7 +74,10 @@
       "option": "서포터즈·홍보대사 · 11.09 ~ 12.16",
       "deadline": "2026-12-16",
       "thumb": "8_images/8_activity06.png",
-      "thumbClass": ""
+      "thumbClass": "",
+      "field": "서포터즈·홍보대사",
+      "start": "2026-11-09",
+      "recommended": true
     },
     {
       "id": "activity-snow",
@@ -78,7 +87,9 @@
       "option": "기자단·콘텐츠 · 11.05 ~ 12.19",
       "deadline": "2026-12-19",
       "thumb": "8_images/8_activity03.jpg",
-      "thumbClass": ""
+      "thumbClass": "",
+      "field": "기자단·콘텐츠",
+      "start": "2026-11-05"
     },
     {
       "id": "recruit-004",
@@ -248,6 +259,161 @@
       "option": "신입, 경력직 / 서울 / 마케팅/광고, 기획/경영 · ~ 12.20",
       "deadline": "2026-12-20",
       "thumb": "8_images_recruit/8_sm_logo.png",
+      "thumbClass": "logo"
+    },
+    {
+      "id": "contest-data-ai",
+      "category": "공모전",
+      "company": "한국과학기술정보연구원 외 공동 주최",
+      "title": "2026 DATA·AI 분석 경진대회",
+      "option": "IT·개발·데이터·AI · 11.11 ~ 12.25",
+      "deadline": "2026-12-25",
+      "thumb": "8_images/8_contest01.jpg",
+      "thumbClass": "",
+      "field": "IT·개발·데이터·AI",
+      "start": "2026-11-11",
+      "recommended": true
+    },
+    {
+      "id": "contest-university-idea",
+      "category": "공모전",
+      "company": "한국부동산금융투자포럼 · 한국토지주택공사",
+      "title": "2026 대학생 아이디어 공모대회",
+      "option": "기획·아이디어 · 11.01 ~ 11.25",
+      "deadline": "2026-11-25",
+      "thumb": "8_images/8_contest03.jpg",
+      "thumbClass": "",
+      "field": "기획·아이디어",
+      "start": "2026-11-01"
+    },
+    {
+      "id": "contest-kia-pbv",
+      "category": "공모전",
+      "company": "기아",
+      "title": "제5회 기아 PBV 아이디어 공모전",
+      "option": "기획·아이디어 · 11.18 ~ 12.14",
+      "deadline": "2026-12-14",
+      "thumb": "8_images/8_contest05.png",
+      "thumbClass": "",
+      "field": "기획·아이디어",
+      "start": "2026-11-18"
+    },
+    {
+      "id": "contest-ai-life",
+      "category": "공모전",
+      "company": "산업통상부 · 한국산업기술기획평가원",
+      "title": "AI 라이프 솔루션 챌린지",
+      "option": "IT·개발·데이터·AI · 11.20 ~ 11.28",
+      "deadline": "2026-11-28",
+      "thumb": "8_images/8_contest06.jpg",
+      "thumbClass": "",
+      "field": "IT·개발·데이터·AI",
+      "start": "2026-11-20"
+    },
+    {
+      "id": "activity-hanwha",
+      "category": "대외활동",
+      "company": "한화생명",
+      "title": "한화생명 PLUS FINFLUENCER LAB 모집",
+      "option": "기자단·콘텐츠 · 11.01 ~ 11.25",
+      "deadline": "2026-11-25",
+      "thumb": "8_images/8_activity01.png",
+      "thumbClass": "",
+      "field": "기자단·콘텐츠",
+      "start": "2026-11-01"
+    },
+    {
+      "id": "activity-lotte",
+      "category": "대외활동",
+      "company": "롯데월드타워·몰",
+      "title": "롯데월드타워·몰 잠실크루 2기 모집",
+      "option": "서포터즈·홍보대사 · 11.16 ~ 12.05",
+      "deadline": "2026-12-05",
+      "thumb": "8_images/8_activity04.png",
+      "thumbClass": "",
+      "field": "서포터즈·홍보대사",
+      "start": "2026-11-16"
+    },
+    {
+      "id": "activity-tams",
+      "category": "대외활동",
+      "company": "미래에셋금융서비스",
+      "title": "TAMs 글로벌 금융인 양성과정 모집",
+      "option": "외부교육·강연 · 11.21 ~ 11.28",
+      "deadline": "2026-11-28",
+      "thumb": "8_images/8_activity05.png",
+      "thumbClass": "",
+      "field": "외부교육·강연",
+      "start": "2026-11-21"
+    },
+    {
+      "id": "home-recruit-003",
+      "category": "취업공고",
+      "company": "LG 유플러스",
+      "title": "[Consumer부문] 전남소매영업팀 회계 계약직 채용",
+      "option": "전남광주 · 계약직 · ~ 10.21",
+      "deadline": "2026-10-21",
+      "thumb": "8_images/8_lg_logo.jpeg",
+      "thumbClass": "logo"
+    },
+    {
+      "id": "home-recruit-004",
+      "category": "취업공고",
+      "company": "SK ON",
+      "title": "기계/전기 설비 관리 기술직 채용",
+      "option": "대전 · 계약직 · ~ 10.24",
+      "deadline": "2026-10-24",
+      "thumb": "8_images/8_sk_logo.png",
+      "thumbClass": "logo"
+    },
+    {
+      "id": "home-recruit-006",
+      "category": "취업공고",
+      "company": "SM 엔터테인먼트",
+      "title": "A&R 담당자 채용",
+      "option": "서울 · 신입 · 경력직 가능 · ~ 10.23",
+      "deadline": "2026-10-23",
+      "thumb": "8_images/8_sm_logo.png",
+      "thumbClass": "logo"
+    },
+    {
+      "id": "home-recruit-008",
+      "category": "취업공고",
+      "company": "CJ 프레시웨이",
+      "title": "SCM 센터운영 신입/경력사원 모집",
+      "option": "경기 · 신입 · 경력직 가능 · ~ 11.01",
+      "deadline": "2026-11-01",
+      "thumb": "8_images/8_cj_logo.png",
+      "thumbClass": "logo"
+    },
+    {
+      "id": "home-recruit-010",
+      "category": "취업공고",
+      "company": "현대 자동차",
+      "title": "시험정비(경쟁차 운영) 계약직 채용",
+      "option": "경기 · 계약직 · ~ 11.25",
+      "deadline": "2026-11-25",
+      "thumb": "8_images/8_hyundai_logo.jpeg",
+      "thumbClass": "logo"
+    },
+    {
+      "id": "home-recruit-011",
+      "category": "취업공고",
+      "company": "SM C&C",
+      "title": "법인영업 담당 신입/계약직 채용",
+      "option": "서울 · 신입 · 경력직 · ~ 11.20",
+      "deadline": "2026-11-20",
+      "thumb": "8_images/8_sm_logo.png",
+      "thumbClass": "logo"
+    },
+    {
+      "id": "home-recruit-012",
+      "category": "취업공고",
+      "company": "SK인텔릭스",
+      "title": "2D/3D 장면 재구성 엔지니어 신입 인재 채용",
+      "option": "경기 · 신입 · ~ 11.01",
+      "deadline": "2026-11-01",
+      "thumb": "8_images/8_sk_logo.png",
       "thumbClass": "logo"
     }
   ],

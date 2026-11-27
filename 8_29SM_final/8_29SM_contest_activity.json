@@ -1,0 +1,16 @@
+{
+  "likes": [
+    {"id":"contest-data-ai","category":"공모전","company":"한국과학기술정보연구원 외 공동 주최","title":"2026 DATA·AI 분석 경진대회","option":"IT·개발·데이터·AI · 11.11 ~ 12.25","deadline":"2026-12-25","thumb":"8_images/8_contest01.jpg","thumbClass":"","field":"IT·개발·데이터·AI","start":"2026-11-11","recommended":true},
+    {"id":"contest-hana","category":"공모전","company":"하나카드","title":"제4회 하나카드 PLATE 디자인 공모전","option":"디자인·광고 · 11.14 ~ 12.21","deadline":"2026-12-21","thumb":"8_images/8_contest02.jpg","thumbClass":"","field":"디자인·광고","start":"2026-11-14"},
+    {"id":"contest-university-idea","category":"공모전","company":"한국부동산금융투자포럼 · 한국토지주택공사","title":"2026 대학생 아이디어 공모대회","option":"기획·아이디어 · 11.01 ~ 11.25","deadline":"2026-11-25","thumb":"8_images/8_contest03.jpg","thumbClass":"","field":"기획·아이디어","start":"2026-11-01"},
+    {"id":"contest-ai-copyright","category":"공모전","company":"문화체육관광부 · 한국저작권위원회","title":"2026 AI 활용 저작권 콘텐츠 공모전","option":"영상·콘텐츠 · 11.10 ~ 12.12","deadline":"2026-12-12","thumb":"8_images/8_contest04.jpg","thumbClass":"","field":"영상·콘텐츠","start":"2026-11-10"},
+    {"id":"contest-kia-pbv","category":"공모전","company":"기아","title":"제5회 기아 PBV 아이디어 공모전","option":"기획·아이디어 · 11.18 ~ 12.14","deadline":"2026-12-14","thumb":"8_images/8_contest05.png","thumbClass":"","field":"기획·아이디어","start":"2026-11-18"},
+    {"id":"contest-ai-life","category":"공모전","company":"산업통상부 · 한국산업기술기획평가원","title":"AI 라이프 솔루션 챌린지","option":"IT·개발·데이터·AI · 11.20 ~ 11.28","deadline":"2026-11-28","thumb":"8_images/8_contest06.jpg","thumbClass":"","field":"IT·개발·데이터·AI","start":"2026-11-20"},
+    {"id":"activity-hanwha","category":"대외활동","company":"한화생명","title":"한화생명 PLUS FINFLUENCER LAB 모집","option":"기자단·콘텐츠 · 11.01 ~ 11.25","deadline":"2026-11-25","thumb":"8_images/8_activity01.png","thumbClass":"","field":"기자단·콘텐츠","start":"2026-11-01"},
+    {"id":"activity-global","category":"대외활동","company":"TV CHOSUN","title":"글로벌 리더스 포럼 2026 대학생 서포터즈 모집","option":"서포터즈·홍보대사 · 11.20 ~ 12.18","deadline":"2026-12-18","thumb":"8_images/8_activity02.png","thumbClass":"","field":"서포터즈·홍보대사","start":"2026-11-20"},
+    {"id":"activity-snow","category":"대외활동","company":"SNOW","title":"SNOW 포토 인사이트 크루 모집","option":"기자단·콘텐츠 · 11.05 ~ 12.19","deadline":"2026-12-19","thumb":"8_images/8_activity03.jpg","thumbClass":"","field":"기자단·콘텐츠","start":"2026-11-05"},
+    {"id":"activity-lotte","category":"대외활동","company":"롯데월드타워·몰","title":"롯데월드타워·몰 잠실크루 2기 모집","option":"서포터즈·홍보대사 · 11.16 ~ 12.05","deadline":"2026-12-05","thumb":"8_images/8_activity04.png","thumbClass":"","field":"서포터즈·홍보대사","start":"2026-11-16"},
+    {"id":"activity-tams","category":"대외활동","company":"미래에셋금융서비스","title":"TAMs 글로벌 금융인 양성과정 모집","option":"외부교육·강연 · 11.21 ~ 11.28","deadline":"2026-11-28","thumb":"8_images/8_activity05.png","thumbClass":"","field":"외부교육·강연","start":"2026-11-21"},
+    {"id":"activity-hyundai-style","category":"대외활동","company":"현대자동차","title":"현대자동차 SNS 앰버서더 H스타일리스트 14기","option":"서포터즈·홍보대사 · 11.09 ~ 12.16","deadline":"2026-12-16","thumb":"8_images/8_activity06.png","thumbClass":"","field":"서포터즈·홍보대사","start":"2026-11-09","recommended":true}
+  ]
+}

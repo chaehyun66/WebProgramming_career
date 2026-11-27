@@ -23,7 +23,7 @@ function daysLeft(deadline) {
 function dday(deadline) {
   const diff = daysLeft(deadline);
   if (diff > 0) return 'D-' + diff;
-  if (diff === 0) return 'D-Day';
+  if (diff === 0) return '오늘 마감';
   return '마감';
 }
 
@@ -58,6 +58,12 @@ const likeList = document.getElementById('like-list');
 function likedItems() {
   return likes.filter(item => likedIds.includes(item.id));
 }
+let favoriteCategory = '전체';
+const favoriteTabs = document.querySelectorAll('[data-favorite-category]');
+favoriteTabs.forEach(button => button.addEventListener('click', () => {
+  favoriteCategory = button.dataset.favoriteCategory;
+  renderLikes();
+}));
 
 function isApplied(id) {
   return applied.some(a => a.id === id);
@@ -84,17 +90,25 @@ function renderLikes() {
   }
 
   likeList.innerHTML = '';
-  const items = likedItems();
+  const allItems = likedItems();
+  const items = allItems.filter(item => favoriteCategory === '전체' || item.category === favoriteCategory);
+  document.getElementById('favorite-total').textContent = allItems.length;
+  favoriteTabs.forEach(button => {
+    const name = button.dataset.favoriteCategory;
+    const count = allItems.filter(item => name === '전체' || item.category === name).length;
+    button.textContent = name + ' ' + count;
+    button.classList.toggle('active', favoriteCategory === name);
+  });
 
   if (items.length === 0) {
     likeList.innerHTML =
       '<div class="empty-cart">' +
-        '<p class="empty-title">찜한 공고가 없어요</p>' +
+        '<p class="empty-title">' + (favoriteCategory === '전체' ? '찜한 공고가 없어요' : favoriteCategory + ' 찜 목록이 비어 있어요') + '</p>' +
         '<p class="empty-desc">관심 있는 공고의 ♡를 눌러 담아 두면, 마감일을 달력에서 함께 챙길 수 있어요.</p>' +
         '<div class="empty-links">' +
-          '<a href="contest.html">공모전 보기</a>' +
-          '<a href="activity.html">대외활동 보기</a>' +
-          '<a href="recruit.html">채용공고 보기</a>' +
+          '<a href="8_29SM_contest.html">공모전 보기</a>' +
+          '<a href="8_29SM_activity.html">대외활동 보기</a>' +
+          '<a href="8_29SM_recruit.html">채용공고 보기</a>' +
         '</div>' +
       '</div>';
   }
@@ -213,7 +227,7 @@ function updateSummary() {
   document.getElementById('sum-count').innerText = selected.length + '건';
   document.getElementById('sum-week').innerText = left.filter(n => n <= 7).length + '건';
   if (left.length > 0) {
-    document.getElementById('sum-first').innerText = 'D-' + Math.min(...left);
+    document.getElementById('sum-first').innerText = Math.min(...left) === 0 ? '오늘 마감' : 'D-' + Math.min(...left);
   } else {
     document.getElementById('sum-first').innerText = '-';
   }
@@ -660,3 +674,15 @@ fetch('8_29SM_MyPage.json', { cache: 'no-store' })
     renderApplied();
     refreshCalendar();
   });
+
+function refreshSavedFavorites() {
+  if (!likes.length) return;
+  likedIds = load('likedIds', []);
+  if (!Array.isArray(likedIds)) likedIds = [];
+  renderLikes();
+  refreshCalendar();
+}
+window.addEventListener('pageshow', refreshSavedFavorites);
+window.addEventListener('storage', e => {
+  if (e.key === 'likedIds' || e.key === null) refreshSavedFavorites();
+});
