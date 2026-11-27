@@ -1,32 +1,27 @@
 @font-face {
     font-family: "Outfit";
-    src: url("fonts/Outfit-Regular.ttf");
+    src: url("8_fonts/Outfit-Regular.ttf");
     font-weight: normal;
 }
 
 @font-face {
     font-family: "Outfit";
-    src: url("fonts/Outfit-Medium.ttf");
+    src: url("8_fonts/Outfit-Medium.ttf");
     font-weight: 500;
 }
 
 @font-face {
     font-family: "Google Sans";
-    src: url("fonts/GoogleSans-Regular.ttf");
+    src: url("8_fonts/GoogleSans-Regular.ttf");
     font-weight: normal;
 }
 
 @font-face {
     font-family: "Google Sans";
-    src: url("fonts/GoogleSans-Bold.ttf");
+    src: url("8_fonts/GoogleSans-Bold.ttf");
     font-weight: bold;
 }
 
-
-/* 공통 설정 */
-* {
-    box-sizing: border-box;
-}
 
 body {
     margin: 0;
@@ -42,103 +37,6 @@ a {
 
 p {
     line-height: 1.6;
-}
-
-
-/* 상단: 로고와 계정 메뉴 */
-.site-header {
-    padding: 28px 40px 0;
-}
-
-.top-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-family: "Outfit", sans-serif;
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: 2px;
-}
-
-.account-menu {
-    display: flex;
-    align-items: center;
-}
-
-.account-menu a {
-    display: flex;
-    align-items: center;
-    margin-left: 25px;
-    font-size: 13px;
-}
-
-.account-menu img {
-    width: 21px;
-    height: 21px;
-    margin-right: 6px;
-}
-
-
-/* 연결 메뉴와 검색창 */
-.navigation-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 20px;
-}
-
-.main-menu {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-.main-menu a {
-    margin-right: 26px;
-    margin-bottom: 14px;
-    font-family: "Outfit", sans-serif;
-    font-size: 48px;
-    font-weight: 500;
-    padding-bottom: 1px;
-    border-bottom: 4px solid transparent;
-}
-
-.main-menu a:hover {
-    border-bottom-color: black;
-}
-
-.search-box {
-    display: flex;
-    align-items: center;
-    width: 230px;
-    margin-bottom: 14px;
-    border-bottom: 4px solid black;
-}
-
-.search-box input {
-    flex: 1;
-    min-width: 0;
-    width: 100%;
-    padding: 10px 5px;
-    border: none;
-    font-family: "Google Sans", sans-serif;
-    font-size: 18px;
-}
-
-.search-box button {
-    padding: 0 0 6px 8px;
-    border: none;
-    background-color: white;
-}
-
-.search-box img {
-    display: block;
-    width: 36px;
-    height: 36px;
 }
 
 
@@ -326,63 +224,49 @@ h3 {
     color: #111111;
 }
 
-
-/* 하단 */
-.site-footer {
-    margin-top: 80px;
-    padding: 45px 40px 30px;
-    background-color: black;
-    color: white;
-}
-
-.footer-heading {
-    margin-bottom: 25px;
-}
-
-.site-footer .footer-logo {
-    font-family: "Outfit", sans-serif;
-    font-size: 30px;
-    font-weight: 500;
-    letter-spacing: 2px;
-    color: white;
-}
-
-.footer-heading p {
-    margin: 10px 0 0;
-    font-size: 16px;
-    color: #dddddd;
-}
-
-.footer-info p {
-    margin: 0 0 14px;
-    font-size: 13px;
-    line-height: 1.8;
-    color: #999999;
-}
-
-/* 안내문과 링크 목록 사이 구분선 */
-.footer-links {
+/* 커뮤니티 하트와 좋아요 수 */
+.community-post .likes {
     display: flex;
-    flex-wrap: wrap;
-    margin-top: 28px;
-    padding-top: 24px;
-    border-top: 1px solid #333333;
+    align-items: center;
+    gap: 6px;
 }
 
-.footer-links a {
-    margin: 0 22px 12px 0;
-    font-size: 14px;
-    font-weight: bold;
-    color: white;
+.community-heart {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    cursor: pointer;
 }
 
-.footer-links a:hover {
-    text-decoration: underline;
+.community-heart input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
 }
 
-.footer-credit {
-    margin: 18px 0 0;
-    font-family: "Outfit", sans-serif;
-    font-size: 12px;
-    color: #777777;
+.community-heart svg {
+    display: block;
+    width: 28px;
+    height: 28px;
+    fill: none;
+    stroke: #111;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* 선택하면 빨간색으로 채우기 */
+.community-heart input:checked + svg {
+    fill: red;
+    stroke: red;
+}
+
+.community-heart input:focus-visible + svg {
+    outline: 2px solid #111;
+    outline-offset: 3px;
 }

@@ -1,0 +1,434 @@
+@font-face {
+  font-family: "Outfit";
+  src: url("8_fonts/Outfit-Light.ttf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("8_fonts/Outfit-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("8_fonts/Outfit-Medium.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("8_fonts/Outfit-SemiBold.ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("8_fonts/Outfit-Bold.ttf");
+  font-weight: 700 900;
+}
+
+@font-face {
+  font-family: "Google Sans";
+  src: url("8_fonts/GoogleSans-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Google Sans";
+  src: url("8_fonts/GoogleSans-Medium.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Google Sans";
+  src: url("8_fonts/GoogleSans-SemiBold.ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Google Sans";
+  src: url("8_fonts/GoogleSans-Bold.ttf");
+  font-weight: 700 900;
+}
+
+body {
+
+  font-family: "Outfit", "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  color: #222;
+}
+
+html,
+body {
+  overscroll-behavior: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.inner {
+  width: 1400px;
+  padding: 0 0 0 40px;
+}
+
+.search-box input {
+  outline: none;
+}
+
+.detail {
+  padding: 0 40px;
+}
+
+.page-head {
+  margin: 55px 0 40px;
+  padding-bottom: 22px;
+  border-bottom: 4px solid #222;
+}
+
+.page-head h2 {
+  margin: 0 0 10px;
+  font-family: "Outfit", sans-serif;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.page-head p {
+  margin: 10px 0 0;
+  font-family: "Google Sans", Arial, sans-serif;
+  font-size: 14px;
+  color: #777;
+  font-weight: normal;
+  line-height: 1.6;
+}
+
+.breadcrumb {
+  margin-bottom: 22px;
+  font-size: 14px;
+  color: #888;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb .arrow {
+  margin: 0 6px;
+}
+
+.breadcrumb .current {
+  color: #222;
+}
+
+.detail-top {
+  display: flex;
+  gap: 44px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.poster-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 255px;
+  height: 318px;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+}
+
+.poster-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.detail-summary {
+  flex: 1;
+}
+
+.company {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.dday {
+  padding: 4px 7px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #2f45f0;
+  border-radius: 3px;
+}
+
+.detail-title {
+  padding-bottom: 24px;
+  margin-bottom: 18px;
+  font-size: 32px;
+  font-weight: 700;
+  border-bottom: 1px solid #222;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 100px 1fr 100px 1fr;
+  row-gap: 16px;
+  font-size: 16px;
+}
+
+.info-grid dt {
+  color: #888;
+}
+
+.info-grid dd {
+  color: #222;
+}
+
+.purpose {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 22px;
+  font-size: 14px;
+}
+
+.purpose-label {
+  margin-right: 6px;
+  color: #888;
+}
+
+.purpose-tag {
+  padding: 5px 9px;
+  border: 1px solid #222;
+  border-radius: 3px;
+}
+
+.detail-buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: 22px;
+}
+
+.btn-like {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 51px;
+  height: 51px;
+  cursor: pointer;
+}
+
+.btn-like input {
+  display: none;
+}
+
+.btn-like svg {
+  display: block;
+  width: 28px;
+  height: 28px;
+  fill: none;
+  stroke: #111;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.btn-like input:checked + svg {
+  fill: red;
+  stroke: red;
+}
+
+.btn-apply {
+  width: 327px;
+  height: 51px;
+  font-size: 17px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #111;
+  border: none;
+  border-radius: 3px;
+  transition: all 0.15s;
+}
+
+.btn-apply:hover {
+  background-color: #333;
+}
+
+.btn-apply:active {
+  transform: scale(0.98);
+}
+
+.detail-rows {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 60px;
+}
+
+.detail-row {
+  display: flex;
+  padding: 28px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 16px;
+}
+
+.detail-row.wide {
+  grid-column: 1 / -1;
+}
+
+.detail-row dt {
+  flex-shrink: 0;
+  width: 160px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.detail-row dd {
+  color: #444;
+  line-height: 1.6;
+}
+
+.dot-list li {
+  position: relative;
+  padding-left: 16px;
+  margin-bottom: 8px;
+}
+
+.dot-list li:last-child {
+  margin-bottom: 0;
+}
+
+.dot-list li::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 2px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #222;
+}
+
+.step-arrow {
+  margin: 0 4px;
+  color: #aaa;
+}
+
+.related {
+  margin-top: 80px;
+}
+
+.related-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.related-top h3 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.related-more {
+  font-size: 14px;
+  color: #555;
+}
+
+.related-more:hover {
+  text-decoration: underline;
+}
+
+.license-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.license-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 20px;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  transition: border-color 0.15s;
+}
+
+.license-card:hover {
+  border-color: #222;
+}
+
+.license-name {
+  margin-bottom: 6px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.license-desc {
+  font-size: 14px;
+  color: #888;
+}
+
+.license-date {
+  font-size: 14px;
+  color: #888;
+}
+
+.similar-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.similar-thumb {
+  height: 240px;
+  margin-bottom: 10px;
+  padding: 30px;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  transition: border-color 0.15s;
+}
+
+.similar-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.similar-card:hover .similar-thumb {
+  border-color: #222;
+}
+
+.similar-meta {
+  margin-bottom: 6px;
+  font-size: 13px;
+  color: #888;
+}
+
+.similar-name {
+  font-size: 17px;
+  font-weight: 700;
+}
+

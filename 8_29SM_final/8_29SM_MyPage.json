@@ -1,0 +1,300 @@
+{
+  "likes": [
+    {
+      "id": "recruit-003",
+      "category": "취업공고",
+      "company": "현대자동차",
+      "title": "[현대자동차] 2026년 12월 월간 경력 채용",
+      "option": "경력직 / 서울, 경기 / 기획·경영, 영업 · ~ 12.14",
+      "deadline": "2026-12-14",
+      "thumb": "8_images_recruit/8_hyundai_logo.jpeg",
+      "thumbClass": "logo-mark"
+    },
+    {
+      "id": "activity-global",
+      "category": "대외활동",
+      "company": "TV CHOSUN",
+      "title": "글로벌 리더스 포럼 2026 대학생 서포터즈 모집",
+      "option": "서포터즈·홍보대사 · 11.20 ~ 12.18",
+      "deadline": "2026-12-18",
+      "thumb": "8_images/8_activity02.png",
+      "thumbClass": ""
+    },
+    {
+      "id": "contest-hana",
+      "category": "공모전",
+      "company": "하나카드",
+      "title": "제4회 하나카드 PLATE 디자인 공모전",
+      "option": "디자인·광고 · 11.14 ~ 12.21",
+      "deadline": "2026-12-21",
+      "thumb": "8_images/8_contest02.jpg",
+      "thumbClass": ""
+    },
+    {
+      "id": "recruit-001",
+      "category": "취업공고",
+      "company": "테슬라코리아",
+      "title": "[테슬라코리아] 2026 대규모 공개채용",
+      "option": "경력직 / 서울 강남구 / IT/개발 · ~ 12.24",
+      "deadline": "2026-12-24",
+      "thumb": "8_images_recruit/8_tesla_logo.jpeg",
+      "thumbClass": "logo"
+    },
+    {
+      "id": "contest-ai-copyright",
+      "category": "공모전",
+      "company": "문화체육관광부 · 한국저작권위원회",
+      "title": "2026 AI 활용 저작권 콘텐츠 공모전",
+      "option": "영상·콘텐츠 · 11.10 ~ 12.12",
+      "deadline": "2026-12-12",
+      "thumb": "8_images/8_contest04.jpg",
+      "thumbClass": ""
+    },
+    {
+      "id": "recruit-002",
+      "category": "취업공고",
+      "company": "CJ ENM",
+      "title": "커머스부문 [물류관리] 신입수시 채용",
+      "option": "신입 / 경기 / 생산·제조, 물류·유통 · ~ 12.11",
+      "deadline": "2026-12-11",
+      "thumb": "8_images_recruit/8_cj_logo.png",
+      "thumbClass": "logo"
+    },
+    {
+      "id": "activity-hyundai-style",
+      "category": "대외활동",
+      "company": "현대자동차",
+      "title": "현대자동차 SNS 앰버서더 H스타일리스트 14기",
+      "option": "서포터즈·홍보대사 · 11.09 ~ 12.16",
+      "deadline": "2026-12-16",
+      "thumb": "8_images/8_activity06.png",
+      "thumbClass": ""
+    },
+    {
+      "id": "activity-snow",
+      "category": "대외활동",
+      "company": "SNOW",
+      "title": "SNOW 포토 인사이트 크루 모집",
+      "option": "기자단·콘텐츠 · 11.05 ~ 12.19",
+      "deadline": "2026-12-19",
+      "thumb": "8_images/8_activity03.jpg",
+      "thumbClass": ""
+    },
+    {
+      "id": "recruit-004",
+      "category": "취업공고",
+      "company": "SM 엔터테인먼트",
+      "title": "[SM엔터테인먼트] Creative Visual 담당자 채용",
+      "option": "신입, 계약직 / 서울 / 디자인, 미디어/콘텐츠 · ~ 10.21",
+      "deadline": "2026-10-21",
+      "thumb": "8_images_recruit/8_sm_logo.png",
+      "thumbClass": "logo"
+    },
+    {
+      "id": "recruit-005",
+      "category": "취업공고",
+      "company": "SK오션플랜트",
+      "title": "[SK오션플랜트]경영기획 구성원 모집",
+      "option": "경력직 / 경기 / 기획/경영, 영업 · ~ 11.01",
+      "deadline": "2026-11-01",
+      "thumb": "8_images_recruit/8_sk_logo.png",
+      "thumbClass": "logo"
+    },
+    {
+      "id": "recruit-006",
+      "category": "취업공고",
+      "company": "소니코리아",
+      "title": "소니코리아 General Affairs Specialist 채용",
+      "option": "신입 / 서울 / 기타 · ~ 11.07",
+      "deadline": "2026-11-07",
+      "thumb": "8_images_recruit/8_sony_logo.png",
+      "thumbClass": "logo"
+    },
+    {
+      "id": "recruit-007",
+      "category": "취업공고",
+      "company": "LG전자",
+      "title": "[LG전자]채용비연계형 대학생 인턴 인사기획/조직문화",
+      "option": "인턴 / 서울 / 기획/경영 · ~ 11.10",
+      "deadline": "2026-11-10",
+      "thumb": "8_images_recruit/8_lg_logo.jpeg",
+      "thumbClass": "logo"
+    },
+    {
+      "id": "recruit-008",
+      "category": "취업공고",
+      "company": "SK텔레콤",
+      "title": "[SK텔레콤]에이닷 음악 추천 서비스 운영 담당자",
+      "option": "계약직 / 서울 / IT/개발, 기획/경영 · ~ 11.13",
+      "deadline": "2026-11-13",
+      "thumb": "8_images_recruit/8_sk_logo.png",
+      "thumbClass": "logo"
+    },
+    {
+      "id": "recruit-009",
+      "category": "취업공고",
+      "company": "현대자동차",
+      "title": "[현대자동차]R&D 임원 통번역사",
+      "option": "계약직 / 경기 / 기타 · ~ 11.18",
+      "deadline": "2026-11-18",
+      "thumb": "8_images_recruit/8_hyundai_logo.jpeg",
+      "thumbClass": "logo"
+    },
+    {
+      "id": "recruit-010",
+      "category": "취업공고",
+      "company": "LG경영개발원",
+      "title": "[LG경영개발원]Backend Engineer Internship",
+      "option": "인턴 / 서울 / IT/개발 · ~ 11.22",
+      "deadline": "2026-11-22",
+      "thumb": "8_images_recruit/8_lg_logo.jpeg",
+      "thumbClass": "logo"
+    },
+    {
+      "id": "recruit-011",
+      "category": "취업공고",
+      "company": "SM C&C",
+      "title": "[SM C&C]법인영업 담당 신입/경력직 채용",
+      "option": "신입, 경력직 / 서울 / 기획/경영, 영업 · ~ 11.28",
+      "deadline": "2026-11-28",
+      "thumb": "8_images_recruit/8_sm_logo.png",
+      "thumbClass": "logo"
+    },
+    {
+      "id": "recruit-012",
+      "category": "취업공고",
+      "company": "CJ ENM",
+      "title": "[CJ ENM] 콘텐츠 마케팅 신입 담당자 모집",
+      "option": "신입 / 서울 / 마케팅/광고, 미디어/콘텐츠 · ~ 12.04",
+      "deadline": "2026-12-04",
+      "thumb": "8_images_recruit/8_cj_logo.png",
+      "thumbClass": "logo"
+    },
+    {
+      "id": "recruit-013",
+      "category": "취업공고",
+      "company": "현대자동차",
+      "title": "[현대자동차]생산관리 인턴 모집",
+      "option": "인턴 / 울산 / 생산/제조 · ~ 12.06",
+      "deadline": "2026-12-06",
+      "thumb": "8_images_recruit/8_hyundai_logo.jpeg",
+      "thumbClass": "logo"
+    },
+    {
+      "id": "recruit-014",
+      "category": "취업공고",
+      "company": "LG전자",
+      "title": "[LG전자]서비스 화면 디자인 경력직 모집",
+      "option": "경력직 / 서울, 경기 / 디자인, IT/개발 · ~ 12.08",
+      "deadline": "2026-12-08",
+      "thumb": "8_images_recruit/8_lg_logo.jpeg",
+      "thumbClass": "logo"
+    },
+    {
+      "id": "recruit-015",
+      "category": "취업공고",
+      "company": "SK텔레콤",
+      "title": "[SK텔레콤]웹서비스 개발 인턴 모집",
+      "option": "인턴 / 서울 / IT/개발 · ~ 12.10",
+      "deadline": "2026-12-10",
+      "thumb": "8_images_recruit/8_sk_logo.png",
+      "thumbClass": "logo"
+    },
+    {
+      "id": "recruit-016",
+      "category": "취업공고",
+      "company": "SM 엔터테인먼트",
+      "title": "[SM 엔터테인먼트]글로벌 컨텐츠 운영 계약직 모집",
+      "option": "계약직 / 서울 / 미디어/콘텐츠, 기타 · ~ 12.10",
+      "deadline": "2026-12-10",
+      "thumb": "8_images_recruit/8_sm_logo.png",
+      "thumbClass": "logo"
+    },
+    {
+      "id": "recruit-017",
+      "category": "취업공고",
+      "company": "소니코리아",
+      "title": "영업 지원 신입 담당자 모집",
+      "option": "신입 / 부산 / 영업 · ~ 12.13",
+      "deadline": "2026-12-13",
+      "thumb": "8_images_recruit/8_sony_logo.png",
+      "thumbClass": "logo"
+    },
+    {
+      "id": "recruit-018",
+      "category": "취업공고",
+      "company": "테슬라코리아",
+      "title": "[테슬라코리아]물류 운영 계약직 모집",
+      "option": "계약직 / 인천, 경기 / 물류/유통 · ~ 12.15",
+      "deadline": "2026-12-15",
+      "thumb": "8_images_recruit/8_tesla_logo.jpeg",
+      "thumbClass": "logo"
+    },
+    {
+      "id": "recruit-019",
+      "category": "취업공고",
+      "company": "LG경영개발원",
+      "title": "[LG경영개발원]연구 지원 인턴 모집",
+      "option": "인턴 / 대전 / 연구, 기획/경영 · ~ 12.18",
+      "deadline": "2026-12-18",
+      "thumb": "8_images_recruit/8_lg_logo.jpeg",
+      "thumbClass": "logo"
+    },
+    {
+      "id": "recruit-020",
+      "category": "취업공고",
+      "company": "SM C&C",
+      "title": "[SM C&C]광고 기획 신입 및 경력직 모집",
+      "option": "신입, 경력직 / 서울 / 마케팅/광고, 기획/경영 · ~ 12.20",
+      "deadline": "2026-12-20",
+      "thumb": "8_images_recruit/8_sm_logo.png",
+      "thumbClass": "logo"
+    }
+  ],
+  "applied": [
+    {
+      "id": "contest-ai-copyright",
+      "cate": "공모전 · 문화체육관광부 · 한국저작권위원회",
+      "title": "2026 AI 활용 저작권 콘텐츠 공모전",
+      "date": "지원일 2026.11.20 · 접수 마감 2026.12.12",
+      "thumb": "8_images/8_contest04.jpg",
+      "thumbClass": "",
+      "alt": "2026 AI 활용 저작권 콘텐츠 공모전 포스터",
+      "stage": 1,
+      "result": "ing"
+    },
+    {
+      "id": "recruit-002",
+      "cate": "취업공고 · CJ ENM",
+      "title": "커머스부문 [물류관리] 신입수시 채용",
+      "date": "지원일 2026.11.18 · 접수 마감 2026.12.11",
+      "thumb": "8_images_recruit/8_cj_logo.png",
+      "thumbClass": "logo",
+      "alt": "CJ ENM 로고",
+      "stage": 2,
+      "result": "ing"
+    },
+    {
+      "id": "activity-hyundai-style",
+      "cate": "대외활동 · 현대자동차",
+      "title": "현대자동차 SNS 앰버서더 H스타일리스트 14기",
+      "date": "지원일 2026.11.19 · 모집 마감 2026.12.16",
+      "thumb": "8_images/8_activity06.png",
+      "thumbClass": "",
+      "alt": "현대자동차 SNS 앰버서더 H스타일리스트 14기 모집 포스터",
+      "stage": 3,
+      "result": "pass"
+    },
+    {
+      "id": "activity-snow",
+      "cate": "대외활동 · SNOW",
+      "title": "SNOW 포토 인사이트 크루 모집",
+      "date": "지원일 2026.11.15 · 신청 마감 2026.12.19",
+      "thumb": "8_images/8_activity03.jpg",
+      "thumbClass": "",
+      "alt": "SNOW 포토 인사이트 크루 모집 포스터",
+      "stage": 1,
+      "result": "fail"
+    }
+  ]
+}
