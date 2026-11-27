@@ -25,7 +25,7 @@
 @font-face {
   font-family: "Outfit";
   src: url("fonts/Outfit-Bold.ttf");
-  font-weight: 700 900;   /* 800처럼 더 두꺼운 굵기도 Bold 파일로 표시 */
+  font-weight: 700 900;
 }
 
 @font-face {
@@ -52,7 +52,6 @@
   font-weight: 700 900;
 }
 
-/* ===== 기본 초기화 ===== */
 * {
   margin: 0;
   padding: 0;
@@ -60,9 +59,14 @@
 }
 
 body {
-  /* 영어·숫자는 Outfit, Outfit에 없는 한글은 뒤의 폰트로 표시 */
+
   font-family: "Outfit", "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
   color: #222;
+}
+
+html,
+body {
+  overscroll-behavior: none;
 }
 
 a {
@@ -74,7 +78,6 @@ ol, ul {
   list-style: none;
 }
 
-/* 버튼, 입력칸은 body 폰트를 자동으로 안 따라가서 따로 지정 */
 button,
 input {
   font-family: inherit;
@@ -84,30 +87,24 @@ button {
   cursor: pointer;
 }
 
-/* 가운데 정렬용 공통 영역 */
-
 .inner {
   width: 1400px;
   padding: 0 0 0 40px;
 }
 
-/* 본문: 1400px 고정을 풀고, 오른쪽 간격도 왼쪽(40px)과 같게 */
 main.inner {
   width: auto;
   padding-right: 40px;
 }
 
-/* ===== 헤더 (index.html의 style.css와 같은 값) ===== */
-
-/* 상단: 로고와 계정 메뉴 */
 .site-header {
-  position: sticky;   /* 스크롤해도 화면 맨 위에 고정 */
+  position: sticky;
   top: 0;
-  z-index: 100;       /* 다른 요소보다 위에 보이게 */
+  z-index: 100;
   padding: 28px 40px 0;
   background-color: #fff;
   color: #111111;
-  font-family: "Google Sans", Arial, sans-serif;   /* index의 기본 글꼴 */
+  font-family: "Google Sans", Arial, sans-serif;
 }
 
 .top-row {
@@ -142,7 +139,6 @@ main.inner {
   margin-right: 6px;
 }
 
-/* 연결 메뉴와 검색창 */
 .navigation-row {
   display: flex;
   justify-content: space-between;
@@ -163,7 +159,7 @@ main.inner {
   font-family: "Outfit", sans-serif;
   font-size: 48px;
   font-weight: 500;
-  line-height: normal;   /* index와 같은 줄 높이 */
+  line-height: normal;
   padding-bottom: 1px;
   border-bottom: 4px solid transparent;
 }
@@ -208,7 +204,6 @@ main.inner {
   height: 36px;
 }
 
-/* ===== 페이지 제목 + 단계 ===== */
 .page-title {
   display: flex;
   justify-content: space-between;
@@ -233,7 +228,6 @@ main.inner {
   font-weight: 700;
 }
 
-/* ===== 장바구니 전체 레이아웃 (왼쪽 목록 / 오른쪽 요약) ===== */
 .cart-wrap {
   display: flex;
   align-items: flex-start;
@@ -248,15 +242,13 @@ main.inner {
   padding: 10px 0;
 }
 
-/* ===== 체크박스 공통 ===== */
 input[type="checkbox"] {
   width: 20px;
   height: 20px;
-  accent-color: #222;   /* 체크됐을 때 색상 */
+  accent-color: #222;
   cursor: pointer;
 }
 
-/* ===== 전체선택 줄 ===== */
 .list-top {
   display: flex;
   justify-content: space-between;
@@ -274,13 +266,12 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 
-/* 테두리만 있는 작은 버튼 */
 .btn-line {
   padding: 8px 14px;
   font-size: 13px;
   background-color: #fff;
   border: 1px solid #ccc;
-  border-radius: 6px;
+  border-radius: 3px;
   transition: all 0.15s;
 }
 
@@ -293,7 +284,6 @@ input[type="checkbox"] {
   transform: scale(0.96);
 }
 
-/* ===== 상품 한 줄 ===== */
 .cart-item {
   display: flex;
   align-items: center;
@@ -306,25 +296,22 @@ input[type="checkbox"] {
   border-bottom: none;
 }
 
-/* 상품 이미지 자리 */
 .thumb {
   width: 100px;
   height: 100px;
   flex-shrink: 0;
-  object-fit: cover;          /* 포스터가 찌그러지지 않게 칸을 꽉 채우기 */
-  object-position: top;       /* 포스터 윗부분(제목 쪽)이 보이게 */
+  object-fit: cover;
+  object-position: top;
 }
 
-/* 가로로 긴 로고(현대자동차): 왼쪽 H 마크만 보이게 잘라서 크게 */
 .thumb.logo-mark {
-  padding: 0 15px;               /* 좌우를 좁혀서 마크 부분만 남기기 */
-  object-fit: cover;             /* 세로를 칸에 꽉 맞춤 */
-  object-position: -9px center;  /* 로고 왼쪽 여백을 살짝 밀어내기 */
+  padding: 0 15px;
+  object-fit: cover;
+  object-position: -9px center;
   background-color: #fff;
   border: 1px solid #e5e5e5;
 }
 
-/* 기업 로고: 잘리지 않게 칸 안에 맞추고 흰 배경 + 테두리 */
 .thumb.logo,
 .applied-thumb.logo {
   object-fit: contain;
@@ -361,7 +348,6 @@ input[type="checkbox"] {
   font-weight: 700;
 }
 
-/* 작은 지원하기 버튼 */
 .btn-smorder {
   width: 70px;
   height: 35px;
@@ -370,7 +356,7 @@ input[type="checkbox"] {
   color: #fff;
   background-color: #222;
   border: none;
-  border-radius: 2px;
+  border-radius: 3px;
   transition: all 0.15s;
 }
 
@@ -383,7 +369,6 @@ input[type="checkbox"] {
   background-color: #000;
 }
 
-/* 삭제(X) 버튼 */
 .btn-delete {
   width: 32px;
   height: 32px;
@@ -404,18 +389,15 @@ input[type="checkbox"] {
   transform: scale(0.85);
 }
 
-/* ===== 왼쪽 영역 (상품 목록 + 지원 완료한 공고) ===== */
 .cart-left {
   flex: 1;
   min-width: 0;
 }
 
-/* ===== 지원 완료한 공고 ===== */
 .applied {
   margin-top: 60px;
 }
 
-/* 제목 + 탭 */
 .applied-top {
   display: flex;
   justify-content: space-between;
@@ -443,25 +425,26 @@ input[type="checkbox"] {
   color: #555;
 }
 
-/* 전체 / 진행 중 / 합격 / 불합격 탭 */
-.applied-tabs a {
+.applied-tabs button {
   margin-left: 18px;
-  padding-bottom: 6px;
+  padding: 0 0 6px;
   font-size: 13px;
   color: #555;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
 }
 
-.applied-tabs a:hover {
+.applied-tabs button:hover {
   color: #222;
 }
 
-.applied-tabs a.active {
+.applied-tabs button.active {
   font-weight: 700;
   color: #222;
   border-bottom: 2px solid #222;
 }
 
-/* 공고 한 줄 */
 .applied-item {
   display: flex;
   align-items: center;
@@ -470,7 +453,10 @@ input[type="checkbox"] {
   border-bottom: 1px solid #e5e5e5;
 }
 
-/* 썸네일 자리 */
+.applied-item[hidden] {
+  display: none;
+}
+
 .applied-thumb {
   width: 80px;
   height: 80px;
@@ -479,7 +465,6 @@ input[type="checkbox"] {
   object-position: top;
 }
 
-/* 불합격 공고는 포스터도 흐리게 */
 .applied-item.fail .applied-thumb {
   opacity: 0.5;
 }
@@ -505,7 +490,6 @@ input[type="checkbox"] {
   color: #777;
 }
 
-/* ----- 진행 단계 (지원 - 서류 - 면접 - 결과) ----- */
 .progress {
   display: flex;
   align-items: center;
@@ -518,7 +502,6 @@ input[type="checkbox"] {
   color: #aaa;
 }
 
-/* 동그라미 점 (기본: 아직 안 한 단계 → 속이 빈 회색 원) */
 .progress li::before {
   content: "";
   width: 8px;
@@ -529,7 +512,6 @@ input[type="checkbox"] {
   background-color: #fff;
 }
 
-/* 단계 사이 연결선 (마지막 단계 뒤에는 없음) */
 .progress li:not(:last-child)::after {
   content: "";
   width: 28px;
@@ -538,7 +520,6 @@ input[type="checkbox"] {
   background-color: #e5e5e5;
 }
 
-/* 완료한 단계 → 검은 점 + 굵은 글씨 + 진한 선 */
 .progress li.done {
   color: #222;
   font-weight: 700;
@@ -553,7 +534,6 @@ input[type="checkbox"] {
   background-color: #999;
 }
 
-/* 지금 진행 중인 단계 → 파란 점 + 바깥 테두리 */
 .progress li.current {
   color: #3b4fe0;
   font-weight: 700;
@@ -562,22 +542,20 @@ input[type="checkbox"] {
 .progress li.current::before {
   background-color: #3b4fe0;
   border-color: #3b4fe0;
-  box-shadow: 0 0 0 2px #fff, 0 0 0 3px #3b4fe0;   /* 점 바깥 링 */
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3px #3b4fe0;
 }
 
-/* ----- 오른쪽 상태 버튼 ----- */
 .status {
   width: 80px;
   height: 30px;
   margin-left: 20px;
-  white-space: nowrap;   /* 글자가 두 줄로 넘어가지 않게 */
+  white-space: nowrap;
   font-size: 12px;
   font-weight: 700;
   border: 1px solid;
   transition: all 0.15s;
 }
 
-/* 서류 심사 중 : 파란 테두리 */
 .status-line {
   color: #3b4fe0;
   background-color: #fff;
@@ -588,7 +566,6 @@ input[type="checkbox"] {
   background-color: #eef0fd;
 }
 
-/* 면접 예정 : 파란 배경 */
 .status-blue {
   color: #fff;
   background-color: #2f45f0;
@@ -599,7 +576,6 @@ input[type="checkbox"] {
   background-color: #2234c8;
 }
 
-/* 최종 합격 : 검은 배경 */
 .status-black {
   color: #fff;
   background-color: #111;
@@ -610,7 +586,6 @@ input[type="checkbox"] {
   background-color: #333;
 }
 
-/* 불합격 : 회색 테두리 */
 .status-gray {
   color: #333;
   background-color: #fff;
@@ -621,7 +596,6 @@ input[type="checkbox"] {
   background-color: #f5f5f5;
 }
 
-/* 불합격한 공고는 전체를 회색 톤으로 */
 .applied-item.fail .applied-name,
 .applied-item.fail .progress li.done {
   color: #777;
@@ -632,14 +606,13 @@ input[type="checkbox"] {
   border-color: #999;
 }
 
-/* ===== 오른쪽 결제 요약 ===== */
 .summary {
   width: 340px;
   background-color: #fff;
   padding: 30px;
   margin-top: 88px;
-  position: sticky;   /* 스크롤해도 따라오게 */
-  top: 172px;         /* 고정된 헤더(152px) 아래 + 20px */
+  position: sticky;
+  top: 172px;
   border: 2px solid #222;
 }
 
@@ -681,7 +654,6 @@ input[type="checkbox"] {
   border-top: 1px solid #eee;
 }
 
-/* 주문하기 버튼 */
 .btn-order {
   width: 100%;
   height: 56px;
@@ -703,7 +675,6 @@ input[type="checkbox"] {
   background-color: #000;
 }
 
-/* 쇼핑 계속하기 */
 .btn-continue {
   display: block;
   margin-top: 12px;
@@ -719,8 +690,309 @@ input[type="checkbox"] {
   border-color: #222;
 }
 
+.empty-cart {
+  padding: 60px 0;
+  text-align: center;
+}
 
-/* 하단 */
+.empty-title {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.empty-desc {
+  margin-bottom: 24px;
+  font-size: 14px;
+  color: #777;
+}
+
+.empty-links {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.empty-links a {
+  padding: 10px 18px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  transition: all 0.15s;
+}
+
+.empty-links a:hover {
+  color: #fff;
+  background-color: #222;
+  border-color: #222;
+}
+
+.progress li {
+  cursor: pointer;
+  transition: color 0.15s;
+}
+
+.progress li::before {
+  transition: transform 0.15s;
+}
+
+.progress li:hover {
+  color: #3b4fe0;
+}
+
+.progress li:hover::before {
+  transform: scale(1.4);
+  border-color: #3b4fe0;
+}
+
+.progress li:focus-visible {
+  outline: 2px solid #3b4fe0;
+  outline-offset: 3px;
+}
+
+.empty {
+  padding: 24px 0;
+  font-size: 14px;
+  color: #999;
+}
+
+.calendar-section {
+  margin-top: 60px;
+}
+
+.calendar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 14px;
+  border-bottom: 2px solid #222;
+}
+
+.month-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.month-nav strong {
+  min-width: 90px;
+  font-family: "Outfit", sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.calendar-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.calendar {
+  flex: 1;
+  min-width: 0;
+}
+
+.weekdays,
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.weekdays li {
+  padding: 8px 0;
+  font-size: 13px;
+  color: #888;
+  text-align: center;
+}
+
+.weekdays li:first-child {
+  color: #d93025;
+}
+
+.weekdays li:last-child {
+  color: #3b4fe0;
+}
+
+.calendar-grid li {
+  min-width: 0;
+  min-height: 92px;
+  padding: 6px;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.calendar-grid li:nth-child(7n + 1) {
+  border-left: 1px solid #eee;
+}
+
+.calendar-grid li:nth-child(-n + 7) {
+  border-top: 1px solid #eee;
+}
+
+.day {
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.day:hover {
+  background-color: #f5f5f5;
+}
+
+.day .num {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 26px;
+  height: 26px;
+  margin-bottom: 2px;
+  font-size: 14px;
+}
+
+.day.today .num {
+  color: #fff;
+  background-color: #111;
+  border-radius: 50%;
+}
+
+.day.selected {
+  background-color: #eef0fd;
+  box-shadow: inset 0 0 0 2px #3b4fe0;
+}
+
+.tag {
+  display: block;
+  margin-top: 3px;
+  padding: 2px 5px;
+  overflow: hidden;
+  font-size: 11px;
+  color: #fff;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.type-deadline  { background-color: #d93025; }
+.type-interview { background-color: #111; }
+.type-exam      { background-color: #7a4fe0; }
+.type-study     { background-color: #1a8a5a; }
+.type-etc       { background-color: #999; }
+
+.day .more {
+  display: block;
+  margin-top: 2px;
+  font-size: 11px;
+  color: #888;
+}
+
+.day-panel {
+  width: 280px;
+  flex-shrink: 0;
+}
+
+.day-panel h4 {
+  margin-bottom: 6px;
+  font-size: 18px;
+}
+
+.day-event {
+  position: relative;
+  padding: 12px 104px 12px 0;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+}
+
+.day-event .tag {
+  display: inline-block;
+  margin: 0 6px 0 0;
+  vertical-align: middle;
+}
+
+.day-event p {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #777;
+}
+
+.event-btns {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  display: flex;
+  gap: 6px;
+}
+
+.event-btns .btn-line {
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+#event-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #222;
+}
+
+#event-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #555;
+}
+
+#event-form input,
+#event-form select,
+#event-form textarea {
+  padding: 8px 4px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: normal;
+  color: #222;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #ddd;
+  border-radius: 0;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+#event-form select {
+  cursor: pointer;
+}
+
+#event-form textarea {
+  resize: none;
+}
+
+#event-form input:hover,
+#event-form select:hover,
+#event-form textarea:hover,
+#event-form input:focus,
+#event-form select:focus,
+#event-form textarea:focus {
+  border-bottom-color: #222;
+}
+
+.form-btns {
+  display: flex;
+  gap: 8px;
+}
+
+.form-btns .btn-smorder {
+  flex: 1;
+  width: auto;
+  height: 40px;
+  font-size: 14px;
+}
+
+.form-btns .btn-line {
+  width: 70px;
+}
+
 .site-footer {
   margin-top: 80px;
   padding: 45px 40px 30px;
@@ -753,7 +1025,6 @@ input[type="checkbox"] {
   color: #999999;
 }
 
-/* 안내문과 링크 목록 사이 구분선 */
 .footer-links {
   display: flex;
   flex-wrap: wrap;
@@ -778,4 +1049,13 @@ input[type="checkbox"] {
   font-family: "Outfit", sans-serif;
   font-size: 12px;
   color: #777777;
+}
+
+.reset-dot {
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: text;
 }
