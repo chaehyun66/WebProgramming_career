@@ -25,7 +25,7 @@
 @font-face {
   font-family: "Outfit";
   src: url("fonts/Outfit-Bold.ttf");
-  font-weight: 700 900;   /* 800처럼 더 두꺼운 굵기도 Bold 파일로 표시 */
+  font-weight: 700 900;
 }
 
 @font-face {
@@ -52,7 +52,6 @@
   font-weight: 700 900;
 }
 
-/* ===== 기본 초기화 ===== */
 * {
   margin: 0;
   padding: 0;
@@ -60,9 +59,14 @@
 }
 
 body {
-  /* 영어·숫자는 Outfit, Outfit에 없는 한글은 뒤의 폰트로 표시 */
+
   font-family: "Outfit", "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
   color: #222;
+}
+
+html,
+body {
+  overscroll-behavior: none;
 }
 
 a {
@@ -74,7 +78,6 @@ ol, ul {
   list-style: none;
 }
 
-/* 버튼, 입력칸은 body 폰트를 자동으로 안 따라가서 따로 지정 */
 button,
 input {
   font-family: inherit;
@@ -84,24 +87,19 @@ button {
   cursor: pointer;
 }
 
-/* 가운데 정렬용 공통 영역 */
-
 .inner {
   width: 1400px;
   padding: 0 0 0 40px;
 }
 
-/* ===== 헤더 (index.html의 style.css와 같은 값) ===== */
-
-/* 상단: 로고와 계정 메뉴 */
 .site-header {
-  position: sticky;   /* 스크롤해도 화면 맨 위에 고정 */
+  position: sticky;
   top: 0;
-  z-index: 100;       /* 다른 요소보다 위에 보이게 */
+  z-index: 100;
   padding: 28px 40px 0;
   background-color: #fff;
   color: #111111;
-  font-family: "Google Sans", Arial, sans-serif;   /* index의 기본 글꼴 */
+  font-family: "Google Sans", Arial, sans-serif;
 }
 
 .top-row {
@@ -136,7 +134,6 @@ button {
   margin-right: 6px;
 }
 
-/* 연결 메뉴와 검색창 */
 .navigation-row {
   display: flex;
   justify-content: space-between;
@@ -157,7 +154,7 @@ button {
   font-family: "Outfit", sans-serif;
   font-size: 48px;
   font-weight: 500;
-  line-height: normal;   /* index와 같은 줄 높이 */
+  line-height: normal;
   padding-bottom: 1px;
   border-bottom: 4px solid transparent;
 }
@@ -166,7 +163,6 @@ button {
   border-bottom-color: black;
 }
 
-/* 현재 페이지의 메뉴는 밑줄 유지 */
 .main-menu .current-menu {
     border-bottom-color: black;
 }
@@ -207,13 +203,10 @@ button {
   height: 36px;
 }
 
-
-/* ===== 본문: 공고 상세 ===== */
 .detail {
-  padding: 0 40px;   /* 양쪽 40px (MyPage, Qualifications와 같게) */
+  padding: 0 40px;
 }
 
-/* ===== 페이지 제목 (Qualifications와 같은 값) ===== */
 .page-head {
   margin: 55px 0 40px;
   padding-bottom: 22px;
@@ -237,10 +230,9 @@ button {
   line-height: 1.6;
 }
 
-/* 위치 안내 (대외활동 › 서포터즈) */
 .breadcrumb {
   margin-bottom: 22px;
-  font-size: 12px;
+  font-size: 14px;
   color: #888;
 }
 
@@ -256,7 +248,6 @@ button {
   color: #222;
 }
 
-/* ----- 포스터 + 요약 정보 ----- */
 .detail-top {
   display: flex;
   gap: 44px;
@@ -272,10 +263,10 @@ button {
   width: 255px;
   height: 318px;
   background-color: #fff;
-  border: 1px solid #e5e5e5;   /* 흰 로고 이미지가 배경에 묻히지 않게 */
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
 }
 
-/* 기업 로고: 비율을 유지한 채 칸 안에 맞추기 */
 .poster-box img {
   width: 100%;
   height: 100%;
@@ -291,32 +282,32 @@ button {
   align-items: center;
   gap: 8px;
   margin-bottom: 10px;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 700;
 }
 
 .dday {
   padding: 4px 7px;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 700;
   color: #fff;
   background-color: #2f45f0;
+  border-radius: 3px;
 }
 
 .detail-title {
   padding-bottom: 24px;
   margin-bottom: 18px;
-  font-size: 26px;
+  font-size: 32px;
   font-weight: 700;
   border-bottom: 1px solid #222;
 }
 
-/* 접수기간 / 활동기간 ... 2칸씩 */
 .info-grid {
   display: grid;
-  grid-template-columns: 80px 1fr 80px 1fr;   /* 제목 | 내용 | 제목 | 내용 */
-  row-gap: 14px;
-  font-size: 13px;
+  grid-template-columns: 100px 1fr 100px 1fr;
+  row-gap: 16px;
+  font-size: 16px;
 }
 
 .info-grid dt {
@@ -327,13 +318,12 @@ button {
   color: #222;
 }
 
-/* 추천 목적 태그 */
 .purpose {
   display: flex;
   align-items: center;
   gap: 6px;
   margin-top: 22px;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .purpose-label {
@@ -344,9 +334,9 @@ button {
 .purpose-tag {
   padding: 5px 9px;
   border: 1px solid #222;
+  border-radius: 3px;
 }
 
-/* 하트 + 지원하기 버튼 */
 .detail-buttons {
   display: flex;
   gap: 8px;
@@ -359,40 +349,38 @@ button {
   align-items: center;
   width: 51px;
   height: 51px;
-  border: 1px solid #ccc;
   cursor: pointer;
-  transition: border-color 0.15s;
-}
-
-.btn-like:hover {
-  border-color: #222;
 }
 
 .btn-like input {
-  display: none;   /* 체크박스는 숨기고 하트만 보이게 */
+  display: none;
 }
 
-/* 기본: 빈 하트 */
-.btn-like span::before {
-  content: "♡";
-  font-size: 18px;
-  color: #222;
+.btn-like svg {
+  display: block;
+  width: 28px;
+  height: 28px;
+  fill: none;
+  stroke: #111;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
-/* 누르면(체크되면): 빨간 꽉 찬 하트 */
-.btn-like input:checked + span::before {
-  content: "♥";
-  color: #d93025;
+.btn-like input:checked + svg {
+  fill: red;
+  stroke: red;
 }
 
 .btn-apply {
   width: 327px;
   height: 51px;
-  font-size: 14px;
+  font-size: 17px;
   font-weight: 700;
   color: #fff;
   background-color: #111;
   border: none;
+  border-radius: 3px;
   transition: all 0.15s;
 }
 
@@ -404,18 +392,27 @@ button {
   transform: scale(0.98);
 }
 
-/* ----- 상세 내용 (모집 개요, 활동 내용 ...) ----- */
+.detail-rows {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 60px;
+}
+
 .detail-row {
   display: flex;
-  padding: 40px 0;
+  padding: 28px 0;
   border-bottom: 1px solid #eee;
-  font-size: 13px;
+  font-size: 16px;
+}
+
+.detail-row.wide {
+  grid-column: 1 / -1;
 }
 
 .detail-row dt {
   flex-shrink: 0;
-  width: 190px;
-  font-size: 14px;
+  width: 160px;
+  font-size: 18px;
   font-weight: 700;
 }
 
@@ -424,7 +421,6 @@ button {
   line-height: 1.6;
 }
 
-/* 점 목록 */
 .dot-list li {
   position: relative;
   padding-left: 16px;
@@ -451,7 +447,6 @@ button {
   color: #aaa;
 }
 
-/* ----- 아래쪽 추천 영역 공통 ----- */
 .related {
   margin-top: 80px;
 }
@@ -464,12 +459,12 @@ button {
 }
 
 .related-top h3 {
-  font-size: 28px;   /* 섹션 제목 (다른 페이지와 같게) */
+  font-size: 28px;
   font-weight: 700;
 }
 
 .related-more {
-  font-size: 12px;
+  font-size: 14px;
   color: #555;
 }
 
@@ -477,8 +472,6 @@ button {
   text-decoration: underline;
 }
 
-/* 함께 준비하면 좋은 자격증 */
-/* 넓어진 본문에 맞춰 카드 3개가 같은 너비로 꽉 차게 */
 .license-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -491,6 +484,7 @@ button {
   align-items: center;
   padding: 22px 20px;
   border: 1px solid #e5e5e5;
+  border-radius: 3px;
   transition: border-color 0.15s;
 }
 
@@ -500,42 +494,40 @@ button {
 
 .license-name {
   margin-bottom: 6px;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 700;
 }
 
 .license-desc {
-  font-size: 11px;
+  font-size: 14px;
   color: #888;
 }
 
 .license-date {
-  font-size: 11px;
+  font-size: 14px;
   color: #888;
 }
 
-/* 비슷한 활동 */
-/* 카드 4개가 같은 너비로 꽉 차게 (Qualifications 일정 카드와 같은 방식) */
 .similar-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
 
-/* 기업 로고 칸 (위쪽 테슬라 로고 칸과 같은 스타일) */
 .similar-thumb {
   height: 240px;
   margin-bottom: 10px;
-  padding: 30px;                /* 로고가 테두리에 붙지 않게 여백 */
+  padding: 30px;
   background-color: #fff;
   border: 1px solid #e5e5e5;
+  border-radius: 3px;
   transition: border-color 0.15s;
 }
 
 .similar-thumb img {
   width: 100%;
   height: 100%;
-  object-fit: contain;          /* 로고 비율 유지 */
+  object-fit: contain;
 }
 
 .similar-card:hover .similar-thumb {
@@ -544,16 +536,15 @@ button {
 
 .similar-meta {
   margin-bottom: 6px;
-  font-size: 11px;
+  font-size: 13px;
   color: #888;
 }
 
 .similar-name {
-  font-size: 13px;
+  font-size: 17px;
   font-weight: 700;
 }
 
-/* 하단 */
 .site-footer {
   margin-top: 80px;
   padding: 45px 40px 30px;
@@ -586,7 +577,6 @@ button {
   color: #999999;
 }
 
-/* 안내문과 링크 목록 사이 구분선 */
 .footer-links {
   display: flex;
   flex-wrap: wrap;
