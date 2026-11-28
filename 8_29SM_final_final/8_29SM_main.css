@@ -1,0 +1,313 @@
+/* 메인 페이지 추가 스타일 */
+
+/* 전체보기 밑줄 */
+.section-heading > a:hover {
+    text-decoration: underline;
+}
+
+/* best recruit 카드 hover */
+.recruit-card:hover {
+    border-color: #111111;
+}
+
+/* best contest 줄맞춤 */
+.contest-scroll {
+    align-items: stretch;
+}
+
+.contest-card {
+    position: relative;
+    padding-bottom: 42px;
+}
+
+.contest-card h3 {
+    min-height: 57px;
+    margin-top: 16px;
+}
+
+.contest-card .organization {
+    min-height: 0;
+    margin: 7px 0 12px;
+}
+
+.contest-card .dday {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+}
+
+.home-favorite {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    color: #e65332;
+    font-size: 23px;
+    line-height: 1;
+    padding: 5px 9px;
+    cursor: pointer;
+}
+.contest-card .home-favorite { position: absolute; right: 0; bottom: 0; }
+.recruit-card .home-favorite { margin-top: 8px; }
+.home-favorite:hover { background: #fff2ef; }
+
+/* best recruit 줄맞춤 */
+.recruit-card {
+    height: auto;
+    min-height: 320px;
+    padding: 33px 26px 55px;
+}
+
+.recruit-card h3 {
+    min-height: 0px;
+    font-size: 21px;
+    line-height: 1.5;
+}
+
+/* best recruit 수정 */
+.recruit-card .company-logo {
+    width: 180px;
+    max-width: 100%;
+    height: 95px;
+    margin-bottom: 12px;
+    object-fit: contain;
+    object-position: left center;
+}
+
+.recruit-card .company-name {
+    font-size: 16px;
+}
+
+.recruit-card .requirements {
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.recruit-card .deadline {
+    font-size: 15px;
+}
+
+/* 커뮤니티 디자인 변경 */
+.community-list {
+    display: block;
+    border-top: 1px solid #dddddd;
+}
+
+.community-post {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 24px 110px 24px 22px;
+    border: none;
+    border-bottom: 1px solid #dddddd;
+    border-radius: 0;
+    background-color: #ffffff;
+}
+
+.community-post h3 {
+    min-height: 0;
+    margin: 0 0 8px;
+    font-size: 19px;
+    line-height: 1.5;
+}
+
+.community-post p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #777777;
+}
+
+.community-post .likes {
+    position: absolute;
+    top: 24px;
+    right: 22px;
+    margin: 0;
+}
+
+.community-post:hover {
+    background-color: #f5f5f5;
+}
+
+.community-post h3 a:hover {
+    text-decoration: underline;
+}
+
+/* 히어로 섹션 */
+.main-hero {
+    position: relative;
+    margin-top: 30px;
+    padding: 90px 24px 100px;
+    overflow: hidden;
+    background-color: #101010;
+    text-align: center;
+}
+
+.main-hero .hero-poster {
+    position: absolute;
+    width: 180px;
+    height: 245px;
+    object-fit: cover;
+    border-radius: 8px;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.hero-poster-one {
+    top: 35px;
+    left: 5%;
+}
+
+.hero-poster-two {
+    top: 60px;
+    right: 6%;
+}
+
+.hero-poster-three {
+    bottom: 35px;
+    left: 12%;
+}
+
+.hero-poster-four {
+    bottom: 25px;
+    right: 12%;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+.main-hero .hero-brand {
+    margin: 0 0 25px;
+    font-family: "Outfit", sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: #dddddd;
+}
+
+.main-hero .hero-title {
+    margin: 0;
+    font-family: "Outfit", sans-serif;
+    font-size: 108px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -3px;
+    color: #ffffff;
+}
+
+.main-hero .hero-description {
+    margin: 30px 0 35px;
+    font-family: "Google Sans", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #cccccc;
+}
+
+.hero-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.hero-links .hero-link {
+    display: block;
+    width: 190px;
+    margin: 6px;
+    padding: 16px 12px;
+    border: 1px solid #ffffff;
+    font-family: "Google Sans", Arial, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.hero-links .hero-link-light {
+    background-color: #ffffff;
+    color: #111111;
+}
+
+.hero-links .hero-link-dark {
+    background-color: #101010;
+    color: #ffffff;
+}
+
+.hero-links .hero-link-light:hover {
+    background-color: #dddddd;
+    border-color: #dddddd;
+}
+
+.hero-links .hero-link-dark:hover {
+    background-color: #ffffff;
+    color: #111111;
+}
+
+
+/* 화면이 좁을 때 크기 조정 */
+@media screen and (max-width: 800px) {
+
+    .main-hero {
+        padding: 75px 20px;
+    }
+
+    .main-hero .hero-title {
+        font-size: 64px;
+        letter-spacing: -2px;
+    }
+
+    .main-hero .hero-poster {
+        width: 115px;
+        height: 156px;
+        opacity: 0.18;
+    }
+
+    .hero-poster-three {
+        left: 3%;
+    }
+
+    .hero-poster-four {
+        right: 3%;
+    }
+}
+
+/* 더 좁은 화면일 때 */
+@media screen and (max-width: 480px) {
+
+    .main-hero .hero-title {
+        font-size: 44px;
+        letter-spacing: -1px;
+    }
+
+    .main-hero .hero-description {
+        font-size: 14px;
+    }
+
+    .hero-links .hero-link {
+        width: 100%;
+        max-width: 240px;
+    }
+}
+
+/* 히어로 섹션 효과 */
+.main-hero .hero-poster {
+    transform: translateY(0);
+    transition:
+        transform 0.5s ease-in-out,
+        opacity 0.5s ease-in-out;
+}
+
+.main-hero .hero-poster:hover {
+    transform: translateY(-8px);
+    opacity: 0.65;
+}
+
+.hero-links .hero-link {
+    transition: 
+        background-color 0.3s ease-in-out,
+        color 0.3s ease-in-out,
+        border-color 0.3s ease-in-out;
+}

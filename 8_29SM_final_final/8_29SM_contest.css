@@ -1,0 +1,919 @@
+@font-face {
+    font-family: "Outfit";
+    src: url("8_fonts/Outfit-Regular.ttf");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Outfit";
+    src: url("8_fonts/Outfit-Medium.ttf");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Google Sans";
+    src: url("8_fonts/GoogleSans-Regular.ttf");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Google Sans";
+    src: url("8_fonts/GoogleSans-Bold.ttf");
+    font-weight: bold;
+}
+
+/* 공통 설정 */
+
+body {
+    margin: 0;
+    background-color: white;
+    color: #111111;
+    font-family: "Google Sans", Arial, sans-serif;
+}
+
+a {
+    color: #111111;
+    text-decoration: none;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* 상단 */
+
+/* 상단 메뉴 */
+
+/* 현재 페이지의 메뉴는 밑줄 유지 */
+
+.search-box input {
+  outline: none;
+}
+
+/* 페이지 제목 */
+.recruit-page {
+    padding: 0 40px;
+}
+
+.page-heading {
+    margin: 55px 0 40px;
+    padding-bottom: 22px;
+    border-bottom: 4px solid black;
+}
+
+h1 {
+    margin-bottom: 10px;
+    font-family: "Outfit", sans-serif;
+    font-size: 48px;
+    font-weight: 500;
+}
+
+.page-heading p {
+    margin: 10px 0 0;
+    color: #777777;
+    font-size: 14px;
+}
+
+/* 왼쪽 필터와 오른쪽 목록을 나란히 배치 */
+.recruit-layout {
+    display: flex;
+    align-items: flex-start;
+}
+
+.filter-panel {
+    width: 220px;
+    flex-shrink: 0;
+    margin-right: 42px;
+}
+
+.filter-panel h2 {
+    margin: 0 0 24px;
+    font-family: "Outfit", sans-serif;
+    font-size: 24px;
+}
+
+/* 필터의 검색창 */
+.filter-search {
+    margin-bottom: 32px;
+}
+
+.filter-search > label {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.filter-search-box {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid black;
+}
+
+.filter-search-box input {
+    width: 100%;
+    min-width: 0;
+    padding: 10px 4px;
+    border: none;
+    font-family: "Google Sans", sans-serif;
+    font-size: 14px;
+}
+
+.filter-search-box button {
+    padding: 4px;
+    border: none;
+    background-color: white;
+}
+
+.filter-search-box img {
+    display: block;
+    width: 23px;
+    height: 23px;
+}
+
+/* 채용형태, 직무, 지역 선택 목록 */
+.filter-group {
+    min-width: 0;
+    margin: 0 0 30px;
+    padding: 15px 0 0;
+    border: none;
+    border-top: 1px solid #cccccc;
+}
+
+.filter-group legend {
+    padding: 0 12px 0 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #444444;
+}
+
+.filter-group input {
+    margin: 0 8px 0 0;
+}
+
+/* 오른쪽 목록 영역 */
+.notice-panel {
+    flex: 1;
+    min-width: 0;
+}
+
+.list-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.list-heading h2 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.list-heading p {
+    margin: 0;
+    font-size: 13px;
+    color: #777777;
+}
+
+/* 좁은 화면에서는 표 영역을 가로로 스크롤 */
+.table-wrap {
+    overflow-x: auto;
+}
+
+/* 공고 표 */
+.notice-table {
+    width: 100%;
+    min-width: 850px;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-top: 2px solid black;
+}
+
+/* 각 열의 너비 */
+.company-heading {
+    width: 24%;
+}
+
+.notice-heading {
+    width: 34%;
+}
+
+.type-heading {
+    width: 11%;
+}
+
+.region-heading {
+    width: 11%;
+}
+
+.date-heading {
+    width: 12%;
+}
+
+.heart-heading {
+    width: 8%;
+}
+
+/* 표 제목 */
+.notice-table th {
+    padding: 20px 10px;
+    border-bottom: 1px solid #dddddd;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* 공고 한 행의 각 칸 */
+.notice-table td {
+    padding: 28px 10px;
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* 기업 로고와 기업명 */
+.company-cell {
+    display: flex;
+    align-items: center;
+}
+
+.company-cell img {
+    width: 80px;
+    height: 45px;
+    margin-right: 12px;
+    object-fit: contain;
+}
+
+.company-cell span {
+    font-size: 13px;
+    text-align: left;
+}
+
+/* 공고명과 작은 직무 설명 */
+.notice-table .notice-cell {
+    text-align: left;
+}
+
+.notice-cell a {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.notice-cell p {
+    margin: 8px 0 0;
+    color: #888888;
+    font-size: 13px;
+}
+
+/* 찜, 관심 표시 */
+.notice-table .heart {
+    font-size: 25px;
+}
+
+/* 하단 */
+
+/* 안내문과 링크 목록 사이 구분선 */
+
+/* ===== 공모전 페이지 ===== */
+
+.contest-page {
+    padding: 0 40px;
+}
+
+.contest-page .page-heading {
+    margin: 55px 0 40px;
+    padding-bottom: 22px;
+    border-bottom: 4px solid #111;
+}
+
+.contest-page .page-heading h1 {
+    margin: 0 0 10px;
+    font-family: "Outfit", sans-serif;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.contest-page .page-heading p {
+    margin: 10px 0 0;
+    font-family: "Google Sans", Arial, sans-serif;
+    color: #777;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.6;
+}
+
+/* 왼쪽 메뉴와 오른쪽 목록 */
+.contest-layout {
+    display: grid;
+    grid-template-columns: 210px minmax(0, 1fr);
+    gap: 50px;
+    align-items: start;
+}
+
+/* 왼쪽 분야 메뉴 */
+.contest-sidebar h2 {
+    margin: 0;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #111;
+    font-size: 24px;
+}
+
+.contest-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-top: 28px;
+}
+
+.contest-categories a {
+    color: #666;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.contest-categories a.selected,
+.contest-categories a:hover {
+    color: #111;
+    font-weight: bold;
+}
+
+/* 목록 상단 */
+.contest-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.contest-toolbar h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.contest-toolbar h2 span {
+    margin-left: 8px;
+    color: #888;
+    font-size: 16px;
+}
+
+.contest-toolbar select {
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    background: #fff;
+    color: #333;
+    font: inherit;
+}
+
+/* 한 줄에 카드 3개 */
+.contest-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 36px;
+    row-gap: 64px;
+}
+
+.contest-card {
+    min-width: 0;
+}
+
+.contest-card a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* 이미지가 준비되기 전 사용할 포스터 */
+.contest-card .contest-poster {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    aspect-ratio: 3 / 4;
+    padding: 24px;
+    color: #111;
+}
+
+.poster-idea {
+    background: #eceae6;
+}
+
+.poster-design {
+    background: #e1e8df;
+}
+
+.poster-tech {
+    background: #e0e5ec;
+}
+
+.contest-poster .poster-label {
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.contest-poster strong {
+    font-size: clamp(24px, 3vw, 48px);
+    line-height: 1.05;
+    letter-spacing: -1px;
+}
+
+.contest-poster > span:last-child {
+    font-size: 13px;
+}
+
+/* 카드 아래 정보 */
+.contest-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.contest-organizer {
+    margin: 0;
+    color: #777;
+    font-size: 13px;
+}
+
+.contest-heart {
+    padding: 0 4px;
+    border: none;
+    background: transparent;
+    color: #111;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.contest-card h3 {
+    margin: 8px 0;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.contest-category {
+    margin: 0;
+    color: #888;
+    font-size: 13px;
+}
+
+.contest-card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 18px;
+}
+
+.contest-card-bottom strong {
+    color: #e65332;
+    font-size: 20px;
+}
+
+.contest-card-bottom span {
+    color: #777;
+    font-size: 12px;
+}
+
+/* 화면이 좁아질 때 */
+@media (max-width: 1000px) {
+    .contest-layout {
+        grid-template-columns: 160px minmax(0, 1fr);
+        gap: 28px;
+    }
+
+    .contest-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 650px) {
+    .contest-page {
+        padding: 32px 20px 60px;
+    }
+
+    .contest-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .contest-categories {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .contest-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 실제 포스터 이미지 */
+.contest-card .image-poster {
+    display: block;
+    padding: 0;
+    background: #f5f5f5;
+}
+
+.image-poster img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* 체크박스 숨기기 */
+.heart-check {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+/* 하트 영역 크기 고정 */
+.heart-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+/* 동일한 도형의 테두리와 채우기 */
+.heart-toggle svg {
+    display: block;
+    width: 28px;
+    height: 28px;
+    fill: none;
+    stroke: #111;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* 선택하면 색만 변경 */
+.heart-check:checked + .heart-toggle svg {
+    fill: red;
+    stroke: red;
+}
+
+.heart-check:focus-visible + .heart-toggle {
+    outline: 2px solid #111;
+    outline-offset: 3px;
+}
+
+/* 작은 편집자 추천 영역 */
+.editor-pick {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin: 0 0 40px;
+    padding: 20px 24px;
+    border: 1px solid #dddddd;
+    background-color: #f8f8f8;
+}
+
+.editor-pick-label {
+    flex-shrink: 0;
+    margin: 0;
+    font-family: "Outfit", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.editor-pick-image {
+    display: block;
+    flex-shrink: 0;
+    width: 64px;
+    height: 90px;
+    object-fit: contain;
+}
+
+.editor-pick-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.editor-pick-content h2 {
+    margin: 0 0 8px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.5;
+    word-break: keep-all;
+}
+
+.editor-pick-content p {
+    margin: 0;
+    color: #666666;
+    font-size: 13px;
+    line-height: 1.6;
+    word-break: keep-all;
+}
+
+.editor-pick-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+    padding: 8px 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.editor-pick-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.editor-pick-link:focus-visible {
+    outline: 2px solid #111111;
+    outline-offset: 5px;
+}
+
+/* 고정된 헤더에 이동한 카드가 가려지지 않도록 설정 */
+#contest-pick-card,
+#activity-pick-card {
+    scroll-margin-top: 220px;
+}
+
+/* 작은 화면에서는 추천 내용을 여러 줄로 배치 */
+@media (max-width: 800px) {
+    .editor-pick {
+        flex-wrap: wrap;
+        gap: 16px;
+        padding: 20px;
+    }
+
+    .editor-pick-label {
+        width: 100%;
+    }
+
+    .editor-pick-content h2 {
+        font-size: 16px;
+    }
+
+    .editor-pick-link {
+        margin-left: auto;
+    }
+}
+
+/* 카드 사이 여백 */
+.contest-grid {
+    column-gap: 36px;
+    row-gap: 64px;
+    align-items: stretch;
+}
+
+/* 카드 정보를 위에서 아래로 배치 */
+.contest-grid > .contest-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+/* 모든 포스터 영역을 같은 비율로 통일 */
+.contest-card .contest-poster.image-poster {
+    position: relative;
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f5f5f5;
+}
+
+/* 포스터를 자르거나 찌그러뜨리지 않고 표시 */
+.contest-card .contest-poster.image-poster img {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* 주최 기관과 하트 */
+.contest-card .contest-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    min-height: 42px;
+    margin-top: 16px;
+}
+
+.contest-card .contest-organizer {
+    margin: 0;
+    color: #777777;
+    font-size: 13px;
+    line-height: 1.6;
+    word-break: keep-all;
+}
+
+/* 제목: 두 줄 높이를 확보하고, 긴 내용은 그대로 표시 */
+.contest-card h3 {
+    min-height: 54px;
+    margin: 10px 0 12px;
+    color: #111111;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+    word-break: keep-all;
+}
+
+/* 분야: 같은 줄의 카드에서 아래쪽 위치를 맞춤 */
+.contest-card .contest-category {
+    margin: auto 0 0;
+    color: #777777;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* 기간 */
+.contest-card .contest-card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 18px;
+}
+
+.contest-card .contest-card-bottom strong {
+    color: #e65332;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.contest-card .contest-card-bottom span {
+    color: #777777;
+    font-size: 12px;
+}
+
+/* 작은 화면에서는 카드 간격 조정 */
+@media (max-width: 650px) {
+    .contest-grid {
+        column-gap: 20px;
+        row-gap: 40px;
+    }
+}
+
+/* 공모전·대외활동 특징 태그 */
+.activity-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    min-height: 26px;
+    margin: 12px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.activity-tags > li {
+    padding: 4px 8px;
+    background-color: #f1f1f1;
+    color: #555555;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+/* 추천 라벨의 위치 기준 */
+.contest-card .contest-poster.image-poster {
+    position: relative;
+}
+
+/* 포스터 왼쪽 위 추천 라벨 */
+.contest-card .contest-poster.image-poster > .pick-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 1;
+    padding: 6px 10px;
+    background-color: #111111;
+    color: #ffffff;
+    font-family: "Outfit", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    pointer-events: none;
+}
+
+/* 화면에는 숨기고 스크린리더에 설명 제공 */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* 페이지 번호 */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+    padding: 15px 0;
+}
+
+.pagination span {
+    display: block;
+    margin: 0 12px;
+    font-family: "Outfit", sans-serif;
+    font-size: 24px;
+    line-height: 1.5;
+    color: #c5c5c5;
+}
+
+.pagination .current-page {
+    color: #111111;
+    font-weight: bold;
+}
+
+.pagination .page-prev {
+    margin-right: 22px;
+}
+
+.pagination .page-next {
+    margin-left: 22px;
+}
+
+/* 페이지 번호에 마우스를 올리면 검은색으로 표시 */
+.pagination span:not(.page-prev):not(.page-next):hover {
+    color: #111111;
+}
+
+/* 하트와 관심 수를 나란히 표시 */
+.contest-card .heart-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: auto;
+    min-width: 70px;
+    min-height: 36px;
+    height: auto;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.contest-card .heart-toggle svg {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+/* 관심 수 */
+.heart-toggle .heart-count {
+    display: inline-block;
+    min-width: 3ch;
+    color: #777777;
+    font-family: "Outfit", sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+}
+
+/* 선택 전에는 원래 숫자 표시 */
+.heart-count .count-off {
+    display: inline;
+}
+
+.heart-count .count-on {
+    display: none;
+}
+
+/* 선택하면 하트를 빨갛게 채우기 */
+.heart-check:checked + .heart-toggle svg {
+    fill: red;
+    stroke: red;
+}
+
+/* 선택하면 1 증가한 숫자 표시 */
+.heart-check:checked + .heart-toggle .count-off {
+    display: none;
+}
+
+.heart-check:checked + .heart-toggle .count-on {
+    display: inline;
+}

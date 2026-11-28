@@ -1,0 +1,73 @@
+/* 공통 검색 결과 */
+#common-search-results {
+    display: none;
+    margin: 30px 40px 0;
+    padding: 24px;
+    border: 1px solid #dddddd;
+    background-color: #ffffff;
+    color: #111111;
+    font-family: "Google Sans", Arial, sans-serif;
+}
+
+#common-search-results .common-search-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+#common-search-results h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+#common-search-close {
+    padding: 7px 12px;
+    border: 1px solid #dddddd;
+    background-color: #ffffff;
+    color: #555555;
+    font-family: "Google Sans", Arial, sans-serif;
+    font-size: 13px;
+}
+
+#common-search-close:hover {
+    border-color: #111111;
+    background-color: #eeeeee;
+}
+
+#common-search-message {
+    margin: 0;
+    color: #888888;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+#common-search-results .common-search-item {
+    margin: 0;
+    padding: 18px 0;
+    border-bottom: 1px solid #eeeeee;
+}
+
+#common-search-results .common-search-kind {
+    margin: 0 0 5px;
+    color: #777777;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+#common-search-results h3 {
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+#common-search-results h3 a {
+    color: #111111;
+    text-decoration: none;
+}
+
+#common-search-results h3 a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="황채현, 이다은, 신유진">
+
+  <title>29SM | My Page</title>
+
+  <link rel="stylesheet" href="8_29SM_common.css">
+  <link rel="stylesheet" href="8_29SM_MyPage.css">
+  <link rel="stylesheet" href="8_29SM_search.css">
+  <script src="8_29SM_MyPage.js" defer></script>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="top-row">
+      <a class="logo" href="8_29SM_index.html">29SM</a>
+
+      <div class="account-menu">
+        <a href="8_29SM_MyPage.html">
+          <img src="8_images/8_profile.svg" alt="">
+          마이페이지
+        </a>
+
+        <a href="#">
+          <img src="8_images/8_bell.svg" alt="">
+          알림
+        </a>
+      </div>
+    </div>
+
+    <div class="navigation-row">
+
+      <nav class="main-menu">
+        <a href="8_29SM_contest.html">Contest</a>
+        <a href="8_29SM_activity.html">ECA</a>
+        <a href="8_29SM_recruit.html">Recruit</a>
+        <a href="8_29SM_Qualifications.html">Qualification</a>
+      </nav>
+
+      <div class="search-box">
+        <input
+          id="search"
+          type="text"
+          title="검색어 입력"
+        >
+
+        <button type="button" title="검색">
+            <img src="8_images/8_search.svg" alt="검색">
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section id="common-search-results">
+    <div class="common-search-heading">
+      <h2>검색 결과</h2>
+      
+      <button type="button" id="common-search-close">
+        닫기
+      </button>
+    </div>
+
+      <p id="common-search-message"></p>
+
+      <div id="common-search-list"></div>
+
+  </section>
+
+  <main class="inner">
+
+    <div class="page-title">
+      <h2>My Page</h2>
+    </div>
+
+    <div class="cart-wrap">
+
+      <div class="cart-left">
+
+      <section class="cart-list">
+        <h3 class="favorite-heading">찜한 공고 <span id="favorite-total">0</span>건</h3>
+        <nav class="favorite-tabs" aria-label="찜 공고 분류">
+          <button type="button" data-favorite-category="전체" class="active">전체</button>
+          <button type="button" data-favorite-category="공모전">공모전</button>
+          <button type="button" data-favorite-category="대외활동">대외활동</button>
+          <button type="button" data-favorite-category="취업공고">취업공고</button>
+        </nav>
+
+        <div class="list-top">
+          <label class="check">
+            <input type="checkbox" id="select-all" checked>
+            <span id="select-count">전체선택</span>
+          </label>
+          <button type="button" class="btn-line" id="delete-selected">선택삭제</button>
+        </div>
+
+        <div id="like-list"></div>
+
+      </section>
+
+      <section class="calendar-section">
+        <div class="calendar-top">
+          <div>
+            <h3 class="applied-title">내 일정</h3>
+            <p class="applied-desc">날짜를 누르면 그날의 일정을 보고 새 일정을 추가할 수 있어요.</p>
+          </div>
+          <div class="month-nav">
+            <button type="button" id="prev-month" class="btn-line" title="이전 달">‹</button>
+            <strong id="month-label"></strong>
+            <button type="button" id="next-month" class="btn-line" title="다음 달">›</button>
+            <button type="button" id="today-btn" class="btn-line">오늘</button>
+          </div>
+        </div>
+
+        <div class="calendar-body">
+          <div class="calendar">
+            <ol class="weekdays">
+              <li>일</li><li>월</li><li>화</li><li>수</li><li>목</li><li>금</li><li>토</li>
+            </ol>
+            <ol id="calendar-grid" class="calendar-grid"></ol>
+          </div>
+
+          <div class="day-panel">
+            <h4 id="selected-label"></h4>
+            <ul id="day-events"></ul>
+
+            <form id="event-form">
+              <input type="hidden" id="event-id">
+              <label>제목 <input type="text" id="event-title" required></label>
+              <label>날짜 <input type="date" id="event-date" required></label>
+              <label>종류
+                <select id="event-type">
+                  <option>면접</option>
+                  <option>시험</option>
+                  <option>스터디</option>
+                  <option>기타</option>
+                </select>
+              </label>
+              <label>메모 <textarea id="event-memo" rows="3"></textarea></label>
+              <div class="form-btns">
+                <button type="submit" id="event-submit" class="btn-smorder">일정 추가</button>
+                <button type="button" id="event-cancel" class="btn-line" hidden>취소</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="applied">
+
+        <div class="applied-top">
+          <div>
+            <h3 class="applied-title">지원 완료한 공고</h3>
+            <p class="applied-desc">단계 원을 눌러 진행 상황을 바꾸고, 오른쪽 상자를 눌러 합격·불합격을 표시하세요.</p>
+          </div>
+
+          <nav class="applied-tabs">
+            <button type="button" class="active" data-filter="all">전체</button>
+            <button type="button" data-filter="ing">진행 중</button>
+            <button type="button" data-filter="pass">합격</button>
+            <button type="button" data-filter="fail">불합격</button>
+          </nav>
+        </div>
+
+        <div id="applied-list"></div>
+
+      </section>
+
+      </div>
+
+      <aside class="summary">
+        <h3>지원 일정 요약</h3>
+        <dl>
+          <div class="row">
+            <dt>선택한 공고</dt>
+            <dd id="sum-count">3건</dd>
+          </div>
+          <div class="row">
+            <dt>이번주 마감</dt>
+            <dd class="discount" id="sum-week">1건</dd>
+          </div>
+          <div class="row">
+            <dt>가장 빠른 마감</dt>
+            <dd id="sum-first">D-3</dd>
+          </div>
+        </dl>
+        <p class="notice">마감 하루 전에 알림을 받으려면 로그인 후 알림을 켜주세요</p>
+
+        <button type="button" class="btn-order" id="apply-selected">지원하기</button>
+        <a href="#" class="btn-continue">더 둘러보기</a>
+      </aside>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-heading">
+      <a class="footer-logo" href="8_29SM_index.html">29SM</a>
+      <p>29살까지 취업하고자 하는 대학생들의 다음 기회를 모으다.</p>
+    </div>
+
+    <div class="footer-info">
+      <p>
+        29SM은 대학생들을 위한 공모전, 대외활동,
+        채용 및 자격증 정보를 소개하는 웹사이트입니다.
+      </p>
+
+      <p>
+        본 웹사이트는 정보를 제공함과 동시에
+        학생들의 공모전, 대외활동, 채용공고, 자격증 관련
+        일정을 관리하고 다양한 활동을 비교할 수 있는 서비스를 제공합니다.
+      </p>
+
+      <p>
+          제작: 황채현 · 이다은 · 신유진
+      </p>
+    </div>
+
+    <nav class="footer-links">
+      <a href="#">서비스 소개</a>
+      <a href="#">이용약관</a>
+      <a href="#">개인정보처리방침</a>
+      <a href="#">문의하기</a>
+    </nav>
+
+    <p class="footer-credit">
+      29SM <button type="button" id="reset-data" class="reset-dot" aria-label="마이페이지 데이터 초기화">·</button> Web Programming Team Project
+    </p>
+  </footer>
+  <script src="8_29SM_search.js"></script>
+</body>
+</html>
